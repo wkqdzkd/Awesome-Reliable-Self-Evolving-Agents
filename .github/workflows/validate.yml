@@ -1,0 +1,35 @@
+name: Validate catalog
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pytest
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run tests
+        run: python -m pytest tests
+
+      - name: Validate catalog
+        run: python scripts/validate_catalog.py --report data/validation_report.json
+
+      - name: Regenerate documentation
+        run: python scripts/generate_docs.py
+
+      - name: Ensure generated files are committed
+        run: git diff --exit-code

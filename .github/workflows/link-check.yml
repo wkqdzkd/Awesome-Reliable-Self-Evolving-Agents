@@ -1,0 +1,119 @@
+name: Link audit
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check catalog links
+        run: python scripts/check_links.py --kinds paper,code,project
+
+      - name: Regenerate link audit report
+        run: python scripts/generate_docs.py
+
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-audit
+          path: |
+            data/link_audit.json
+            docs/LINK_AUDIT.md
+            README.md
+
+      - name: Open or update dead-link issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const issueTitle = 'Link audit: dead URLs detected';
+            const auditPath = 'data/link_audit.json';
+            const audit = JSON.parse(fs.readFileSync(auditPath, 'utf8'));
+            const deadUrls = audit.dead_urls || [];
+
+            if (deadUrls.length === 0) {
+              core.info('No dead URLs detected; skipping issue creation.');
+              return;
+            }
+
+            const maxListed = 25;
+            const listed = deadUrls.slice(0, maxListed);
+            const truncated = deadUrls.length > maxListed;
+            const urlList = listed.map((url) => `- ${url}`).join('\n');
+            const statusSummary = Object.entries(audit.status_counts || {})
+              .map(([status, count]) => `- ${status}: ${count}`)
+              .join('\n');
+
+            const body = [
+              'Automated weekly link audit found unreachable or invalid URLs.',
+              '',
+              `**Checked at:** ${audit.checked_at}`,
+              `**Dead URL count:** ${deadUrls.length}`,
+              `**Unique URLs checked:** ${audit.url_count}`,
+              '',
+              '**Status summary**',
+              statusSummary || '_No status counts recorded._',
+              '',
+              '**Dead URLs**',
+              urlList,
+              truncated
+                ? `\n_…and ${deadUrls.length - maxListed} more. Download the workflow artifact for the full audit._`
+                : '',
+              '',
+              '**Artifacts**',
+              'Download `link-audit` from the latest workflow run for `data/link_audit.json`, `docs/LINK_AUDIT.md`, and the generated `README.md`.',
+              '',
+              '_This issue is updated by the scheduled link-audit workflow; do not rename the title._',
+            ]
+              .filter(Boolean)
+              .join('\n');
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            const existing = issues
+              .filter((issue) => !issue.pull_request)
+              .find((issue) => issue.title === issueTitle);
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.info(`Updated issue #${existing.number}.`);
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: issueTitle,
+              body,
+            });
+            core.info('Created dead-link audit issue.');

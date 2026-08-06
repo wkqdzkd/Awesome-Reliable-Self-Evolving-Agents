@@ -1,0 +1,272 @@
+{
+  "version": "2.0",
+  "source": {
+    "survey_title": "Diving into Reliable Self-Evolving Agents: A Survey",
+    "principle": "Classify each transition by the deepest evolution target whose active semantic change affects a decision-relevant output, update, or judgment, not by the algorithm name, training stage, or runtime components."
+  },
+  "collections": [
+    {
+      "id": "surveys",
+      "label": "Surveys and Positioning",
+      "icon": "📚",
+      "anchor": "surveys-and-positioning",
+      "description": "Surveys and adjacent literature used to position the field; these works are not assigned an L0-L4 self-evolution level."
+    },
+    {
+      "id": "cross_level",
+      "label": "Cross-Level Reliability: Evidence, Acceptance, and Control",
+      "icon": "🛡️",
+      "anchor": "cross-level-reliability-evidence-acceptance-and-control",
+      "description": "Works supporting the survey's cross-level synthesis of shared failure modes, external audit signals, promotion reliability, and audit independence under compromise."
+    },
+    {
+      "id": "open_problems",
+      "label": "Open Problems and Outlook",
+      "icon": "🚀",
+      "anchor": "open-problems-and-outlook",
+      "description": "Works cited in the research agenda on capability growth, longitudinal and adaptive evaluation, deployment, and scalable oversight."
+    }
+  ],
+  "levels": [
+    {
+      "id": "L0",
+      "slug": "output",
+      "icon": "✍️",
+      "anchor": "l0-output-level-self-evolution",
+      "label": "Output-Level Self-Evolution",
+      "short_label": "Output",
+      "summary": "changes the current output or trajectory while retained agent state remains unchanged across independent tasks.",
+      "deepest_rewrite": "Current output or task-local trajectory",
+      "persistence": "Task-local; retained agent state remains unchanged across independent tasks.",
+      "invariant_deeper_state": "Active retained state",
+      "characteristic_failure": "Self-confirmation",
+      "subcategories": [
+        {
+          "id": "L0.definition",
+          "label": "Task-Local Boundary and Persistence"
+        },
+        {
+          "id": "L0.iterative_revision",
+          "label": "Iterative Revision"
+        },
+        {
+          "id": "L0.search_verification",
+          "label": "Search, Verification, and Acceptance"
+        },
+        {
+          "id": "L0.reliability",
+          "label": "Reliability and the Persistence Limit"
+        }
+      ]
+    },
+    {
+      "id": "L1",
+      "slug": "model",
+      "icon": "🧠",
+      "anchor": "l1-model-level-self-evolution",
+      "label": "Model-Level Self-Evolution",
+      "short_label": "Model",
+      "summary": "retains a change to trainable model or policy state that affects later task execution.",
+      "deepest_rewrite": "Trainable model or policy state",
+      "persistence": "The model or policy change affects later independent tasks.",
+      "invariant_deeper_state": "Scaffold, improver, and criterion",
+      "characteristic_failure": "Model collapse",
+      "subcategories": [
+        {
+          "id": "L1.definition",
+          "label": "Definition and Update Boundary"
+        },
+        {
+          "id": "L1.self_training",
+          "label": "Single-Model Self-Training"
+        },
+        {
+          "id": "L1.self_play",
+          "label": "Competitive Self-Play"
+        },
+        {
+          "id": "L1.co_evolution",
+          "label": "Cooperative Co-Evolution"
+        },
+        {
+          "id": "L1.reliability",
+          "label": "Reliability and the Fixed-Scaffold Limit"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "slug": "scaffold",
+      "icon": "🧰",
+      "anchor": "l2-scaffold-level-self-evolution",
+      "label": "Scaffold-Level Self-Evolution",
+      "short_label": "Scaffold",
+      "summary": "retains a change to prompts, tools, memory operations, workflows, topology, skills, or the runtime harness.",
+      "deepest_rewrite": "Scaffold",
+      "persistence": "The scaffold change affects later execution or retained evidence.",
+      "invariant_deeper_state": "Improver and criterion",
+      "characteristic_failure": "Scaffold overfitting",
+      "subcategories": [
+        {
+          "id": "L2.definition",
+          "label": "Definition and the Scaffold Boundary"
+        },
+        {
+          "id": "L2.prompts_programs",
+          "label": "Prompts and Programs"
+        },
+        {
+          "id": "L2.architecture_workflows",
+          "label": "Architecture and Workflows"
+        },
+        {
+          "id": "L2.skills_experience",
+          "label": "Skills and Experience"
+        },
+        {
+          "id": "L2.memory_retrieval",
+          "label": "Memory and Retrieval"
+        },
+        {
+          "id": "L2.runtime_harness",
+          "label": "Runtime Harness"
+        },
+        {
+          "id": "L2.reliability",
+          "label": "Reliability and the Fixed-Improver Limit"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "slug": "improver",
+      "icon": "🔁",
+      "anchor": "l3-improver-level-self-evolution",
+      "label": "Improver-Level Self-Evolution",
+      "short_label": "Improver",
+      "summary": "retains a change to how later candidates are proposed, selected, committed, or rolled back.",
+      "deepest_rewrite": "Improver",
+      "persistence": "The changed improver governs future updates.",
+      "invariant_deeper_state": "Criterion",
+      "characteristic_failure": "Metric capture",
+      "subcategories": [
+        {
+          "id": "L3.definition",
+          "label": "Definition and the Improver Boundary"
+        },
+        {
+          "id": "L3.self_referential",
+          "label": "Self-Referential Agents"
+        },
+        {
+          "id": "L3.learned_improvement",
+          "label": "Learning Better Improvement Strategies"
+        },
+        {
+          "id": "L3.reliability",
+          "label": "Reliability and the Fixed-Criterion Limit"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "slug": "criterion",
+      "icon": "🎯",
+      "anchor": "l4-criterion-level-self-evolution",
+      "label": "Criterion-Level Self-Evolution",
+      "short_label": "Criterion",
+      "summary": "retains a change to judgment tasks, rewards, evaluator protocols, comparison rules, constraints, or values.",
+      "deepest_rewrite": "Criterion",
+      "persistence": "The revised criterion governs later judgments.",
+      "invariant_deeper_state": "None inside the writable state",
+      "characteristic_failure": "Criterion drift",
+      "subcategories": [
+        {
+          "id": "L4.definition",
+          "label": "Definition and the Criterion Boundary"
+        },
+        {
+          "id": "L4.evaluation_mechanisms",
+          "label": "Evolving Evaluation Mechanisms"
+        },
+        {
+          "id": "L4.tasks_objectives",
+          "label": "Evolving Evaluation Tasks and Objectives"
+        },
+        {
+          "id": "L4.reliability",
+          "label": "Reliability with the Criterion Inside the Loop"
+        }
+      ]
+    }
+  ],
+  "supporting_subcategories": [
+    {
+      "id": "surveys.positioning",
+      "collection": "surveys",
+      "label": "Field Positioning and Related Surveys"
+    },
+    {
+      "id": "cross_level.external_audit",
+      "collection": "cross_level",
+      "label": "External Audit Across Self-Evolution Levels"
+    },
+    {
+      "id": "cross_level.failure_modes",
+      "collection": "cross_level",
+      "label": "Level-Specific Audit Failures and Evaluation Horizons"
+    },
+    {
+      "id": "cross_level.acceptance_promotion",
+      "collection": "cross_level",
+      "label": "Acceptance Policies and Requirements for Promotion"
+    },
+    {
+      "id": "cross_level.audit_independence",
+      "collection": "cross_level",
+      "label": "Preserving Audit Independence Under Compromise"
+    },
+    {
+      "id": "open_problems.evolution",
+      "collection": "open_problems",
+      "label": "Evolution: Capability Growth and Learning Over Time"
+    },
+    {
+      "id": "open_problems.evaluation",
+      "collection": "open_problems",
+      "label": "Evaluation: Longitudinal Measurement and Adaptive Auditing"
+    },
+    {
+      "id": "open_problems.applications",
+      "collection": "open_problems",
+      "label": "Applications: From Updates to Deployment"
+    },
+    {
+      "id": "open_problems.governance",
+      "collection": "open_problems",
+      "label": "Governance: Goal Preservation and Scalable Oversight"
+    }
+  ],
+  "classification_statuses": [
+    {
+      "id": "strict",
+      "description": "The system directly satisfies the retained rewrite semantics of its assigned level."
+    },
+    {
+      "id": "facing",
+      "description": "The core transition is shallower, but the work is discussed at a deeper frontier such as an adaptive curriculum or evaluator."
+    },
+    {
+      "id": "mixed",
+      "description": "The system contains multiple active update paths; primary level records the deepest demonstrated rewrite."
+    },
+    {
+      "id": "boundary",
+      "description": "The work is retained as an explicit classification boundary or ambiguous case."
+    },
+    {
+      "id": "supporting",
+      "description": "The work supports positioning, reliability, evaluation, safety, or open problems rather than instantiating an L0-L4 system."
+    }
+  ]
+}

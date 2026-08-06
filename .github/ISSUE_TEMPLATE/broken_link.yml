@@ -1,0 +1,57 @@
+name: Broken link report
+description: Report a dead or incorrect paper, code, or project URL in the catalog.
+title: "[Link] "
+labels:
+  - broken-link
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us keep catalog links reachable. Please include the broken URL,
+        the affected work, and what you observed.
+
+  - type: input
+    id: broken_url
+    attributes:
+      label: Broken URL
+      description: The URL that fails, redirects incorrectly, or points to the wrong resource.
+      placeholder: "https://github.com/example/removed-repo"
+    validations:
+      required: true
+
+  - type: input
+    id: work_title
+    attributes:
+      label: Work / title
+      description: Catalog entry title or work identifier, if known.
+      placeholder: "MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: artifact_kind
+    attributes:
+      label: Artifact kind
+      description: Which link type is broken?
+      options:
+        - paper
+        - code
+        - project
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed_behavior
+    attributes:
+      label: Observed behavior
+      description: HTTP status, error message, redirect target, or other behavior you saw.
+      placeholder: "404 Not Found on GitHub; repository was renamed or deleted."
+    validations:
+      required: true
+
+  - type: input
+    id: alternative_url
+    attributes:
+      label: Alternative URL (optional)
+      description: Replacement link if you found an official mirror, archive, or updated repository.
+      placeholder: "https://github.com/example/new-repo"

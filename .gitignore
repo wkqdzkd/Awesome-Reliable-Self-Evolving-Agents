@@ -1,0 +1,9 @@
+.DS_Store
+.worktrees/
+.vscode/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*~

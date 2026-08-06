@@ -1,0 +1,14 @@
+Dual-license notice
+
+Unless a file states otherwise:
+
+1. Catalog data and documentation, including README.md, docs/, and data/*.json,
+   are licensed under Creative Commons Attribution 4.0 International
+   (CC BY 4.0). See LICENSES/CC-BY-4.0.txt.
+
+2. Source code and automation, including scripts/, tests/, and .github/, are
+   licensed under the MIT License. See LICENSES/MIT.txt.
+
+This licensing applies only to original material in this repository. Linked
+papers, code repositories, project pages, names, and third-party metadata
+remain subject to their respective copyright and license terms.

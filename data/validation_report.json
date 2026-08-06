@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "work_count": 710,
+  "active_manuscript_coverage": "549/549",
+  "taxonomy_representative_coverage": "137/137",
+  "paper_links": 710,
+  "code_links": 338,
+  "project_links": 92,
+  "counts_by_collection": {
+    "surveys": 25,
+    "L0": 42,
+    "L1": 189,
+    "L2": 287,
+    "L3": 23,
+    "L4": 66,
+    "cross_level": 45,
+    "open_problems": 33
+  },
+  "counts_by_status": {
+    "supporting": 103,
+    "strict": 552,
+    "boundary": 42,
+    "facing": 8,
+    "mixed": 5
+  },
+  "errors": [],
+  "warnings": []
+}
