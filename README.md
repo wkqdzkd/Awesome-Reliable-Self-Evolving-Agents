@@ -52,11 +52,11 @@ Each transition is classified by the **deepest evolution target whose active sem
 
 | Level | Deepest active evolution target | Characteristic failure | Works |
 | --- | --- | --- | ---: |
-| [![L0-Output](https://img.shields.io/badge/L0-Output-9AA5B1?style=flat-square)](#l0-output-level-self-evolution) | Current output or task-local trajectory | Self-confirmation | 42 |
-| [![L1-Model](https://img.shields.io/badge/L1-Model-4C78A8?style=flat-square)](#l1-model-level-self-evolution) | Trainable model or policy state | Model collapse | 189 |
-| [![L2-Scaffold](https://img.shields.io/badge/L2-Scaffold-2E8B57?style=flat-square)](#l2-scaffold-level-self-evolution) | Scaffold | Scaffold overfitting | 287 |
-| [![L3-Improver](https://img.shields.io/badge/L3-Improver-E8842C?style=flat-square)](#l3-improver-level-self-evolution) | Improver | Metric capture | 23 |
-| [![L4-Criterion](https://img.shields.io/badge/L4-Criterion-C0392B?style=flat-square)](#l4-criterion-level-self-evolution) | Criterion | Criterion drift | 66 |
+| [![L0-Output](https://img.shields.io/badge/L0-Output-57B36F?style=flat-square)](#l0-output-level-self-evolution) | Current output or task-local trajectory | Self-confirmation | 42 |
+| [![L1-Model](https://img.shields.io/badge/L1-Model-00A8BD?style=flat-square)](#l1-model-level-self-evolution) | Trainable model or policy state | Model collapse | 189 |
+| [![L2-Scaffold](https://img.shields.io/badge/L2-Scaffold-2496E8?style=flat-square)](#l2-scaffold-level-self-evolution) | Scaffold | Scaffold overfitting | 287 |
+| [![L3-Improver](https://img.shields.io/badge/L3-Improver-7782DA?style=flat-square)](#l3-improver-level-self-evolution) | Improver | Metric capture | 23 |
+| [![L4-Criterion](https://img.shields.io/badge/L4-Criterion-C65D97?style=flat-square)](#l4-criterion-level-self-evolution) | Criterion | Criterion drift | 66 |
 
 L0 is task-local; L1–L4 require a retained change that affects later independent tasks or future updates. The levels describe how far a change reaches, not how capable or reliable the system is.
 
