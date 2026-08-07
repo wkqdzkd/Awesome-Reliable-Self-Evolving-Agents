@@ -69,8 +69,6 @@ Across all levels, reliable self-evolution depends on whether evaluation and ove
 <em><b>Figure 1.</b> The self-evolution loop. The agent runs a task, then proposes and selects a candidate change, and an external audit either accepts it, rejects it and rolls back, or escalates to a human. The evidence source and the acceptance gate stay outside the update boundary, so the loop cannot rewrite them.</em>
 </div>
 
-A work has one primary level and may have additional manuscript memberships. `facing`, `mixed`, and `boundary` labels preserve distinctions such as an L1 policy update discussed at the L4 curriculum frontier.
-
 <div align="center">
 <img src="assets/organization.png" width="90%" alt="Organization of the survey"/>
 <br>
@@ -108,7 +106,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 > Surveys and adjacent literature used to position the field; these works are not assigned an L0-L4 self-evolution level.
 
-**Jump to:** [Field Positioning and Related Surveys (24)](#surveys.positioning)
+**↪️ Jump to:** [Field Positioning and Related Surveys (24)](#surveys.positioning)
 
 <div id="surveys.positioning"></div>
 
@@ -150,10 +148,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec3_output.png" width="90%" alt="Task-local workflow of Output-Level Self-Evolution"/>
 <br>
-<em><b>Section figure.</b> Reflection, exploration, and verification revise the current output while the underlying agent setup stays fixed, so independent tasks start fresh.</em>
+<em><b>Figure 3.</b> Reflection, exploration, and verification revise the current output while the underlying agent setup stays fixed, so independent tasks start fresh.</em>
 </div>
 
-**Jump to:** [Task-Local Boundary and Persistence (1)](#L0.definition) · [Iterative Revision (11)](#L0.iterative_revision) · [Search, Verification, and Acceptance (28)](#L0.search_verification) · [Reliability and the Persistence Limit (2)](#L0.reliability)
+**↪️ Jump to:** [Task-Local Boundary and Persistence (1)](#L0.definition) · [Iterative Revision (11)](#L0.iterative_revision) · [Search, Verification, and Acceptance (28)](#L0.search_verification) · [Reliability and the Persistence Limit (2)](#L0.reliability)
 
 <div id="L0.definition"></div>
 
@@ -228,10 +226,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec4_model.png" width="90%" alt="The three training relations of Model-Level Self-Evolution"/>
 <br>
-<em><b>Section figure.</b> The three training relations, read left to right as the party emitting the training signal moves further from the trainee and the signal becomes harder to fabricate.</em>
+<em><b>Figure 4.</b> The three training relations, read left to right as the party emitting the training signal moves further from the trainee and the signal becomes harder to fabricate.</em>
 </div>
 
-**Jump to:** [Single-Model Self-Training (51)](#L1.self_training) · [Competitive Self-Play (41)](#L1.self_play) · [Cooperative Co-Evolution (34)](#L1.co_evolution) · [Reliability and the Fixed-Scaffold Limit (11)](#L1.reliability)
+**↪️ Jump to:** [Single-Model Self-Training (51)](#L1.self_training) · [Competitive Self-Play (41)](#L1.self_play) · [Cooperative Co-Evolution (34)](#L1.co_evolution) · [Reliability and the Fixed-Scaffold Limit (11)](#L1.reliability)
 
 <div id="L1.self_training"></div>
 
@@ -258,10 +256,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** Rethinking Continual Experience Internalization for Self-Evolving LLM Agents. [[paper](https://arxiv.org/abs/2606.04703)] [[code](https://github.com/RUCBM/ExpInternalization)]
 - **`arXiv 2026`** RetroAgent: From Solving to Evolving via Retrospective Dual Intrinsic Feedback. [[paper](https://arxiv.org/abs/2603.08561)] [[code](https://github.com/zhangxy-2019/RetroAgent)]
 - **`arXiv 2026`** Rubric-based Self-play: Bootstrapping Post-training Signals for Open-ended Tasks via Rubric-based Self-play on Pre-training Text. [[paper](https://arxiv.org/abs/2604.20051)] [[code](https://github.com/HCY123902/POP)]
-- **`arXiv 2026`** SearchGym: Bootstrapping Real-World Search Agents via Cost-Effective and High-Fidelity Environment Simulation. [[paper](https://arxiv.org/abs/2601.14615)] [[code](https://github.com/JIA-Lab-research/SearchGym)] `boundary`
+- **`arXiv 2026`** SearchGym: Bootstrapping Real-World Search Agents via Cost-Effective and High-Fidelity Environment Simulation. [[paper](https://arxiv.org/abs/2601.14615)] [[code](https://github.com/JIA-Lab-research/SearchGym)]
 - **`arXiv 2026`** Seirênes: Seirênes: Adversarial Self-Play with Evolving Distractions for LLM Reasoning. [[paper](https://arxiv.org/abs/2605.11636)] [[code](https://github.com/MiliLab/Seirenes)]
 - **`arXiv 2026`** Self-Improving 4D Perception via Self-Distillation (SelfEvo). [[paper](https://arxiv.org/abs/2604.08532)] [[code](https://github.com/Self-Evo/SelfEvo)] [[project](https://self-evo.github.io)]
-- **`arXiv 2026`** Sentinel-VLA: A Metacognitive VLA Model with Active Status Monitoring for Dynamic Reasoning and Error Recovery. [[paper](https://arxiv.org/abs/2605.01191)] `boundary`
+- **`arXiv 2026`** Sentinel-VLA: A Metacognitive VLA Model with Active Status Monitoring for Dynamic Reasoning and Error Recovery. [[paper](https://arxiv.org/abs/2605.01191)]
 - **`AAAI 2026`** SERL: SERL: Self-Examining Reinforcement Learning on Open-Domain. [[paper](https://arxiv.org/abs/2511.07922)] [[code](https://github.com/AlwaysOu/SERL)]
 - **`arXiv 2026`** Socratic-SWE: Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills. [[paper](https://arxiv.org/abs/2606.07412)]
 - **`arXiv 2026`** The Era of Real-World Human Interaction: RL from User Conversations. [[paper](https://arxiv.org/abs/2509.25137)]
@@ -296,7 +294,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`ICLR 2026 Workshop`** ACE (Coding): ACE: Self-Evolving LLM Coding Framework via Adversarial Unit Test Generation and Preference Optimization. [[paper](https://arxiv.org/abs/2605.16299)]
 - **`arXiv 2026`** Ask-Solve-Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards. [[paper](https://arxiv.org/abs/2606.27376)] [[code](https://github.com/mbzuai-oryx/Ask-Solve-Generate)] [[project](https://mbzuai-oryx.github.io/Ask-Solve-Generate)]
 - **`ECCV 2026`** C2-Evo（SyncLoop）: SyncLoop: A Multimodal Dual-Loop Framework for Self-Improving Mathematical Reasoning. [[paper](https://arxiv.org/abs/2507.16518)] [[code](https://github.com/chen-xw/C2-Evo)]
-- **`ACL 2026`** CoEvolve: CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution. [[paper](https://arxiv.org/abs/2604.15840)] `mixed`
+- **`ACL 2026`** CoEvolve: CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution. [[paper](https://arxiv.org/abs/2604.15840)]
 - **`ACL 2026`** DEPT: Breaking the Impasse: Dual-Scale Evolutionary Policy Training for Social Language Agents. [[paper](https://arxiv.org/abs/2605.08721)]
 - **`arXiv 2026`** EvoVid: EvoVid: Temporal-Centric Self-Evolution for Video Large Language Models. [[paper](https://arxiv.org/abs/2605.21931)] [[project](https://huangshiqi128.github.io/EvoVid.io)]
 - **`ACL 2026`** FoPO: Foresight Optimization for Strategic Reasoning in Large Language Models. [[paper](https://arxiv.org/abs/2604.13592)] [[code](https://github.com/wangjs9/ForesightOptim)]
@@ -361,16 +359,16 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience. [[paper](https://arxiv.org/abs/2508.04700)] [[code](https://github.com/SunzeY/SEAgent)]
 - **`arXiv 2026`** Self-Distilled RL: Self-Distilled Reinforcement Learning for Co-Evolving Agentic Recommender Systems. [[paper](https://arxiv.org/abs/2604.10029)]
 - **`ICML 2026`** Self-evolving LLM Agents with In-distribution Optimization (Q-Evolve). [[paper](https://arxiv.org/abs/2606.07367)] [[project](https://qevolve.github.io)]
-- **`ICLR 2026 (Poster)`** Self-Harmony: Learning to Harmonize Self-Supervision and Self-Play in Test-Time Reinforcement Learning. [[paper](https://arxiv.org/abs/2511.01191)] [[code](https://github.com/physicsru/self_harmony)] `boundary`
-- **`ACL 2026 Findings`** SERM: SERM: Self-Evolving Relevance Model with Agent-Driven Learning from Massive Query Streams. [[paper](https://arxiv.org/abs/2601.09515)] `boundary`
+- **`ICLR 2026 (Poster)`** Self-Harmony: Learning to Harmonize Self-Supervision and Self-Play in Test-Time Reinforcement Learning. [[paper](https://arxiv.org/abs/2511.01191)] [[code](https://github.com/physicsru/self_harmony)]
+- **`ACL 2026 Findings`** SERM: SERM: Self-Evolving Relevance Model with Agent-Driven Learning from Massive Query Streams. [[paper](https://arxiv.org/abs/2601.09515)]
 - **`arXiv 2026`** Variational Policy Distillation: Learning from Language Feedback via Variational Policy Distillation. [[paper](https://arxiv.org/abs/2605.15113)]
 - **`arXiv 2026`** ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision? [[paper](https://arxiv.org/abs/2604.07864)]
 - **`arXiv 2026`** π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data. [[paper](https://arxiv.org/abs/2604.14054)] [[code](https://github.com/zhyaoch/pi-play)]
-- **`CoLM 2025`** Collaborative self-play（元知识）: Don't lie to your friends: Learning what you know from collaborative self-play. [[paper](https://arxiv.org/abs/2503.14481)] `boundary`
+- **`CoLM 2025`** Collaborative self-play（元知识）: Don't lie to your friends: Learning what you know from collaborative self-play. [[paper](https://arxiv.org/abs/2503.14481)]
 - **`NeurIPS 2025 (Spotlight)`** CURE: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning. [[paper](https://arxiv.org/abs/2506.03136)] [[code](https://github.com/Gen-Verse/CURE)]
 - **`NeurIPS 2025`** QiMeng-MuPa: QiMeng-MuPa: Mutual-Supervised Learning for Sequential-to-Parallel Code Translation. [[paper](https://arxiv.org/abs/2506.11153)] [[code](https://github.com/kcxain/mupa)]
 - **`NeurIPS 2025`** RL Tango: RL Tango: Reinforcing Generator and Verifier Together for Language Reasoning. [[paper](https://arxiv.org/abs/2505.15034)] [[code](https://github.com/kaiwenzha/rl-tango)]
-- **`EMNLP 2025`** WebEvolver: Enhancing Web Agent Self-Improvement with Co-evolving World Model. [[paper](https://arxiv.org/abs/2504.21024)] [[code](https://github.com/Tencent/SelfEvolvingAgent)] `boundary`
+- **`EMNLP 2025`** WebEvolver: Enhancing Web Agent Self-Improvement with Co-evolving World Model. [[paper](https://arxiv.org/abs/2504.21024)] [[code](https://github.com/Tencent/SelfEvolvingAgent)]
 - **`ICLR 2025`** WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning. [[paper](https://arxiv.org/abs/2411.02337)] [[code](https://github.com/THUDM/WebRL)]
 - **`NeurIPS 2024`** CORY: Coevolving with the Other You: Fine-Tuning LLM with Sequential Cooperative Multi-Agent Reinforcement Learning. [[paper](https://arxiv.org/abs/2410.06101)] [[code](https://github.com/Harry67Hu/CORY)]
 
@@ -380,10 +378,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 - **`arXiv 2026`** Autonomous Drift Learning: Autonomous Drift Learning in Data Streams: A Unified Perspective. [[paper](https://arxiv.org/abs/2605.01295)]
 - **`arXiv 2026`** Confidence-Orchestrated Self-Evolution: Confidence-Orchestrated Self-Evolution against Uncertain LLM Feedback. [[paper](https://arxiv.org/abs/2605.28010)] [[code](https://anonymous.4open.science/r/COSE_-B5C2)]
-- **`arXiv 2026`** Do Self-Evolving Agents Forget?: Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation. [[paper](https://arxiv.org/abs/2605.09315)] `boundary`
-- **`arXiv 2026`** First-Order Recoverability Collapse: First-Order Recoverability Collapse in Self-Referential Information Decoders. [[paper](https://arxiv.org/abs/2606.24861)] `boundary`
+- **`arXiv 2026`** Do Self-Evolving Agents Forget?: Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation. [[paper](https://arxiv.org/abs/2605.09315)]
+- **`arXiv 2026`** First-Order Recoverability Collapse: First-Order Recoverability Collapse in Self-Referential Information Decoders. [[paper](https://arxiv.org/abs/2606.24861)]
 - **`arXiv 2026`** Implicit Conflict Monitoring: Modeling Implicit Conflict Monitoring Mechanisms Against Stereotypes in LLMs. [[paper](https://arxiv.org/abs/2605.09647)]
-- **`arXiv 2026`** Matrix-Level Dynamics: When Self-Reference Fails to Close: Matrix-Level Dynamics in Large Language Models. [[paper](https://arxiv.org/abs/2604.12128)] `boundary`
+- **`arXiv 2026`** Matrix-Level Dynamics: When Self-Reference Fails to Close: Matrix-Level Dynamics in Large Language Models. [[paper](https://arxiv.org/abs/2604.12128)]
 - **`ICML 2026`** On the Generalization Gap in Self-Evolving Language Model Reasoning. [[paper](https://arxiv.org/abs/2606.01075)]
 - **`NAACL 2025`** GSI: Mitigating Tail Narrowing in LLM Self-Improvement via Socratic-Guided Sampling. [[paper](https://arxiv.org/abs/2411.00750)] [[code](https://github.com/Yiwen-Ding/Guided-Self-Improvement)]
 - **`NeurIPS 2025`** Is PRM Necessary?: Is PRM Necessary? Problem-Solving RL Implicitly Induces PRM Capability in LLMs. [[paper](https://arxiv.org/abs/2505.11227)]
@@ -401,10 +399,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec5_scaffold.png" width="90%" alt="The widening scaffold scope of Scaffold-Level Self-Evolution"/>
 <br>
-<em><b>Section figure.</b> The widening scaffold scope, from a single prompt or code artifact out to the runtime harness that encloses them all. Each wider region presupposes the narrower objects it organizes, while the improver and criterion stay fixed.</em>
+<em><b>Figure 5.</b> The widening scaffold scope, from a single prompt or code artifact out to the runtime harness that encloses them all. Each wider region presupposes the narrower objects it organizes, while the improver and criterion stay fixed.</em>
 </div>
 
-**Jump to:** [Definition and the Scaffold Boundary (4)](#L2.definition) · [Prompts and Programs (17)](#L2.prompts_programs) · [Architecture and Workflows (77)](#L2.architecture_workflows) · [Skills and Experience (106)](#L2.skills_experience) · [Memory and Retrieval (31)](#L2.memory_retrieval) · [Runtime Harness (14)](#L2.runtime_harness) · [Reliability and the Fixed-Improver Limit (8)](#L2.reliability)
+**↪️ Jump to:** [Definition and the Scaffold Boundary (4)](#L2.definition) · [Prompts and Programs (17)](#L2.prompts_programs) · [Architecture and Workflows (77)](#L2.architecture_workflows) · [Skills and Experience (106)](#L2.skills_experience) · [Memory and Retrieval (31)](#L2.memory_retrieval) · [Runtime Harness (14)](#L2.runtime_harness) · [Reliability and the Fixed-Improver Limit (8)](#L2.reliability)
 
 <div id="L2.definition"></div>
 
@@ -450,7 +448,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses. [[paper](https://arxiv.org/abs/2604.25850)] [[code](https://github.com/china-qijizhifeng/agentic-harness-engineering)]
 - **`arXiv 2026`** AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems. [[paper](https://arxiv.org/abs/2606.26859)]
 - **`arXiv 2026`** AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance. [[paper](https://arxiv.org/abs/2606.30949)]
-- **`arXiv 2026`** AIRA-Compose / AIRA-Design: Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design. [[paper](https://arxiv.org/abs/2605.15871)] `boundary`
+- **`arXiv 2026`** AIRA-Compose / AIRA-Design: Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design. [[paper](https://arxiv.org/abs/2605.15871)]
 - **`arXiv 2026`** ArtiCAD: Articulated CAD Assembly Design via Multi-Agent Code Generation. [[paper](https://arxiv.org/abs/2604.10992)]
 - **`arXiv 2026`** Autogenesis: A Self-Evolving Agent Protocol. [[paper](https://arxiv.org/abs/2604.15034)] [[code](https://github.com/DVampire/Autogenesis)]
 - **`arXiv 2026`** Autopoiesis: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics. [[paper](https://arxiv.org/abs/2604.07144)]
@@ -475,11 +473,11 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** GRAFT-ATHENA: Self-Improving Agentic Teams for Autonomous Discovery and Evolutionary Numerical Algorithms. [[paper](https://arxiv.org/abs/2605.11117)]
 - **`arXiv 2026`** GraphMind: From Operational Traces to Self-Evolving Workflow Automation. [[paper](https://arxiv.org/abs/2605.17617)]
 - **`arXiv 2026`** Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing. [[paper](https://arxiv.org/abs/2602.04837)] [[code](https://github.com/eric-ai-lab/GEA)]
-- **`arXiv 2026`** Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization. [[paper](https://arxiv.org/abs/2604.20714)] `boundary`
+- **`arXiv 2026`** Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization. [[paper](https://arxiv.org/abs/2604.20714)]
 - **`arXiv 2026`** MetaGen: Self-Evolving Roles and Topologies for Multi-Agent LLM Reasoning. [[paper](https://arxiv.org/abs/2601.19290)]
 - **`arXiv 2026`** Mimosa Framework: Toward Evolving Multi-Agent Systems for Scientific Research. [[paper](https://arxiv.org/abs/2603.28986)]
 - **`arXiv 2026`** MobEvolve: An Agentic Self-Evolving Heuristic System for Interpretable Human Mobility Generation. [[paper](https://arxiv.org/abs/2606.01640)]
-- **`arXiv 2026`** MUSE: Multi-Domain Chinese User Simulation via Self-Evolving Profiles and Rubric-Guided Alignment. [[paper](https://arxiv.org/abs/2604.13828)] `boundary`
+- **`arXiv 2026`** MUSE: Multi-Domain Chinese User Simulation via Self-Evolving Profiles and Rubric-Guided Alignment. [[paper](https://arxiv.org/abs/2604.13828)]
 - **`AAAI 2026`** NOTAM-Evolve: NOTAM-Evolve: A Knowledge-Guided Self-Evolving Optimization Framework with LLMs for NOTAM Interpretation. [[paper](https://arxiv.org/abs/2511.07982)]
 - **`arXiv 2026`** OctoT2I: A Self-Evolving Agentic Text-to-Image Router. [[paper](https://arxiv.org/abs/2606.01803)]
 - **`arXiv 2026`** PACE: Two-Timescale Self-Evolution for Small Language Model Agents. [[paper](https://arxiv.org/abs/2605.23019)]
@@ -505,18 +503,18 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`IEEE Communications Magazine 2026`** Toward Intelligent and Secure Cloud: Large Language Model Empowered Proactive Defense (LLM-PD). [[paper](https://arxiv.org/abs/2412.21051)] [[code](https://github.com/SEU-ProactiveSecurity-Group/LLM-PD)]
 - **`arXiv 2026`** Toward Vibe Medicine: A Self-Evolving Multi-Agent Framework for Clinical Decision Support. [[paper](https://arxiv.org/abs/2606.15504)]
 - **`arXiv 2026`** Towards Recursive Self-Evolving Agentic Literature Retrieval. [[paper](https://arxiv.org/abs/2605.14306)] [[code](https://github.com/sjtu-sai-agents/PaSaMaster)]
-- **`arXiv 2026`** Traj-Evolve: A Self-Evolving Multi-Agent System for Patient Trajectory Modeling in Lung Cancer Early Detection. [[paper](https://arxiv.org/abs/2606.02812)] `boundary`
+- **`arXiv 2026`** Traj-Evolve: A Self-Evolving Multi-Agent System for Patient Trajectory Modeling in Lung Cancer Early Detection. [[paper](https://arxiv.org/abs/2606.02812)]
 - **`ICLR 2026 Workshop`** Universe Routing: Universe Routing: Why Self-Evolving Agents Need Epistemic Control. [[paper](https://arxiv.org/abs/2603.14799)]
 - **`arXiv 2026`** VisualClaw: A Real-Time, Personalized Agent for the Physical World. [[paper](https://arxiv.org/abs/2606.16295)] [[code](https://github.com/UCSC-VLAA/VisualClaw)] [[project](https://ucsc-vlaa.github.io/VisualClaw)]
 - **`arXiv 2026`** Web2BigTable: A Bi-Level Multi-Agent LLM System for Internet-Scale Information Search and Extraction. [[paper](https://arxiv.org/abs/2604.27221)] [[code](https://github.com/web2bigtable/web2bigtable)]
 - **`arXiv 2025`** AgentOrchestra: Orchestrating multi-agent intelligence with the tool-environment-agent(TEA) protocol. [[paper](https://arxiv.org/abs/2506.12508)]
 - **`ICLR 2025`** AgentSquare: Automatic LLM Agent Search in Modular Design Space. [[paper](https://arxiv.org/abs/2410.06153)] [[code](https://github.com/tsinghua-fib-lab/AgentSquare)] [[project](https://tsinghua-fib-lab.github.io/AgentSquare_website)]
-- **`NeurIPS 2025`** C-NAV: Towards Self-Evolving Continual Object Navigation in Open World. [[paper](https://arxiv.org/abs/2510.20685)] [[code](https://github.com/BigTree765/C-Nav)] [[project](https://bigtree765.github.io/C-Nav-project)] `boundary`
+- **`NeurIPS 2025`** C-NAV: Towards Self-Evolving Continual Object Navigation in Open World. [[paper](https://arxiv.org/abs/2510.20685)] [[code](https://github.com/BigTree765/C-Nav)] [[project](https://bigtree765.github.io/C-Nav-project)]
 - **`NeurIPS 2025 (Oral)`** MAS-ZERO: Designing Multi-Agent Systems with Zero Supervision. [[paper](https://arxiv.org/abs/2505.14996)] [[code](https://github.com/SalesforceAIResearch/MAS-Zero)]
 - **`MICCAI 2025 (Oral)`** MedAgentSim: Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions. [[paper](https://arxiv.org/abs/2503.22678)] [[code](https://github.com/MAXNORM8650/MedAgentSim)] [[project](https://medagentsim.netlify.app)]
 - **`KDD 2025`** MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions. [[paper](https://arxiv.org/abs/2502.16796)]
-- **`NeurIPS 2025`** Multi-Agent Collaboration via Evolving Orchestration. [[paper](https://arxiv.org/abs/2505.19591)] [[code](https://github.com/OpenBMB/ChatDev/tree/puppeteer)] `boundary`
-- **`SIGMOD 2025`** SEFRQO: A Self-Evolving Fine-Tuned RAG-Based Query Optimizer. [[paper](https://arxiv.org/abs/2508.17556)] `boundary`
+- **`NeurIPS 2025`** Multi-Agent Collaboration via Evolving Orchestration. [[paper](https://arxiv.org/abs/2505.19591)] [[code](https://github.com/OpenBMB/ChatDev/tree/puppeteer)]
+- **`SIGMOD 2025`** SEFRQO: A Self-Evolving Fine-Tuned RAG-Based Query Optimizer. [[paper](https://arxiv.org/abs/2508.17556)]
 - **`ICML 2024`** GPTSwarm: Language Agents as Optimizable Graphs. [[paper](https://proceedings.mlr.press/v235/zhuge24a.html)]
 
 <div id="L2.skills_experience"></div>
@@ -529,12 +527,12 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** AlphaMemo: Structured Search-Process Memory for Self-Evolving Alpha Mining Agents. [[paper](https://arxiv.org/abs/2606.20625)] [[code](https://github.com/jarrettyu/AlphaMemo)]
 - **`arXiv 2026`** ANNEAL: ANNEAL: Adapting LLM Agents via Governed Symbolic Patch Learning. [[paper](https://arxiv.org/abs/2605.16309)] [[code](https://github.com/sbhakim/anneal-agents)]
 - **`arXiv 2026`** APEX: Autonomous Policy Exploration for Self-Evolving LLM Agents. [[paper](https://arxiv.org/abs/2605.21240)] [[code](https://github.com/liushiliushi/APEX1)]
-- **`arXiv 2026`** AtlasVA: Self-Evolving Visual Skill Memory for Teacher-Free VLM Agents. [[paper](https://arxiv.org/abs/2605.17933)] [[code](https://github.com/wangpan-ustc/AtlasVA)] [[project](https://wangpan-ustc.github.io/AtlasvaWeb)] `boundary`
+- **`arXiv 2026`** AtlasVA: Self-Evolving Visual Skill Memory for Teacher-Free VLM Agents. [[paper](https://arxiv.org/abs/2605.17933)] [[code](https://github.com/wangpan-ustc/AtlasVA)] [[project](https://wangpan-ustc.github.io/AtlasvaWeb)]
 - **`arXiv 2026`** AutoSkill: AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution. [[paper](https://arxiv.org/abs/2603.01145)] [[code](https://github.com/ECNU-ICALK/AutoSkill)]
 - **`arXiv 2026`** Beyond Meta-Reasoning: Metacognitive Consolidation for Self-Improving LLM Reasoning. [[paper](https://arxiv.org/abs/2604.17399)]
 - **`arXiv 2026`** Causal World Modeling: Self-Evolving Cognitive Framework via Causal World Modeling for Embodied Scientific Intelligence. [[paper](https://arxiv.org/abs/2606.22449)]
 - **`arXiv 2026`** Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks. [[paper](https://arxiv.org/abs/2604.20987)] [[code](https://github.com/wuxiyang1996/cos-play)] [[project](https://wuxiyang1996.github.io/COSPLAY_page)]
-- **`arXiv 2026`** CoCoDA: CoCoDA: Co-evolving Compositional DAG for Tool-Augmented Agents. [[paper](https://arxiv.org/abs/2605.08399)] `boundary`
+- **`arXiv 2026`** CoCoDA: CoCoDA: Co-evolving Compositional DAG for Tool-Augmented Agents. [[paper](https://arxiv.org/abs/2605.08399)]
 - **`arXiv 2026`** CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification. [[paper](https://arxiv.org/abs/2604.01687)] [[code](https://github.com/Zhang-Henry/CoEvoSkills)] [[project](https://zhang-henry.github.io/CoEvoSkills)]
 - **`arXiv 2026`** COMFYCLAW: COMFYCLAW: Self-Evolving Skill Harnesses for Image Generation Workflows. [[paper](https://arxiv.org/abs/2607.01709)]
 - **`arXiv 2026`** Decentralized Memory: Self-Evolving Multi-Agent Systems via Decentralized Memory. [[paper](https://arxiv.org/abs/2605.22721)]
@@ -551,9 +549,9 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** Evo-MedAgent: Beyond One-Shot Diagnosis with Agents That Remember, Reflect, and Improve. [[paper](https://arxiv.org/abs/2604.14475)]
 - **`KDD 2026`** EvoDS: EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management. [[paper](https://arxiv.org/abs/2606.03841)] [[code](https://github.com/usail-hkust/EvoDS)]
 - **`arXiv 2026`** EvoIR-Agent: Self-Evolving Image Restoration Agentic System via Experience-Driven Learning. [[paper](https://arxiv.org/abs/2605.22208)]
-- **`arXiv 2026`** EvolveMem: Self-Evolving Memory Architecture via AutoResearch for LLM Agents. [[paper](https://arxiv.org/abs/2605.13941)] [[code](https://github.com/aiming-lab/SimpleMem)] `boundary`
+- **`arXiv 2026`** EvolveMem: Self-Evolving Memory Architecture via AutoResearch for LLM Agents. [[paper](https://arxiv.org/abs/2605.13941)] [[code](https://github.com/aiming-lab/SimpleMem)]
 - **`arXiv 2026`** EvolveNav: Proactive Preflection and Self-Evolving Memory for Zero-Shot Object Goal Navigation. [[paper](https://arxiv.org/abs/2606.18235)]
-- **`ICML 2026`** EvolveR: EvolveR: Self-Evolving LLM Agents Through an Experience-Driven Lifecycle. [[paper](https://arxiv.org/abs/2510.16079)] [[code](https://github.com/KnowledgeXLab/EvolveR)] `boundary`
+- **`ICML 2026`** EvolveR: EvolveR: Self-Evolving LLM Agents Through an Experience-Driven Lifecycle. [[paper](https://arxiv.org/abs/2510.16079)] [[code](https://github.com/KnowledgeXLab/EvolveR)]
 - **`arXiv 2026`** EvoMemNav: EvoMemNav: Efficient Self-Evolving Fine-Grained Memory for Zero-Shot Embodied Navigation. [[paper](https://arxiv.org/abs/2606.03509)] [[code](https://github.com/caicaiya123/EvoMemNav)]
 - **`arXiv 2026`** EvoRec: Self-Evolving Agentic Recommender Systems. [[paper](https://arxiv.org/abs/2606.28368)]
 - **`arXiv 2026`** EvoRepair: Enhancing Vulnerability Repair Agents Through Experience-Based Self-Evolution. [[paper](https://arxiv.org/abs/2605.30105)]
@@ -561,7 +559,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** EXG: Self-Evolving Agents with Experience Graphs. [[paper](https://arxiv.org/abs/2605.17721)]
 - **`arXiv 2026`** Experience Graphs: Experience Graphs: The Data Foundation for Self-Improving Agents. [[paper](https://arxiv.org/abs/2606.29823)]
 - **`arXiv 2026`** ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory for LLM Agents. [[paper](https://arxiv.org/abs/2605.30712)]
-- **`arXiv 2026`** FederatedSkill: FederatedSkill: Federated Learning for Agentic Skill Evolution. [[paper](https://arxiv.org/abs/2606.03143)] [[code](https://github.com/UCSB-NLP-Chang/FederatedSkill)] `boundary`
+- **`arXiv 2026`** FederatedSkill: FederatedSkill: Federated Learning for Agentic Skill Evolution. [[paper](https://arxiv.org/abs/2606.03143)] [[code](https://github.com/UCSB-NLP-Chang/FederatedSkill)]
 - **`arXiv 2026`** Few-Shot MTS: Empowering VLMs for Few-Shot Multimodal Time Series Classification via Tailored Agentic Reasoning. [[paper](https://arxiv.org/abs/2605.09395)]
 - **`arXiv 2026`** FinAcumen: Financial Multimodal Reasoning via Self-Evolving Experience Memory Harness. [[paper](https://arxiv.org/abs/2606.17642)] [[code](https://anonymous.4open.science/r/FinAcumen)]
 - **`arXiv 2026`** FlyRoute: Self-Evolving Agent Profiling via Data Flywheel for Adaptive Task Routing. [[paper](https://arxiv.org/abs/2605.22057)]
@@ -587,7 +585,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** PhotoCraft: PhotoCraft: Agentic Reasoning with Hierarchical Self-Evolving Memory for Deep Image Search. [[paper](https://arxiv.org/abs/2606.03099)]
 - **`arXiv 2026`** Prism: An Evolutionary Memory Substrate for Multi-Agent Open-Ended Discovery. [[paper](https://arxiv.org/abs/2604.19795)]
 - **`arXiv 2026`** ProPlay: Procedural World Models for Self-Evolving LLM Agents. [[paper](https://arxiv.org/abs/2606.12780)] [[code](https://github.com/antman9914/proplay)]
-- **`arXiv 2026`** PsychAgent: An Experience-Driven Lifelong Learning Agent for Self-Evolving Psychological Counselor. [[paper](https://arxiv.org/abs/2604.00931)] [[code](https://github.com/ECNU-ICALK/PsychAgent)] `boundary`
+- **`arXiv 2026`** PsychAgent: An Experience-Driven Lifelong Learning Agent for Self-Evolving Psychological Counselor. [[paper](https://arxiv.org/abs/2604.00931)] [[code](https://github.com/ECNU-ICALK/PsychAgent)]
 - **`ICML 2026`** REFLEX: Reflective Evolution from LLM Experience. [[paper](https://arxiv.org/abs/2606.16496)]
 - **`arXiv 2026`** Rethinking Experience Utilization: Rethinking Experience Utilization in Self-Evolving Language Model Agents. [[paper](https://arxiv.org/abs/2605.07164)]
 - **`arXiv 2026`** Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki. [[paper](https://arxiv.org/abs/2605.25480)]
@@ -606,14 +604,14 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`SIGIR 2026`** SkillForge: SkillForge: Forging Domain-Specific, Self-Evolving Agent Skills in Cloud Technical Support. [[paper](https://arxiv.org/abs/2604.08618)]
 - **`arXiv 2026`** SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources. [[paper](https://arxiv.org/abs/2604.03964)] [[code](https://github.com/ma-compbio-lab/SkillFoundry)] [[project](https://ma-compbio-lab.github.io/SkillFoundry)]
 - **`arXiv 2026`** SkillOpt: Executive Strategy for Self-Evolving Agent Skills. [[paper](https://arxiv.org/abs/2605.23904)] [[code](https://github.com/microsoft/SkillOpt)] [[project](https://microsoft.github.io/SkillOpt)]
-- **`arXiv 2026`** SkillOS: SkillOS: Learning Skill Curation for Self-Evolving Agents. [[paper](https://arxiv.org/abs/2605.06614)] `boundary`
+- **`arXiv 2026`** SkillOS: SkillOS: Learning Skill Curation for Self-Evolving Agents. [[paper](https://arxiv.org/abs/2605.06614)]
 - **`arXiv 2026`** SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision. [[paper](https://arxiv.org/abs/2606.01139)]
 - **`arXiv 2026`** Skills-Coach: A Self-Evolving Skill Optimizer via Training-Free GRPO. [[paper](https://arxiv.org/abs/2604.27488)] [[code](https://github.com/T1aNS1R/Skills-Coach)]
 - **`arXiv 2026`** SkillSmith: Co-Evolving Skills and Tools for Self-Improving Agent Systems. [[paper](https://arxiv.org/abs/2606.01314)]
 - **`arXiv 2026`** SkillsVote: SkillsVote: Lifecycle Governance of Agent Skills from Collection, Recommendation to Evolution. [[paper](https://arxiv.org/abs/2605.18401)] [[code](https://github.com/MemTensor/skills-vote)]
 - **`arXiv 2026`** SkillWiki: A Living Knowledge Infrastructure for Agent Skills. [[paper](https://arxiv.org/abs/2606.16523)] [[code](https://github.com/Huangdingcheng/SkillWiki)]
 - **`arXiv 2026`** SkillX: Automatically Constructing Skill Knowledge Bases for Agents. [[paper](https://arxiv.org/abs/2604.04804)] [[code](https://github.com/zjunlp/SkillX)]
-- **`arXiv 2026`** Swarm Skills: Swarm Skills: A Portable, Self-Evolving Multi-Agent System Specification for Coordination Engineering. [[paper](https://arxiv.org/abs/2605.10052)] `boundary`
+- **`arXiv 2026`** Swarm Skills: Swarm Skills: A Portable, Self-Evolving Multi-Agent System Specification for Coordination Engineering. [[paper](https://arxiv.org/abs/2605.10052)]
 - **`arXiv 2026`** Trace2Policy: From Expert Behavior Traces to Self-Evolving Decision Agents. [[paper](https://arxiv.org/abs/2606.10457)]
 - **`arXiv 2026`** Tree-of-Experience: Tree-of-Experience: A Structured Experience-Management Solution for Self-Evolving Agents under Low-Repetition and Implicit-Reward Environments. [[paper](https://arxiv.org/abs/2606.06960)]
 - **`ICRA 2026`** Uni-Skill: Uni-Skill: Building Self-Evolving Skill Repository for Generalizable Robotic Manipulation. [[paper](https://arxiv.org/abs/2603.02623)]
@@ -709,10 +707,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec6_improver.png" width="90%" alt="Improver-Level Self-Evolution"/>
 <br>
-<em><b>Section figure.</b> The current improver helps produce or select a candidate successor to its own update mechanism. After external audit and promotion, the retained updater governs later proposal, selection, commit, and rollback under a fixed criterion.</em>
+<em><b>Figure 6.</b> The current improver helps produce or select a candidate successor to its own update mechanism. After external audit and promotion, the retained updater governs later proposal, selection, commit, and rollback under a fixed criterion.</em>
 </div>
 
-**Jump to:** [Self-Referential Agents (10)](#L3.self_referential) · [Learning Better Improvement Strategies (7)](#L3.learned_improvement) · [Reliability and the Fixed-Criterion Limit (4)](#L3.reliability)
+**↪️ Jump to:** [Self-Referential Agents (10)](#L3.self_referential) · [Learning Better Improvement Strategies (7)](#L3.learned_improvement) · [Reliability and the Fixed-Criterion Limit (4)](#L3.reliability)
 
 <div id="L3.self_referential"></div>
 
@@ -722,7 +720,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** Huxley-Gödel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine (HGM). [[paper](https://arxiv.org/abs/2510.21614)] [[code](https://github.com/metauto-ai/HGM)]
 - **`arXiv 2026`** HyperAgents: Self-Referential Agents that Integrate Task and Meta Agents. [[paper](https://arxiv.org/abs/2603.19461)] [[code](https://github.com/facebookresearch/Hyperagents)]
 - **`arXiv 2026`** MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems. [[paper](https://arxiv.org/abs/2605.22794)] [[code](https://github.com/hkgai-official/Moss)]
-- **`arXiv 2026`** SePO: SePO: Self-Evolving Prompt Agent for System Prompt Optimization. [[paper](https://arxiv.org/abs/2606.04465)] [[code](https://github.com/taowangcheng/SePO)] `mixed`
+- **`arXiv 2026`** SePO: SePO: Self-Evolving Prompt Agent for System Prompt Optimization. [[paper](https://arxiv.org/abs/2606.04465)] [[code](https://github.com/taowangcheng/SePO)]
 - **`ICLR 2025 Workshop`** A Self-Improving Coding Agent. [[paper](https://openreview.net/forum?id=rShJCyLsOr)]
 - **`ACL 2025`** Gödel Agent: A Self-Referential Agent Framework for Recursively Self-Improvement. [[paper](https://arxiv.org/abs/2410.04444)] [[code](https://github.com/Arvid-pku/Godel_Agent)]
 - **`arXiv 2025`** Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly? [[paper](https://arxiv.org/abs/2511.13646)] [[code](https://github.com/OpenAutoCoder/live-swe-agent)] [[project](https://live-swe-agent.github.io)]
@@ -733,9 +731,9 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 ### Learning Better Improvement Strategies
 
-- **`arXiv 2026`** A-Evolve-Training: Autonomous Post-Training of a 30B Model. [[paper](https://arxiv.org/abs/2606.20657)] [[code](https://github.com/A-EVO-Lab/A-EVOLVE)] `boundary`
+- **`arXiv 2026`** A-Evolve-Training: Autonomous Post-Training of a 30B Model. [[paper](https://arxiv.org/abs/2606.20657)] [[code](https://github.com/A-EVO-Lab/A-EVOLVE)]
 - **`arXiv 2026`** AREX: Towards a Recursively Self-Improving Agent for Deep Research. [[paper](https://arxiv.org/abs/2607.21461)]
-- **`arXiv 2026`** EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning. [[paper](https://arxiv.org/abs/2606.03108)] [[code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/EvoTrainer)] `mixed`
+- **`arXiv 2026`** EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning. [[paper](https://arxiv.org/abs/2606.03108)] [[code](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/EvoTrainer)]
 - **`ACL 2026 Findings`** Polaris: A Gödel Agent Framework for Small Language Models through Experience-Abstracted Policy Repair. [[paper](https://arxiv.org/abs/2603.23129)]
 - **`arXiv 2026`** Reinforcing Chain-of-Thought Reasoning with Self-Evolving Rubrics. [[paper](https://arxiv.org/abs/2602.10885)]
 - **`arXiv 2024`** Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution. [[paper](https://arxiv.org/abs/2309.16797)]
@@ -745,10 +743,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 ### Reliability and the Fixed-Criterion Limit
 
-- **`arXiv 2026`** ImprovEvolve: Basin-Hopping Meets LLM-Guided Evolutionary Search. [[paper](https://arxiv.org/abs/2602.10233)] `boundary`
+- **`arXiv 2026`** ImprovEvolve: Basin-Hopping Meets LLM-Guided Evolutionary Search. [[paper](https://arxiv.org/abs/2602.10233)]
 - **`ICML 2026 Workshop`** Self-Supervised Theorem Discovery: Self-Supervised Theorem Discovery in a Formal Axiomatic System. [[paper](https://arxiv.org/abs/2606.28747)]
-- **`arXiv 2025`** AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery. [[paper](https://arxiv.org/abs/2506.13131)] [[code](https://github.com/google-deepmind/alphaevolve_results)] [[project](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms)] `boundary`
-- **`arXiv 2025`** DeepEvolve: Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research. [[paper](https://arxiv.org/abs/2510.06056)] [[code](https://github.com/liugangcode/deepevolve)] `boundary`
+- **`arXiv 2025`** AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery. [[paper](https://arxiv.org/abs/2506.13131)] [[code](https://github.com/google-deepmind/alphaevolve_results)] [[project](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms)]
+- **`arXiv 2025`** DeepEvolve: Scientific Algorithm Discovery by Augmenting AlphaEvolve with Deep Research. [[paper](https://arxiv.org/abs/2510.06056)] [[code](https://github.com/liugangcode/deepevolve)]
 
 ---
 
@@ -758,7 +756,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 > Deepest active evolution target: **Criterion**. Characteristic failure: **Criterion drift**.
 
-**Jump to:** [Evolving Evaluation Mechanisms (11)](#L4.evaluation_mechanisms) · [Evolving Evaluation Tasks and Objectives (19)](#L4.tasks_objectives)
+**↪️ Jump to:** [Evolving Evaluation Mechanisms (11)](#L4.evaluation_mechanisms) · [Evolving Evaluation Tasks and Objectives (19)](#L4.tasks_objectives)
 
 <div id="L4.evaluation_mechanisms"></div>
 
@@ -768,7 +766,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** EvoRubric: EvoRubric: Self-Evolving Rubric-Driven RL for Open-Ended Generation. [[paper](https://arxiv.org/abs/2605.29847)]
 - **`EACL 2026 Findings`** Learning to Judge: LLMs Designing and Applying Evaluation Rubrics. [[paper](https://aclanthology.org/2026.findings-eacl.335)]
 - **`arXiv 2026`** OpenComputer: Verifiable Software Worlds for Computer-Use Agents. [[paper](https://arxiv.org/abs/2605.19769)] [[code](https://github.com/echo0715/OpenComputer)]
-- **`arXiv 2026`** Red Queen Gödel Machine: The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators. [[paper](https://arxiv.org/abs/2606.26294)] `boundary`
+- **`arXiv 2026`** Red Queen Gödel Machine: The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators. [[paper](https://arxiv.org/abs/2606.26294)]
 - **`ACL 2026`** RubricBench: Aligning Model-Generated Rubrics with Human Standards. [[paper](https://doi.org/10.18653/v1/2026.acl-long.1439)]
 - **`arXiv 2026`** SkillCoach: SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use. [[paper](https://arxiv.org/abs/2607.01874)]
 - **`arXiv 2026`** Who grades the grader? Co-evolving evaluation metrics and skills for self-improving LLM agents. [[paper](https://arxiv.org/abs/2607.12790)] [[code](https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet)]
@@ -781,7 +779,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 ### Evolving Evaluation Tasks and Objectives
 
 - **`ICLR 2026`** AC/DC: Discovering Novel LLM Experts via Task-Capability Coevolution. [[paper](https://arxiv.org/abs/2604.14969)] [[code](https://github.com/SakanaAI/AC-DC)] [[project](https://acdc-llm.github.io)]
-- **`ICLR 2026 (Oral)`** AdAEM: An Adaptively and Automated Extensible Measurement of LLMs' Value Difference. [[paper](https://arxiv.org/abs/2505.13531)] `boundary`
+- **`ICLR 2026 (Oral)`** AdAEM: An Adaptively and Automated Extensible Measurement of LLMs' Value Difference. [[paper](https://arxiv.org/abs/2505.13531)]
 - **`TACL 2026`** Learning to Optimize Multi-Objective Alignment Through Dynamic Reward Weighting. [[paper](https://arxiv.org/abs/2509.11452)] [[project](https://yining610.github.io/dynamic-reward-weighting-webpage)]
 - **`Knowledge-Based Systems 2025`** A Large Language Model-Driven Reward Design Framework via Dynamic Feedback for Reinforcement Learning. [[paper](https://doi.org/10.1016/j.knosys.2025.114065)]
 - **`ICLR 2025`** AutoBencher: Towards declarative benchmark construction. [[paper](https://openreview.net/forum?id=ymt4crbbXh)]
@@ -797,8 +795,8 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`AAAI 2024`** Value Kaleidoscope: Engaging AI with Pluralistic Human Values, Rights, and Duties. [[paper](https://doi.org/10.1609/aaai.v38i18.29970)]
 - **`ICML 2022`** Evolving curricula with regret-based environment design. [[paper](https://proceedings.mlr.press/v162/parker-holder22a.html)]
 - **`NAACL 2021`** Dynabench: Rethinking benchmarking in NLP. [[paper](https://aclanthology.org/2021.naacl-main.324)]
-- **`NeurIPS 2020`** Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design. [[paper](https://arxiv.org/abs/2012.02096)] [[code](https://github.com/google-research/google-research/tree/master/social_rl/adversarial_env)] [[project](https://research.google/blog/paired-a-new-multi-agent-approach-for-adversarial-environment-generation)] `facing`
-- **`arXiv 2019`** Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions. [[paper](https://arxiv.org/abs/1901.01753)] [[code](https://github.com/uber-research/poet)] [[project](https://www.uber.com/us/en/blog/poet-open-ended-deep-learning)] `facing`
+- **`NeurIPS 2020`** Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design. [[paper](https://arxiv.org/abs/2012.02096)] [[code](https://github.com/google-research/google-research/tree/master/social_rl/adversarial_env)] [[project](https://research.google/blog/paired-a-new-multi-agent-approach-for-adversarial-environment-generation)]
+- **`arXiv 2019`** Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions. [[paper](https://arxiv.org/abs/1901.01753)] [[code](https://github.com/uber-research/poet)] [[project](https://www.uber.com/us/en/blog/poet-open-ended-deep-learning)]
 
 ---
 
@@ -811,10 +809,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec8_ladder.png" width="90%" alt="The reliability ladder for self-evolving agents"/>
 <br>
-<em><b>Section figure.</b> Each step is a deeper evolution target, and each card pairs it with the external audit and the control that a claim at that depth requires. The rise of the steps is self-evolution depth, not capability or reliability.</em>
+<em><b>Figure 7.</b> Each step is a deeper evolution target, and each card pairs it with the external audit and the control that a claim at that depth requires. The rise of the steps is self-evolution depth, not capability or reliability.</em>
 </div>
 
-**Jump to:** [External Audit Across Self-Evolution Levels (3)](#cross_level.external_audit) · [Level-Specific Audit Failures and Evaluation Horizons (3)](#cross_level.failure_modes) · [Preserving Audit Independence Under Compromise (2)](#cross_level.audit_independence)
+**↪️ Jump to:** [External Audit Across Self-Evolution Levels (3)](#cross_level.external_audit) · [Level-Specific Audit Failures and Evaluation Horizons (3)](#cross_level.failure_modes) · [Preserving Audit Independence Under Compromise (2)](#cross_level.audit_independence)
 
 <div id="cross_level.external_audit"></div>
 
@@ -850,10 +848,10 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 <div align="center">
 <img src="assets/sec9_applications.png" width="90%" alt="Applications and staged deployment of self-evolving agents"/>
 <br>
-<em><b>Section figure.</b> Across executable engineering, persistent digital agents, scientific discovery, and embodied or high-stakes systems, the available evidence ranges from executable checks to expert review and backtests. Wider deployment requires staged evaluation against a declared external target.</em>
+<em><b>Figure 8.</b> Across executable engineering, persistent digital agents, scientific discovery, and embodied or high-stakes systems, the available evidence ranges from executable checks to expert review and backtests. Wider deployment requires staged evaluation against a declared external target.</em>
 </div>
 
-**Jump to:** [Evolution: Capability Growth and Learning Over Time (2)](#open_problems.evolution) · [Evaluation: Longitudinal Measurement and Adaptive Auditing (22)](#open_problems.evaluation) · [Applications: From Updates to Deployment (5)](#open_problems.applications) · [Governance: Goal Preservation and Scalable Oversight (1)](#open_problems.governance)
+**↪️ Jump to:** [Evolution: Capability Growth and Learning Over Time (2)](#open_problems.evolution) · [Evaluation: Longitudinal Measurement and Adaptive Auditing (22)](#open_problems.evaluation) · [Applications: From Updates to Deployment (5)](#open_problems.applications) · [Governance: Goal Preservation and Scalable Oversight (1)](#open_problems.governance)
 
 <div id="open_problems.evolution"></div>
 
