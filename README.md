@@ -5,7 +5,6 @@
 <h1>🧬 Awesome Reliable Self-Evolving Agents</h1>
 
 <strong>A curated collection of research on <em>self-evolving agents</em>, advancing reliable AI self-improvement.</strong><br>
-Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</em>.
 
 <p align="center">
   <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg"></a>
