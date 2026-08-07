@@ -35,7 +35,7 @@ Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</e
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner.jpg">
   <source media="(prefers-color-scheme: light)" srcset="assets/banner.jpg">
-  <img src="assets/banner.jpg" width="90%" alt="Five levels of self-evolution, drawn as divers descending from the surface to the sea floor">
+  <img src="assets/teaser_rounded.png" width="90%" alt="Five levels of self-evolution, drawn as divers descending from the surface to the sea floor">
 </picture>
 </div>
 
