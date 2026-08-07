@@ -1,71 +1,42 @@
-# Contributing
+# Contributing to Awesome Reliable Self-Evolving Agents
 
-Thank you for helping maintain Awesome Reliable Self-Evolving Agents.
+Thanks for helping maintain this companion list for **_Diving into Reliable
+Self-Evolving Agents: A Survey_**.
 
-## Add or correct a paper
+## What belongs here
 
-This repository intentionally contains only papers actively cited by the
-companion manuscript. To add a new paper, add it to the manuscript first and
-then update the generated catalog. For corrections to an existing record,
-open the paper-suggestion issue form or submit a pull request. Include:
+This repository contains only papers cited by the survey. Place each paper in
+its primary section of the L0–L4 taxonomy and list it only once.
 
-- canonical title;
-- arXiv, DOI, OpenReview, or proceedings URL;
-- first public date and venue, if known;
-- official code and project URLs, with evidence;
-- proposed L0-L4 level and subcategory;
-- one sentence identifying the deepest active evolution target;
-- whether the update persists across independent tasks.
+## Entry format
 
-Do not infer an official repository from a matching name alone.
+Match the surrounding entries:
 
-Rendered catalog entries use:
-
-```text
+```markdown
 - **`Venue Year`** Title. [[paper](URL)] [[code](URL)]
 ```
 
-## Classification checklist
+- Use the canonical paper page, preferring arXiv `abs/`, DOI, OpenReview, or
+  official proceedings pages.
+- Include code or project links only when they are official.
+- Preserve the existing section structure and chronological ordering.
 
-Before assigning a level, answer in order:
+## How to contribute
 
-1. Does anything change? If no, it is supporting or out of scope.
-2. Is the change limited to the current task output? If yes, L0.
-3. Does it persist in trainable model state or L1 training data? If deepest,
-   L1.
-4. Does it persist in prompts, code, tools, workflows, skills, memory, or the
-   runtime harness? If deepest, L2.
-5. Does it change the procedure governing future updates? If yes, L3.
-6. Does it change future tasks, rewards, evaluators, constraints, or value
-   semantics? If yes, L4.
+1. Fork the repository and create a branch.
+2. Edit `README.md` directly.
+3. Open a pull request describing the paper and its section.
 
-Use `facing`, `mixed`, or `boundary` when a single strict label would hide an
-important distinction. See `docs/TAXONOMY.md`.
+For taxonomy changes, restructuring, or batch updates, open an issue first.
 
-## Data changes
+## Pull request checklist
 
-`README.md` is generated as a whole and must not be edited directly. Update the
-canonical data for catalog changes or `scripts/generate_docs.py` for layout and
-static content, then run:
+- [ ] The paper is cited by the survey.
+- [ ] The entry is in the correct section and follows the required format.
+- [ ] The paper is not already listed.
+- [ ] All paper, code, project, image, and anchor links work.
 
-```bash
-python scripts/validate_catalog.py --report data/validation_report.json
-python scripts/generate_docs.py
-```
+## License
 
-## Pull-request checks
-
-- Identifiers are unique.
-- Paper URLs are canonical and reachable.
-- Code/project URLs are official or explicitly marked third-party.
-- Classification rationale names the evolution target.
-- Primary level and subcategory agree.
-- The catalog contains exactly the active manuscript papers.
-- Generated documentation is up to date.
-- No local file paths, private hosts, credentials, or unpublished
-  identity-bearing metadata are introduced.
-
-## Licensing
-
-By contributing to this repository, you agree to license your contribution
-under the MIT License in `LICENSE`.
+By contributing, you agree that your contribution is licensed under the
+repository's [MIT License](LICENSE).

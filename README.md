@@ -4,7 +4,7 @@
 
 <h1>🧬 Awesome Reliable Self-Evolving Agents</h1>
 
-<strong>A machine-readable catalog organized by self-evolution depth and reliability evidence</strong><br>
+<strong>A curated paper list organized by self-evolution depth and reliability evidence</strong><br>
 Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</em>.
 
 <p align="center">
@@ -13,7 +13,7 @@ Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</e
 
 <p align="center">
   <a href="#paper-catalog"><img alt="Papers" src="https://img.shields.io/badge/papers-549-6C5CE7?style=flat-square"></a>
-  <a href="docs/ALIGNMENT_REPORT.md"><img alt="Manuscript coverage" src="https://img.shields.io/badge/manuscript-549%2F549-2E8B57?style=flat-square"></a>
+  <a href="#paper-catalog"><img alt="Manuscript coverage" src="https://img.shields.io/badge/manuscript-549%2F549-2E8B57?style=flat-square"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="Last commit" src="https://img.shields.io/github/last-commit/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=flat-square"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=social"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square"></a>
@@ -22,7 +22,6 @@ Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</e
 <p align="center">
   <a href="#why-this-list-is-different">🧭 Taxonomy</a> &nbsp;•&nbsp;
   <a href="#contents">🗂️ Browse</a> &nbsp;•&nbsp;
-  <a href="#data-and-reproducibility">🧪 Reproduce</a> &nbsp;•&nbsp;
   <a href="CONTRIBUTING.md">🤝 Contribute</a>
 </p>
 
@@ -78,7 +77,8 @@ A work has one primary level and may have additional manuscript memberships. `fa
 <em><b>Figure 2.</b> What the companion survey covers. Part I frames self-evolution and RSI, Part II maps methods from L0 to L4 by evolution depth, and Part III analyses reliability and open problems.</em>
 </div>
 
-🔎 Read the full [taxonomy](docs/TAXONOMY.md), [inclusion methodology](docs/METHODOLOGY.md), [manuscript alignment report](docs/ALIGNMENT_REPORT.md), and [link audit](docs/LINK_AUDIT.md).
+This repository is the static companion list for the survey. The complete
+L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 
 <div id="contents"></div>
 
@@ -96,15 +96,12 @@ A work has one primary level and may have additional manuscript memberships. `fa
 - [🎯 L4: Criterion-Level Self-Evolution](#l4-criterion-level-self-evolution) `30`
 - [🛡️ Cross-Level Reliability: Evidence, Acceptance, and Control](#cross-level-reliability-evidence-acceptance-and-control) `8`
 - [🚀 Open Problems and Outlook](#open-problems-and-outlook) `30`
-- [🧪 Data and Reproducibility](#data-and-reproducibility)
-- [🤝 Contributing](#contributing)
 - [⚖️ License](#license)
 
 </details>
 
 <div id="paper-catalog"></div>
 
-<!-- BEGIN GENERATED PAPER LIST -->
 <div id="surveys-and-positioning"></div>
 
 ## 📚 Surveys and Positioning <sub><a href="#toc">↑ contents</a></sub>
@@ -910,42 +907,11 @@ A work has one primary level and may have additional manuscript memberships. `fa
 
 ---
 
-<!-- END GENERATED PAPER LIST -->
-
-<div id="data-and-reproducibility"></div>
-
-## 🧪 Data and Reproducibility <sub><a href="#toc">↑ contents</a></sub>
-
-- 📚 `data/papers.json` is the canonical work catalog.
-- 🧭 `data/taxonomy.json` is the canonical L0-L4 hierarchy.
-- 🔎 `data/manuscript_manifest.json` defines the exact set of papers used by the manuscript.
-- ✅ `scripts/validate_catalog.py` enforces identifiers, taxonomy, and exact manuscript membership.
-- 🔗 `scripts/check_links.py` records live HTTP results without silently deleting announced links.
-
-Regenerate the list with:
-
-```bash
-python scripts/validate_catalog.py --report data/validation_report.json
-python scripts/generate_docs.py
-```
-
-<div id="contributing"></div>
-
-## 🤝 Contributing <sub><a href="#toc">↑ contents</a></sub>
-
-Corrections to the 549 manuscript-used records are welcome. New papers belong in the manuscript first; this repository intentionally does not retain catalog-only additions. Every proposal must include a canonical paper link, evidence for any code/project link, and an evolution-target rationale. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Catalog entries follow this format:
-
-```text
-- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]
-```
-
 <div id="license"></div>
 
 ## ⚖️ License <sub><a href="#toc">↑ contents</a></sub>
 
-Original text, catalog data, code, and images in this repository are licensed under the [MIT License](LICENSE). Linked papers, code repositories, project pages, names, and third-party metadata remain subject to their respective copyright and license terms.
+Original text and images in this repository are licensed under the [MIT License](LICENSE). Linked papers, code repositories, project pages, names, and third-party metadata remain subject to their respective copyright and license terms.
 <div id="star-history"></div>
 
 ## ⭐ Star History <sub><a href="#toc">↑ contents</a></sub>
@@ -969,4 +935,3 @@ Original text, catalog data, code, and images in this repository are licensed un
 <img src="https://contrib.rocks/image?repo=wkqdzkd/Awesome-Reliable-Self-Evolving-Agents" alt="Contributors to wkqdzkd/Awesome-Reliable-Self-Evolving-Agents">
 </a>
 </div>
-
