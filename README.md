@@ -910,7 +910,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 ## ⚖️ License <sub><a href="#toc">↑ contents</a></sub>
 
 Original text and images in this repository are licensed under the [MIT License](LICENSE). Linked papers, code repositories, project pages, names, and third-party metadata remain subject to their respective copyright and license terms.
-<div id="star-history"></div>
+<!-- <div id="star-history"></div>
 
 ## ⭐ Star History <sub><a href="#toc">↑ contents</a></sub>
 
@@ -922,14 +922,4 @@ Original text and images in this repository are licensed under the [MIT License]
   <img src="https://api.star-history.com/svg?repos=wkqdzkd/Awesome-Reliable-Self-Evolving-Agents&amp;type=Date" alt="Star history chart for wkqdzkd/Awesome-Reliable-Self-Evolving-Agents">
 </picture>
 </a>
-</div>
-
-<div id="contributors"></div>
-
-## 👥 Contributors <sub><a href="#toc">↑ contents</a></sub>
-
-<div align="center">
-<a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=wkqdzkd/Awesome-Reliable-Self-Evolving-Agents" alt="Contributors to wkqdzkd/Awesome-Reliable-Self-Evolving-Agents">
-</a>
-</div>
+</div> -->
