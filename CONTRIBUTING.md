@@ -2,9 +2,12 @@
 
 Thank you for helping maintain Awesome Reliable Self-Evolving Agents.
 
-## Suggest a paper
+## Add or correct a paper
 
-Open the paper-suggestion issue form or submit a pull request. Include:
+This repository intentionally contains only papers actively cited by the
+companion manuscript. To add a new paper, add it to the manuscript first and
+then update the generated catalog. For corrections to an existing record,
+open the paper-suggestion issue form or submit a pull request. Include:
 
 - canonical title;
 - arXiv, DOI, OpenReview, or proceedings URL;
@@ -57,7 +60,7 @@ python scripts/generate_docs.py
 - Code/project URLs are official or explicitly marked third-party.
 - Classification rationale names the evolution target.
 - Primary level and subcategory agree.
-- Existing source counts and manuscript coverage do not regress.
+- The catalog contains exactly the active manuscript papers.
 - Generated documentation is up to date.
 - No local file paths, private hosts, credentials, or unpublished
   identity-bearing metadata are introduced.

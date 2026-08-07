@@ -19,7 +19,7 @@ Confirm every item before requesting review:
 - [ ] Code/project URLs are official or explicitly marked third-party.
 - [ ] Classification rationale names the evolution target.
 - [ ] Primary level and subcategory agree.
-- [ ] Existing source counts and manuscript coverage do not regress.
+- [ ] Catalog contains exactly the active manuscript papers.
 - [ ] Generated documentation is up to date.
 - [ ] No local file paths, private hosts, credentials, or unpublished identity-bearing metadata are introduced.
 

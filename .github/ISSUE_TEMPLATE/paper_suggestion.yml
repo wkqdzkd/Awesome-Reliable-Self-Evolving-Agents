@@ -1,5 +1,5 @@
-name: Paper suggestion
-description: Propose a work for the curated catalog (see CONTRIBUTING.md).
+name: Manuscript paper update
+description: Add or correct a paper used by the companion manuscript (see CONTRIBUTING.md).
 title: "[Paper] "
 labels:
   - paper-suggestion
@@ -8,6 +8,8 @@ body:
     attributes:
       value: |
         Thank you for helping maintain Awesome Reliable Self-Evolving Agents.
+        This repository only retains papers actively cited by the companion
+        manuscript. New papers must be added to the manuscript first.
         Include every item below; see [CONTRIBUTING.md](../../CONTRIBUTING.md)
         for classification guidance and rendered entry format.
 

@@ -36,25 +36,20 @@ The following are not core self-evolution by themselves:
 - benchmark or position papers with no self-evolving system, unless included
   in a supporting collection.
 
-The detailed catalog admits a work because a chapter discusses it, which is a
-weaker test than the criteria above. An entry that fails them is recorded in
-`data/exclusions.json` with the evidence for dropping it, and the importer
-refuses to drop anything the manuscript actively cites. Validation subtracts
-the declared exclusions from the curated source counts, so a deliberate removal
-passes while an accidental loss still fails.
+The public repository is manuscript-scoped. A record is retained only when the
+compiled manuscript actively cites its BibTeX key. Supporting surveys,
+benchmarks, position papers, and governance work can therefore remain when the
+manuscript uses them, even though they are not core L0-L4 systems. Catalog-only
+papers are not retained.
 
 ## Source reconciliation
 
-Each release reconciles three manuscript-derived sets:
-
-- active TeX citations;
-- the 618-entry detailed paper catalog;
-- the manuscript BibTeX library.
-
-Active TeX membership is authoritative for whether a work appears in the
-compiled manuscript. The detailed catalog is authoritative for the broader
-curated list and classification rationale. BibTeX supplies bibliographic
-metadata and embedded artifact links.
+Each release reconciles active TeX citations with the manuscript BibTeX
+library. The active citation set is authoritative for repository membership:
+`data/papers.json` must contain exactly one canonical record for each active
+BibTeX key and no additional paper. Historical detailed-catalog metadata can
+supply classification rationale and artifact evidence for those retained
+records, while BibTeX supplies bibliographic metadata and embedded links.
 
 The importer strips TeX comments before extracting citations. This prevents
 superseded, commented-out prose from silently re-entering the public list.
@@ -70,10 +65,9 @@ prose cites much of the work the chapter later discusses in detail. The topical
 subsection is the more informative placement, so a work is filed under a
 chapter's definition heading only when the chapter cites it nowhere else.
 
-The detailed catalog was curated against an earlier chapter structure. Its
-headings are crosswalked onto the current taxonomy during import rather than
-re-curated entry by entry. It shares the manuscript's L0-L4 numbering, so only
-the subsection structure needs the crosswalk.
+Historical source headings are crosswalked onto the current taxonomy during
+import rather than re-curated entry by entry. They share the manuscript's L0-L4
+numbering, so only the subsection structure needs the crosswalk.
 
 The importer reads each level's number from the chapter heading that declares it
 and stops when that disagrees with `data/taxonomy.json`. See the numbering
@@ -149,7 +143,7 @@ silently replace an official URL with a similarly named repository.
 1. Import or edit a canonical work record.
 2. Provide a rewrite-object rationale and source evidence.
 3. Collect artifact links the papers announce themselves.
-4. Validate identifiers, taxonomy, source counts, and manuscript coverage.
+4. Validate identifiers, taxonomy, and exact manuscript membership.
 5. Run the link audit.
 6. Regenerate README and audit reports.
 

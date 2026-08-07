@@ -5,35 +5,23 @@
     "paper",
     "project"
   ],
-  "url_count": 1131,
+  "url_count": 855,
   "status_counts": {
-    "verified": 1075,
     "blocked": 3,
-    "redirected": 41,
-    "invalid": 12
+    "invalid": 7,
+    "redirected": 36,
+    "verified": 809
   },
   "dead_urls": [
     "https://github.com/Ber666/llm-reasoners",
     "https://github.com/SMinL/SrDetectionCode",
-    "https://github.com/SimWorld-AI/SimWorld-Studio",
     "https://github.com/ValueCompass/AdAEM",
     "https://github.com/ag2ai/Live-Evo",
     "https://github.com/amazon-science/JavaMigration/tree/main/self_debug",
-    "https://github.com/sduyangmin/Skill-Master",
-    "https://github.com/tu-tuing/RuntimeSkill-Audit",
     "https://github.com/ulab-uiuc/ExpGraph",
-    "https://github.com/vicFigure/AutoAgent",
-    "https://github.com/yihaohu0118/SEAL",
-    "https://yihaohu0118.github.io/SEAL"
+    "https://github.com/vicFigure/AutoAgent"
   ],
   "results": {
-    "https://aadharna.github.io/publication/watts": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://aadharna.github.io/publication/watts",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://acdc-llm.github.io": {
       "status": "verified",
       "http_status": 200,
@@ -97,13 +85,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://agent-tars-world.github.io/-": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://agent-tars-world.github.io/-/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://agentflow.stanford.edu": {
       "status": "verified",
       "http_status": 200,
@@ -118,13 +99,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://andrewzh112.github.io/expel": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://andrewzh112.github.io/expel/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://anonymous.4open.science/r/COSE_-B5C2": {
       "status": "verified",
       "http_status": 200,
@@ -132,31 +106,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://anonymous.4open.science/r/EvoRubrics-2155": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://anonymous.4open.science/r/EvoRubrics-2155",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://anonymous.4open.science/r/FinAcumen": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://anonymous.4open.science/r/FinAcumen",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://anonymous.4open.science/r/covolve-6187": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://anonymous.4open.science/r/covolve-6187",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/1710.03748": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/1710.03748",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -171,13 +124,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2012.02096",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2107.12808": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2107.12808",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -244,24 +190,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2306.01711": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2306.01711",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2308.08998": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2308.08998",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2308.10144": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2308.10144",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -363,13 +295,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2405.15568": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2405.15568",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2406.00888": {
       "status": "verified",
       "http_status": 200,
@@ -433,20 +358,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2408.08435": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2408.08435",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2409.07429": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2409.07429",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2410.04444": {
       "status": "verified",
       "http_status": 200,
@@ -465,20 +376,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2410.06153",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2410.10762": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2410.10762",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2410.13674": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2410.13674",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -514,20 +411,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2411.02337",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2412.09243": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2412.09243",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2412.11605": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2412.11605",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -580,52 +463,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2502.01600": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.01600",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.04180": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.04180",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.05932": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.05932",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.07128": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.07128",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2502.11799": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2502.11799",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.12110": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.12110",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.12486": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.12486",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -640,20 +481,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2502.16796",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.18293": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.18293",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2502.18449": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2502.18449",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -678,13 +505,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2503.09516": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2503.09516",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2503.14481": {
       "status": "verified",
       "http_status": 200,
@@ -703,13 +523,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2504.00185",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2504.03160": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2504.03160",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -734,13 +547,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2504.15257": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2504.15257",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2504.16084": {
       "status": "verified",
       "http_status": 200,
@@ -752,13 +558,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2504.21024",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2505.03161": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2505.03161",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -804,13 +603,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2505.19850": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2505.19850",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2505.20286": {
       "status": "verified",
       "http_status": 200,
@@ -836,20 +628,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2506.06698",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2506.07636": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2506.07636",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2506.09033": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2506.09033",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -909,13 +687,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2507.06466": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2507.06466",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2507.16518": {
       "status": "verified",
       "http_status": 200,
@@ -941,27 +712,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2508.00271",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2508.03341": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2508.03341",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2508.03501": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2508.03501",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2508.03864": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2508.03864",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1007,13 +757,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2508.20722": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2508.20722",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2508.21589": {
       "status": "verified",
       "http_status": 200,
@@ -1025,13 +768,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2509.02547",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2509.03771": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2509.03771",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1056,13 +792,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2509.20562": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2509.20562",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2509.21212": {
       "status": "verified",
       "http_status": 200,
@@ -1074,13 +803,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2509.23863",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2509.24193": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2509.24193",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1119,13 +841,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2509.26354": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2509.26354",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2510.02665": {
       "status": "verified",
       "http_status": 200,
@@ -1158,20 +873,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2510.06056",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2510.08240": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2510.08240",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2510.08439": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2510.08439",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1224,38 +925,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2510.23038": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2510.23038",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2510.25817": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2510.25817",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2511.01183": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2511.01183",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2511.01191": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2511.01191",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2511.02805": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2511.02805",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1287,38 +960,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2511.16043": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2511.16043",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2511.19399": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2511.19399",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2511.19413": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2511.19413",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2511.21689": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2511.21689",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2512.05464": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2512.05464",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1343,31 +988,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2512.17102": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2512.17102",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2512.18552": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2512.18552",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2601.01885": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2601.01885",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2601.02553": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2601.02553",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1441,20 +1065,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2601.21233": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2601.21233",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2601.21464": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2601.21464",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2601.21557": {
       "status": "verified",
       "http_status": 200,
@@ -1466,20 +1076,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2601.22436",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2602.01848": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.01848",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2602.01869": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.01869",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1532,13 +1128,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2602.08234": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.08234",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2602.10233": {
       "status": "verified",
       "http_status": 200,
@@ -1560,13 +1149,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2602.12275": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.12275",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2602.15384": {
       "status": "verified",
       "http_status": 200,
@@ -1585,20 +1167,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2602.17497",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2602.17913": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.17913",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2602.21320": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2602.21320",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1637,31 +1205,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2603.03290": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.03290",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2603.03827": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2603.03827",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.04549": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.04549",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.06333": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.06333",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1693,38 +1240,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2603.11768": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.11768",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.11863": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.11863",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.12056": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.12056",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2603.14799": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2603.14799",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.15255": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.15255",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1763,13 +1282,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2603.18743": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.18743",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2603.19453": {
       "status": "verified",
       "http_status": 200,
@@ -1798,24 +1310,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2603.25158": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.25158",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2603.28052": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2603.28052",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2603.28386": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2603.28386",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1851,20 +1349,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.01480",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.01560": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.01560",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.01658": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.01658",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1938,45 +1422,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.05142": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.05142",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.05149": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.05149",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.05514": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.05514",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.05939": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.05939",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.06566": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.06566",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.06996": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.06996",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -1998,13 +1447,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.07791",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.07798": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.07798",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2057,20 +1499,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.09813": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.09813",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.09815": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.09815",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.10029": {
       "status": "verified",
       "http_status": 200,
@@ -2082,13 +1510,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.10096",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.10674": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.10674",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2180,13 +1601,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.13828",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.14048": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.14048",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2302,20 +1716,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.16968": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.16968",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.17010": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.17010",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.17091": {
       "status": "verified",
       "http_status": 200,
@@ -2351,13 +1751,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.17562": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.17562",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.17658": {
       "status": "verified",
       "http_status": 200,
@@ -2386,13 +1779,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.18292": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.18292",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.18639": {
       "status": "verified",
       "http_status": 200,
@@ -2400,24 +1786,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.19064": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.19064",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.19572": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.19572",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.19771": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.19771",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2439,13 +1811,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.20051",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.20209": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.20209",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2498,20 +1863,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.23626": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.23626",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.24020": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.24020",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.24819": {
       "status": "verified",
       "http_status": 200,
@@ -2530,13 +1881,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.25850",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2604.26703": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.26703",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2582,24 +1926,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2604.27644": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2604.27644",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2604.27660": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2604.27660",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.00974": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.00974",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2624,48 +1954,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.01899": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.01899",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.02396": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.02396",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.03871": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.03871",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.04874": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.04874",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.05248": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.05248",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.05546": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.05546",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.05702": {
       "status": "verified",
       "http_status": 200,
@@ -2673,24 +1961,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.06130": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.06130",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.06614": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.06614",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.06660": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.06660",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2715,20 +1989,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.07501": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.07501",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.07977": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.07977",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.08327": {
       "status": "verified",
       "http_status": 200,
@@ -2747,20 +2007,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.08399",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.08427": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.08427",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.08693": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.08693",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2785,13 +2031,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.09018": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.09018",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.09188": {
       "status": "verified",
       "http_status": 200,
@@ -2813,13 +2052,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.09423": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.09423",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.09539": {
       "status": "verified",
       "http_status": 200,
@@ -2838,13 +2070,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.09922",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.09946": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.09946",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2873,13 +2098,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.10064",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.10067": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.10067",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -2918,20 +2136,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.10813": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.10813",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.10870": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.10870",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.11117": {
       "status": "verified",
       "http_status": 200,
@@ -2953,20 +2157,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.11882": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.11882",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.11891": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.11891",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.12061": {
       "status": "verified",
       "http_status": 200,
@@ -2978,13 +2168,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.12978",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.13486": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.13486",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3009,13 +2192,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.14392": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.14392",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.14892": {
       "status": "verified",
       "http_status": 200,
@@ -3027,13 +2203,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.15113",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.15412": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.15412",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3107,13 +2276,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.16962": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.16962",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.17101": {
       "status": "verified",
       "http_status": 200,
@@ -3184,13 +2346,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.18930": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.18930",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.19529": {
       "status": "verified",
       "http_status": 200,
@@ -3219,13 +2374,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.20616": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.20616",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.20914": {
       "status": "verified",
       "http_status": 200,
@@ -3251,13 +2399,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.21931",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.21951": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.21951",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3324,24 +2465,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.22905": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.22905",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.23019": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.23019",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.23435": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.23435",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3373,52 +2500,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.24426": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.24426",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.24659": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.24659",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.24693": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.24693",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.24794": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.24794",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.25297": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.25297",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.25389": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.25389",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.25430": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.25430",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3457,20 +2542,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.27130": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.27130",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.27276": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.27276",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.27366": {
       "status": "verified",
       "http_status": 200,
@@ -3482,13 +2553,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.27381",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.27762": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.27762",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3524,13 +2588,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.28433",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.28882": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.28882",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3604,38 +2661,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2605.30883": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.30883",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.31140": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.31140",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2605.31174": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2605.31174",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.31378": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.31378",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2605.31433": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2605.31433",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3657,20 +2686,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.01139",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.01166": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.01166",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.01279": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.01279",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3793,13 +2808,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.03570": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.03570",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.03678": {
       "status": "verified",
       "http_status": 200,
@@ -3832,20 +2840,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.04465",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.04507": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.04507",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.04536": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.04536",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3884,20 +2878,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.05523": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.05523",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.05743": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.05743",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.05844": {
       "status": "verified",
       "http_status": 200,
@@ -3909,13 +2889,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.06079",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.06114": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.06114",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -3982,20 +2955,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.07603": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.07603",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.08092": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.08092",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.08106": {
       "status": "verified",
       "http_status": 200,
@@ -4010,38 +2969,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.08414": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.08414",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.08539": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.08539",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.08755": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.08755",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.08800": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.08800",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.09052": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.09052",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4087,31 +3018,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.10927": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.10927",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.11182": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.11182",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.11671": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.11671",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.11719": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.11719",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4178,13 +3088,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.16497": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.16497",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.16523": {
       "status": "verified",
       "http_status": 200,
@@ -4196,13 +3099,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.16533",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.16682": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.16682",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4238,13 +3134,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.18235",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.19047": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.19047",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4297,13 +3186,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.21262": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.21262",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.21339": {
       "status": "verified",
       "http_status": 200,
@@ -4322,13 +3204,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.22955",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.23038": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.23038",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4371,20 +3246,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.26294",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.26300": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.26300",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2606.26578": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.26578",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4458,13 +3319,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.28939": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.28939",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.28971": {
       "status": "verified",
       "http_status": 200,
@@ -4535,24 +3389,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://arxiv.org/abs/2606.31537": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2606.31537",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://arxiv.org/abs/2606.31763": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2606.31763",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2607.00016": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2607.00016",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4588,13 +3428,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://arxiv.org/abs/2607.01874",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://arxiv.org/abs/2607.05297": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://arxiv.org/abs/2607.05297",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4640,13 +3473,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://bagh2178.github.io/AllDayNav": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://bagh2178.github.io/AllDayNav/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://benchen4395.github.io": {
       "status": "verified",
       "http_status": 200,
@@ -4672,13 +3498,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://deepmind.google/blog/generally-capable-agents-emerge-from-open-ended-play": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://deepmind.google/blog/generally-capable-agents-emerge-from-open-ended-play/",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4801,13 +3620,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://emrecanacikgoz.github.io/Tool-R0": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://emrecanacikgoz.github.io/Tool-R0/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://ephemeral182.github.io/GenEvolve": {
       "status": "verified",
       "http_status": 200,
@@ -4819,13 +3631,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://eureka-research.github.io",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://fanghainannn.github.io/QiMeng-NeuComBack-Web": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://fanghainannn.github.io/QiMeng-NeuComBack-Web/",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4847,13 +3652,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/A-EVO-Lab/a-evolve/tree/release/harness-evolution",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/AIFrontierLab/TorchUMM": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/AIFrontierLab/TorchUMM",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4899,13 +3697,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/AlphaLab-USTC/Skill1": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/AlphaLab-USTC/Skill1",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/AlwaysOu/SERL": {
       "status": "verified",
       "http_status": 200,
@@ -4924,13 +3715,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Arvid-pku/Godel_Agent",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/Baki-0501/llm-self-play-liquidhaskell": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Baki-0501/llm-self-play-liquidhaskell",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -4959,13 +3743,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/BoxueYang/EvoStreaming",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/CSU-JPG/DataEvolver": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/CSU-JPG/DataEvolver",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5060,13 +3837,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/EmanueleLM/AnchoredBipolicySelf-Play": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/EmanueleLM/AnchoredBipolicySelf-Play",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/EtaYang10th/DARE": {
       "status": "verified",
       "http_status": 200,
@@ -5078,20 +3848,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/FFishy-git/INFUSER": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/FFishy-git/INFUSER",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/FangHainannn/QiMeng-NeuComBack": {
-      "status": "redirected",
-      "http_status": 200,
-      "final_url": "https://github.com/QiMeng-IPRC/QiMeng-NeuComBack",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5109,45 +3865,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/FoundationAgents/AFlow": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/FoundationAgents/AFlow",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/FreedomIntelligence/Tiermem": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/FreedomIntelligence/Tiermem",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/GAIR-NLP/DeepResearcher": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/GAIR-NLP/DeepResearcher",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/GAIR-NLP/daVinci-kernel": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/GAIR-NLP/daVinci-kernel",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/Gen-Verse/CURE": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Gen-Verse/CURE",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/GuilinDev/Adaptive_Memory_Admission_Control_LLM_Agents": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/GuilinDev/Adaptive_Memory_Admission_Control_LLM_Agents",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5162,13 +3883,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/HU-xiaobai/xMemory",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/Haoyue-Yang/OmniDiagram": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Haoyue-Yang/OmniDiagram",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5193,13 +3907,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/Human-Agent-Society/CORAL": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Human-Agent-Society/CORAL",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/IAAR-Shanghai/ICSFSurvey": {
       "status": "verified",
       "http_status": 200,
@@ -5218,20 +3925,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/JIA-Lab-research/SearchGym",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/JakeAGonzales/risk-sensitive-preference-games": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/JakeAGonzales/risk-sensitive-preference-games",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/JiajiaLi-1130/PIA": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/JiajiaLi-1130/PIA",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5256,20 +3949,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/LLM-VLM-GSL/AriadneMem": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/LLM-VLM-GSL/AriadneMem",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/LeanderDiazBone/discover": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/LeanderDiazBone/discover",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/LeapLabTHU/Absolute-Zero-Reasoner": {
       "status": "verified",
       "http_status": 200,
@@ -5277,24 +3956,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/LeapLabTHU/ExpeL": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/LeapLabTHU/ExpeL",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/Linear95/SPAG": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Linear95/SPAG",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/LukeBailey181/sgs": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/LukeBailey181/sgs",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5326,13 +3991,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/Memento-Teams/Memento-Skills": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Memento-Teams/Memento-Skills",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/Mercury7353/EvoChamber": {
       "status": "verified",
       "http_status": 200,
@@ -5354,20 +4012,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/Miracle1207/Skill-Pro": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Miracle1207/Skill-Pro",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/MythosAd/ANCORA": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/MythosAd/ANCORA",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/NJU-LINK/MMG2Skill": {
       "status": "verified",
       "http_status": 200,
@@ -5379,27 +4023,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/NJUNLP/trans0",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/NVlabs/ToolOrchestra": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/NVlabs/ToolOrchestra",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/NeurIPS-2026-code/Reflective-Experience-for-Memory-Search": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/NeurIPS-2026-code/Reflective-Experience-for-Memory-Search",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/NineAbyss/CP-Agent": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/NineAbyss/CP-Agent",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5445,13 +4068,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/OpenRaiser/NanoResearch": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/OpenRaiser/NanoResearch",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/OpenRaiser/ProDa": {
       "status": "verified",
       "http_status": 200,
@@ -5480,31 +4096,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/PeterGriffinJin/Search-R1": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/PeterGriffinJin/Search-R1",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/Princeton-AI2-Lab/EEVEE": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Princeton-AI2-Lab/EEVEE",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/QuantLLM/QuantEvolver": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/QuantLLM/QuantEvolver",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/Qwen-Applications/Trace2Skill": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Qwen-Applications/Trace2Skill",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5519,13 +4114,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Rainier-rq1/SEIF",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/RegionCh/SPRec": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/RegionCh/SPRec",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5578,31 +4166,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/SalesforceAIResearch/xRouter": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/SalesforceAIResearch/xRouter",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/Self-Evo/SelfEvo": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Self-Evo/SelfEvo",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/ShaoShuai0605/Misevolution": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ShaoShuai0605/Misevolution",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/ShengranHu/ADAS": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ShengranHu/ADAS",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5612,13 +4179,6 @@
       "final_url": "https://github.com/ShuimuChen-hyq/Reflect-R1",
       "checked_at": "2026-08-06",
       "error": null
-    },
-    "https://github.com/SimWorld-AI/SimWorld-Studio": {
-      "status": "invalid",
-      "http_status": 404,
-      "final_url": "https://github.com/SimWorld-AI/SimWorld-Studio",
-      "checked_at": "2026-08-06",
-      "error": "HTTP Error 404: Not Found"
     },
     "https://github.com/Skylanding/ARISE": {
       "status": "verified",
@@ -5634,13 +4194,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/SubramanyamSahoo/SAHOO-Safeguarded-Alignment-for-High-Order-Optimization-Objectives-in-Recursive-Self-Improvement": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/SubramanyamSahoo/SAHOO-Safeguarded-Alignment-for-High-Order-Optimization-Objectives-in-Recursive-Self-Improvement",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/SunzeY/SEAgent": {
       "status": "verified",
       "http_status": 200,
@@ -5652,13 +4205,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/T1aNS1R/Skills-Coach",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/THUDM/SWE-Dev": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/THUDM/SWE-Dev",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5680,13 +4226,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/Tencent/SelfEvolvingAgent",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/TheSolkatt/SRTJ": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/TheSolkatt/SRTJ",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5746,31 +4285,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/WujiangXu/AgenticMemory": {
-      "status": "redirected",
-      "http_status": 200,
-      "final_url": "https://github.com/WujiangXu/A-mem",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/XSkill-Agent/XSkill": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/XSkill-Agent/XSkill",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/YangLing0818/buffer-of-thought-llm": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/YangLing0818/buffer-of-thought-llm",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/YinBo0927/FATE": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/YinBo0927/FATE",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5788,31 +4306,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/Yunhao-Feng/BraveGuard": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/Yunhao-Feng/BraveGuard",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/ZJU-LLM-Safety/TRACE": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ZJU-LLM-Safety/TRACE",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/ZJU-REAL/SpatialEvo": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/ZJU-REAL/SpatialEvo",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/ZethWang/CreativeBench": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ZethWang/CreativeBench",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5844,20 +4341,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/aidless/mm-epc": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/aidless/mm-epc",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/aiming-lab/Agent0": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/aiming-lab/Agent0",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/aiming-lab/ClawArena": {
       "status": "verified",
       "http_status": 200,
@@ -5879,13 +4362,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/aiming-lab/SkillRL": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/aiming-lab/SkillRL",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/aliyun/qwen-dianjin": {
       "status": "verified",
       "http_status": 200,
@@ -5899,13 +4375,6 @@
       "final_url": "https://github.com/amazon-science/JavaMigration/tree/main/self_debug",
       "checked_at": "2026-08-06",
       "error": "HTTP Error 404: Not Found"
-    },
-    "https://github.com/amazon-science/SAGE": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/amazon-science/SAGE",
-      "checked_at": "2026-08-06",
-      "error": null
     },
     "https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet": {
       "status": "verified",
@@ -5956,24 +4425,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/apple/ml-loop": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/apple/ml-loop",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/areal-project/AReaL": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/areal-project/AReaL",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/audreyccheng/adrd": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/audreyccheng/adrd",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -5988,13 +4443,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/benchen4395/BianQue_Assistant",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/bingreeky/MaAS": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/bingreeky/MaAS",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6047,13 +4495,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/danruili/Cardiverse": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/danruili/Cardiverse",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/datajuicer/data-juicer/tree/MindGYM": {
       "status": "verified",
       "http_status": 200,
@@ -6072,13 +4513,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/echo0715/OpenComputer",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/emrecanacikgoz/Tool-R0": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/emrecanacikgoz/Tool-R0",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6121,13 +4555,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/facebookresearch/mbr-exec",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/facebookresearch/swe-rl": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/facebookresearch/swe-rl",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6180,20 +4607,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/hexo-ai/sia": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/hexo-ai/sia",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/hiteacherIamhumble/Free-Geometry": {
-      "status": "redirected",
-      "http_status": 200,
-      "final_url": "https://github.com/yuhangdai427/Free-Geometry",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/hkgai-official/Moss": {
       "status": "verified",
       "http_status": 200,
@@ -6212,13 +4625,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/hongruijia/DPE",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/htzhang-code/UE-DPO": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/htzhang-code/UE-DPO",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6250,20 +4656,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/icip-cas/MemSearcher": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/icip-cas/MemSearcher",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/inclusionAI/AWorld-RL/tree/main/RODS": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/inclusionAI/AWorld-RL/tree/main/RODS",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/isbogdanov/forge-protocol": {
       "status": "verified",
       "http_status": 200,
@@ -6282,13 +4674,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/jennyzzt/dgm",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/jennyzzt/omni": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/jennyzzt/omni",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6390,13 +4775,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/lee3296/SPEAR": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/lee3296/SPEAR",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/liugangcode/deepevolve": {
       "status": "verified",
       "http_status": 200,
@@ -6425,24 +4803,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/ltlhuuu/PSEC": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ltlhuuu/PSEC",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/lucidrains/self-rewarding-lm-pytorch": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/lucidrains/self-rewarding-lm-pytorch",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/luo-junyu/Awesome-Data-Efficient-LLM": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/luo-junyu/Awesome-Data-Efficient-LLM",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6453,31 +4817,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/lxqpku/EPO": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/lxqpku/EPO",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/ma-compbio-lab/SkillFoundry": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/ma-compbio-lab/SkillFoundry",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/mashin-live/governance-proofs": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/mashin-live/governance-proofs",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/maxencefaldor/omni-epic": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/maxencefaldor/omni-epic",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6537,13 +4880,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/microsoft/rStar": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/microsoft/rStar",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/microsoft/stop": {
       "status": "verified",
       "http_status": 200,
@@ -6569,13 +4905,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/multimodal-art-projection/TACO",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/nemori-ai/nemori": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/nemori-ai/nemori",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6656,13 +4985,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/ritaranx/AceSearcher": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ritaranx/AceSearcher",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/rlresearch/dr-tulu": {
       "status": "verified",
       "http_status": 200,
@@ -6684,20 +5006,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/sail-sg/FlowReasoner": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/sail-sg/FlowReasoner",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/salesforce-misc/Libra": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/salesforce-misc/Libra",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/sanae-ai/CosPlay": {
       "status": "verified",
       "http_status": 200,
@@ -6711,20 +5019,6 @@
       "final_url": "https://github.com/sbhakim/anneal-agents",
       "checked_at": "2026-08-06",
       "error": null
-    },
-    "https://github.com/scaling-group/eve": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/scaling-group/eve",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/sduyangmin/Skill-Master": {
-      "status": "invalid",
-      "http_status": 404,
-      "final_url": "https://github.com/sduyangmin/Skill-Master",
-      "checked_at": "2026-08-06",
-      "error": "HTTP Error 404: Not Found"
     },
     "https://github.com/selfimproving-agent/awesome-Self-Improving-Agents": {
       "status": "verified",
@@ -6740,24 +5034,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/sentient-agi/ROMA": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/sentient-agi/ROMA",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/sethkarten/continual-harness": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/sethkarten/continual-harness",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/shen8424/OmniVL-Guard-Pro": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/shen8424/OmniVL-Guard-Pro",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6796,31 +5076,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/stellalisy/EvoLM": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/stellalisy/EvoLM",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/taowangcheng/SePO": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/taowangcheng/SePO",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/thu-coai/SPaR": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/thu-coai/SPaR",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/thu-nmrc/STC-for-BWT-FamilyText-Compression": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/thu-nmrc/STC-for-BWT-FamilyText-Compression",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6842,13 +5101,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/thunlp/SE-Bench",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/tianyi-lab/DisCL": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/tianyi-lab/DisCL",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -6880,13 +5132,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/tu-tuing/RuntimeSkill-Audit": {
-      "status": "invalid",
-      "http_status": 404,
-      "final_url": "https://github.com/tu-tuing/RuntimeSkill-Audit",
-      "checked_at": "2026-08-06",
-      "error": "HTTP Error 404: Not Found"
-    },
     "https://github.com/uber-research/poet": {
       "status": "verified",
       "http_status": 200,
@@ -6907,20 +5152,6 @@
       "final_url": "https://github.com/ulab-uiuc/ExpGraph",
       "checked_at": "2026-08-06",
       "error": "HTTP Error 404: Not Found"
-    },
-    "https://github.com/ulab-uiuc/GraphPlanner": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ulab-uiuc/GraphPlanner",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/ulab-uiuc/Router-R1": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/ulab-uiuc/Router-R1",
-      "checked_at": "2026-08-06",
-      "error": null
     },
     "https://github.com/ulab-uiuc/Thought-Retriever": {
       "status": "verified",
@@ -6992,13 +5223,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/wjn1996/HeavySkill": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/wjn1996/HeavySkill",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/wuaodi/SpaceMind": {
       "status": "verified",
       "http_status": 200,
@@ -7013,24 +5237,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/x-zheng16/JustAsk": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/x-zheng16/JustAsk",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/xiwenc1/s-sppo": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/xiwenc1/s-sppo",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/y1y5/AgeMem": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/y1y5/AgeMem",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7040,13 +5250,6 @@
       "final_url": "https://github.com/yf-he/aria",
       "checked_at": "2026-08-06",
       "error": null
-    },
-    "https://github.com/yihaohu0118/SEAL": {
-      "status": "invalid",
-      "http_status": 404,
-      "final_url": "https://github.com/yihaohu0118/SEAL",
-      "checked_at": "2026-08-06",
-      "error": "HTTP Error 404: Not Found"
     },
     "https://github.com/yingqi-z20/Agent-libOS": {
       "status": "verified",
@@ -7104,24 +5307,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/zihangtian/ARCO": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/zihangtian/ARCO",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://github.com/zjunlp/SkillX": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://github.com/zjunlp/SkillX",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/zorazrw/agent-workflow-memory": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/zorazrw/agent-workflow-memory",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7139,20 +5328,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://github.com/zzwjames/skill_augmented_agent": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/zzwjames/skill_augmented_agent",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://github.com/zzy1127/ANDES": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://github.com/zzy1127/ANDES",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://guideddecoding.github.io": {
       "status": "verified",
       "http_status": 200,
@@ -7164,20 +5339,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://huangshiqi128.github.io/EvoVid.io/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://huggingface.co/Multi-preference-Optimization": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://huggingface.co/Multi-preference-Optimization",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://huggingface.co/papers/2607.05297": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://huggingface.co/papers/2607.05297",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7216,13 +5377,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://k1xe.github.io/skill-sd": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://k1xe.github.io/skill-sd/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://lab.einsia.ai/frontier-eng": {
       "status": "verified",
       "http_status": 200,
@@ -7248,20 +5402,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://live-swe-agent.github.io",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://llm-vlm-gsl.github.io/AriadneMem.github.io": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://llm-vlm-gsl.github.io/AriadneMem.github.io/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://ltlhuuu.github.io/PSEC": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://ltlhuuu.github.io/PSEC/",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7430,13 +5570,6 @@
       "status": "redirected",
       "http_status": 200,
       "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DTTsecyqrW3",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://openreview.net/forum?id=WINb7mJNUZ": {
-      "status": "redirected",
-      "http_status": 200,
-      "final_url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DWINb7mJNUZ",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7629,13 +5762,6 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://recursive-workshop.github.io/papers.html": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://recursive-workshop.github.io/papers.html",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://research.google/blog/paired-a-new-multi-agent-approach-for-adversarial-environment-generation": {
       "status": "verified",
       "http_status": 200,
@@ -7682,20 +5808,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://selfimproving-agent.github.io",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://shengranhu.com/ADAS": {
-      "status": "redirected",
-      "http_status": 200,
-      "final_url": "https://www.shengranhu.com/ADAS/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://sites.google.com/view/multi-agent-competition": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://sites.google.com/view/multi-agent-competition",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7825,31 +5937,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://www.jennyzhangzt.com/omni": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://www.jennyzhangzt.com/omni",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://www.jennyzhangzt.com/omni-epic": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://www.jennyzhangzt.com/omni-epic",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://www.microsoft.com/en-us/research/publication/agentic-evolution-from-self-improving-agents-to-co-evolving-human-ai-systems": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://www.microsoft.com/en-us/research/publication/agentic-evolution-from-self-improving-agents-to-co-evolving-human-ai-systems/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://www.microsoft.com/en-us/research/publication/ampo-active-multi-preference-optimization": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://www.microsoft.com/en-us/research/publication/ampo-active-multi-preference-optimization/",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7881,31 +5972,10 @@
       "checked_at": "2026-08-06",
       "error": null
     },
-    "https://xskill-agent.github.io/xskill_page": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://xskill-agent.github.io/xskill_page/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
     "https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf": {
       "status": "verified",
       "http_status": 200,
       "final_url": "https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://yihaohu0118.github.io/SEAL": {
-      "status": "invalid",
-      "http_status": 404,
-      "final_url": "https://yihaohu0118.github.io/SEAL",
-      "checked_at": "2026-08-06",
-      "error": "HTTP Error 404: Not Found"
-    },
-    "https://yinbo0927.github.io/FATE": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://yinbo0927.github.io/FATE/",
       "checked_at": "2026-08-06",
       "error": null
     },
@@ -7920,13 +5990,6 @@
       "status": "verified",
       "http_status": 200,
       "final_url": "https://yiqunchen.github.io/causal-agent/",
-      "checked_at": "2026-08-06",
-      "error": null
-    },
-    "https://zethwang.github.io/creativebench.github.io": {
-      "status": "verified",
-      "http_status": 200,
-      "final_url": "https://zethwang.github.io/creativebench.github.io/",
       "checked_at": "2026-08-06",
       "error": null
     },

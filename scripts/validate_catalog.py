@@ -14,30 +14,12 @@ from typing import Any
 from urllib.parse import urlsplit
 
 
-# What the detailed catalog itself contains, keyed by the manuscript's L0-L4
-# taxonomy. Entries declared in data/exclusions.json are subtracted before the
-# comparison, so a deliberate removal passes while an accidental loss does not.
-EXPECTED_DETAILED_COUNTS = {
-    "surveys": 15,
-    "L0": 14,
-    "L1": 182,
-    "L2": 262,
-    "L3": 27,
-    "L4": 50,
-    "cross_level": 45,
-    "open_problems": 23,
-}
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, default=Path("data/papers.json"))
     parser.add_argument("--taxonomy", type=Path, default=Path("data/taxonomy.json"))
     parser.add_argument(
         "--manifest", type=Path, default=Path("data/manuscript_manifest.json")
-    )
-    parser.add_argument(
-        "--exclusions", type=Path, default=Path("data/exclusions.json")
     )
     parser.add_argument("--report", type=Path)
     parser.add_argument(
@@ -97,14 +79,6 @@ def main() -> None:
     # A work can be cited under several BibTeX keys when the bibliography holds
     # duplicate entries for it, so coverage is checked per cited key.
     cited_index: dict[str, dict[str, Any]] = {}
-    detailed_counts: Counter[str] = Counter()
-    excluded_counts: Counter[str] = Counter()
-    if args.exclusions.exists():
-        excluded_counts.update(
-            record["collection"]
-            for record in load_json(args.exclusions).get("works", {}).values()
-            if record.get("collection")
-        )
 
     for work in works:
         work_id = work.get("id")
@@ -139,9 +113,6 @@ def main() -> None:
             "supporting",
         }:
             errors.append(f"{work_id}: invalid classification status")
-        if work["catalog_source"]["file"] == "references/paper_detailed.md":
-            detailed_counts[work["catalog_source"]["collection"]] += 1
-
         urls: set[tuple[str, str]] = set()
         for artifact in work.get("artifacts", []):
             kind = artifact.get("kind")
@@ -173,13 +144,14 @@ def main() -> None:
 
         manuscript = work.get("manuscript", {})
         bib_key = manuscript.get("bib_key")
+        cited_keys = manuscript.get("cited_bib_keys") or []
         if bib_key:
             if bib_key in bib_index:
                 errors.append(
                     f"BibTeX key {bib_key} maps to both {bib_index[bib_key]['id']} and {work_id}"
                 )
             bib_index[bib_key] = work
-        for key in manuscript.get("cited_bib_keys") or []:
+        for key in cited_keys:
             if cited_index.get(key, work) is not work:
                 errors.append(
                     f"BibTeX key {key} maps to both {cited_index[key]['id']} and {work_id}"
@@ -187,6 +159,15 @@ def main() -> None:
             cited_index[key] = work
         if manuscript.get("active") and not bib_key:
             errors.append(f"{work_id}: active work lacks a BibTeX key")
+        if manuscript.get("active") and cited_keys != [bib_key]:
+            errors.append(
+                f"{work_id}: active work must map one-to-one to its primary "
+                f"BibTeX key ({bib_key!r}), found {cited_keys!r}"
+            )
+        if not manuscript.get("active"):
+            errors.append(
+                f"{work_id}: catalog contains a work not used by the active manuscript"
+            )
         if manuscript.get("representative") and not manuscript.get("active"):
             errors.append(f"{work_id}: representative work is not active")
 
@@ -206,16 +187,6 @@ def main() -> None:
         if title_key and len(work_ids) > 1:
             warnings.append(
                 f"Possible duplicate normalized title: {', '.join(work_ids)}"
-            )
-
-    for collection, expected in EXPECTED_DETAILED_COUNTS.items():
-        actual = detailed_counts[collection]
-        allowed = expected - excluded_counts[collection]
-        if actual != allowed:
-            errors.append(
-                f"Detailed catalog count mismatch for {collection}: {actual} != "
-                f"{allowed} ({expected} curated less "
-                f"{excluded_counts[collection]} excluded)"
             )
 
     active_keys = set(manifest["active_bib_keys"])
@@ -252,6 +223,11 @@ def main() -> None:
     if unexpected_representatives:
         errors.append(
             f"Unexpected taxonomy representatives: {unexpected_representatives}"
+        )
+    if len(works) != len(active_keys):
+        errors.append(
+            f"Catalog work count must equal active manuscript key count: "
+            f"{len(works)} != {len(active_keys)}"
         )
 
     status_counts = Counter(work["classification_status"] for work in works)

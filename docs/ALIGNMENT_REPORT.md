@@ -7,23 +7,20 @@ Generated: 2026-08-07
 - Catalog validation: **PASS**
 - Active manuscript references: **549/549**
 - Taxonomy-figure representatives: **137/137**
-- Detailed catalog entries retained: **612/618** (6 entries excluded)
+- Repository paper records: **549**
 - Unresolved active BibTeX keys: **0**
 - Active keys missing from the catalog: **0**
 
-The repository therefore covers every active citation in the compiled manuscript, including references that were cited in TeX but absent from the 618-entry detailed catalog.
+The repository contains exactly the papers used by the compiled manuscript: one canonical record for each active BibTeX key and no catalog-only papers.
 
-## Source-set reconciliation
+## Membership policy
 
-- The detailed catalog contributes 618 curated entries.
-- 6 curated entries were excluded for failing the inclusion criteria: a benchmark, position, or theory paper that implements no self-evolving system, or a subject outside an agent changing its own output, model, scaffold, updater, or criterion. Each exclusion is recorded with its evidence in `data/exclusions.json`.
-- 95 active manuscript references were added because they were absent from that detailed catalog.
-- 3 catalog-only works were added under the same taxonomy, including post-cutoff papers and one recovered identity split.
-- 8 curated records had metadata reconciled against the manuscript, covering identifier collisions and preprint identities that a published record has since superseded.
-- 7 published records merged into the curated preprint entry through a declared identity alias, so the manuscript's published citation and the catalog's preprint entry remain one work.
-- 14 stale detailed-catalog placements were reconciled against the active chapter text and taxonomy figure.
-- 1 work is cited under a BibTeX key that differs from the key matched by the detailed catalog; each is stored once under its canonical identifier, with 1 additional key folded in during import.
-- 4 detailed-catalog works have no matching entry in the manuscript BibTeX library and remain cataloged from their verified paper records: `arxiv:2511.02805`, `arxiv:2512.17102`, `arxiv:2601.21464`, `arxiv:2603.28386`.
+- `data/manuscript_manifest.json` declares 549 active BibTeX keys.
+- `data/papers.json` stores 549 active manuscript records.
+- Validation rejects any record whose `manuscript.active` flag is false.
+- A paper must first become an active manuscript citation before it can enter the repository catalog.
+- 4 source placements were reconciled against the active chapter text and taxonomy figure.
+- 1 work is stored under a canonical identifier while preserving a legacy BibTeX alias.
 
 ## Taxonomy lock
 
@@ -35,25 +32,13 @@ The machine-readable hierarchy mirrors the manuscript chapter structure:
 - L3 (Improver-Level Self-Evolution): definition and the improver boundary, self-referential agents, learning better improvement strategies, reliability and the fixed-criterion limit.
 - L4 (Criterion-Level Self-Evolution): definition and the criterion boundary, evolving evaluation mechanisms, evolving evaluation tasks and objectives, reliability with the criterion inside the loop.
 
-The detailed catalog was curated under the manuscript's earlier L0-L4 numbering and its earlier subsection structure; the importer crosswalks those headings onto the taxonomy above rather than re-curating each entry.
-
 Primary level follows the deepest demonstrated active rewrite. A citation in another level's discussion does not silently change its primary classification; such appearances are retained as manuscript memberships.
 
 ## Reconciled placements
 
-- Agent0: Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning — `L4` → `L1` (`facing`)
 - CoEvolve: CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution — `L2` → `L1` (`mixed`)
-- DEI: Diversity in Evolutionary Inference for Quality-Diversity Search — `L3` → `L2` (`strict`)
-- DataEvolver (T2I): Self-Evolving Multi-Agent Data Construction for Text-Rich Image Generation — `L4` → `L2` (`facing`)
 - DataEvolver: Automatic Data Preparation for Large Language Models through Multi-Level Self-Evolving — `L1` → `L2` (`strict`)
-- Eureka（Feature Engineering）: Eureka: Intelligent Feature Engineering for Enterprise AI Cloud Resource Demand Prediction — `L3` → `L2` (`boundary`)
 - EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning — `L2` → `L3` (`mixed`)
-- Evolutionary Ensemble of Agents: Evolutionary Ensemble of Agents — `L3` → `L2` (`boundary`)
-- Free Geometry: Refining 3D Reconstruction from Longer Versions of Itself — `L0` → `L1` (`boundary`)
-- MetaEvo: A Meta-Optimization Framework for Experience-Driven Agent Evolution — `L3` → `L1` (`boundary`)
-- MileStone: MileStone: A Multi-Objective Compiler Phase Ordering Framework for Graph-based IR-Level Optimization — `L3` → `L2` (`mixed`)
-- ReGuide: From Test-Time Guidance to Self-Improving Diffusion Policies — `L0` → `L1` (`boundary`)
-- STC: STC: Reversible Digit-Context Decomposition for BWT-Family Text Compression — `L3` → `L2` (`boundary`)
 - SePO: SePO: Self-Evolving Prompt Agent for System Prompt Optimization — `L2` → `L3` (`mixed`)
 
 A `mixed` record preserves every update path the manuscript attributes to a system instead of silently choosing one and discarding the others.
@@ -78,7 +63,7 @@ A `mixed` record preserves every update path the manuscript attributes to a syst
 
 ## Reproducibility
 
-The manifest stores SHA-256 hashes for the source bibliography and every TeX section. Re-running the importer after a manuscript edit makes taxonomy or citation drift visible.
+The manifest stores SHA-256 hashes for the source bibliography and every TeX section. Validation also requires the catalog to match the active citation set exactly, making additions, removals, taxonomy changes, or citation drift visible.
 
 Validation command:
 

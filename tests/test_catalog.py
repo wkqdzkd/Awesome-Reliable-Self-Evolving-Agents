@@ -5,7 +5,6 @@ import json
 import re
 import tempfile
 import unittest
-from collections import Counter
 from pathlib import Path
 
 
@@ -57,8 +56,8 @@ class ProjectMetaTests(unittest.TestCase):
         meta = GENERATE_DOCS.load_project_meta(ROOT / "data" / "project_meta.json")
         self.assertEqual(
             meta["text"],
-            "Contributions are welcome: add a missing work in a PR using "
-            "``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.",
+            "Contributions are welcome: correct a manuscript-used record, or "
+            "add the paper to the manuscript before proposing it here.",
         )
         self.assertEqual(
             meta["contact_email"],
@@ -151,8 +150,8 @@ class ReadmeHeaderTests(unittest.TestCase):
         self.assertNotIn('<a id="citation"></a>', header)
         self.assertNotIn("📚 Citation", header)
         self.assertIn(
-            "Contributions are welcome: add a missing work in a PR using "
-            "``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.",
+            "Contributions are welcome: correct a manuscript-used record, or "
+            "add the paper to the manuscript before proposing it here.",
             header,
         )
         self.assertIn(
@@ -841,11 +840,11 @@ class NavigationTests(unittest.TestCase):
 
     def test_level_badge_colors_and_labels(self) -> None:
         expectations = {
-            "L0": ("9AA5B1", "L0-Output", "l0-output-level-self-evolution"),
-            "L1": ("4C78A8", "L1-Model", "l1-model-level-self-evolution"),
-            "L2": ("2E8B57", "L2-Scaffold", "l2-scaffold-level-self-evolution"),
-            "L3": ("E8842C", "L3-Improver", "l3-improver-level-self-evolution"),
-            "L4": ("C0392B", "L4-Criterion", "l4-criterion-level-self-evolution"),
+            "L0": ("57B36F", "L0-Output", "l0-output-level-self-evolution"),
+            "L1": ("00A8BD", "L1-Model", "l1-model-level-self-evolution"),
+            "L2": ("2496E8", "L2-Scaffold", "l2-scaffold-level-self-evolution"),
+            "L3": ("7782DA", "L3-Improver", "l3-improver-level-self-evolution"),
+            "L4": ("C65D97", "L4-Criterion", "l4-criterion-level-self-evolution"),
         }
         for level in self.taxonomy["levels"]:
             color, label, anchor = expectations[level["id"]]
@@ -862,10 +861,10 @@ class NavigationTests(unittest.TestCase):
         )
         self.assertIn("| Level | Deepest active evolution target |", table)
         self.assertIn("| 42 |", table)
-        self.assertIn("| 189 |", table)
-        self.assertIn("| 287 |", table)
-        self.assertIn("| 23 |", table)
-        self.assertIn("| 66 |", table)
+        self.assertIn("| 137 |", table)
+        self.assertIn("| 257 |", table)
+        self.assertIn("| 21 |", table)
+        self.assertIn("| 30 |", table)
         self.assertIn("Current output or task-local trajectory", table)
         self.assertIn("Self-confirmation", table)
         self.assertNotIn("- ✍️ **L0 — Output:**", table)
@@ -943,7 +942,7 @@ class NavigationTests(unittest.TestCase):
         readme = self._readme_text()
         self.assertIn(
             "**Jump to:** "
-            "[Single-Model Self-Training (100)](#L1.self_training)",
+            "[Single-Model Self-Training (51)](#L1.self_training)",
             readme,
         )
         survey_count = GENERATE_DOCS.collection_work_count(
@@ -970,7 +969,7 @@ class NavigationTests(unittest.TestCase):
             ),
         )
         self.assertEqual(
-            GENERATE_DOCS.collection_work_count(self.grouped, "L1"), 189
+            GENERATE_DOCS.collection_work_count(self.grouped, "L1"), 137
         )
         self.assertEqual(
             GENERATE_DOCS.subcategory_anchor_id(None, "L3"), "L3.additional"
@@ -987,9 +986,6 @@ class CatalogTests(unittest.TestCase):
             (ROOT / "data" / "manuscript_manifest.json").read_text(
                 encoding="utf-8"
             )
-        )
-        cls.exclusions = json.loads(
-            (ROOT / "data" / "exclusions.json").read_text(encoding="utf-8")
         )
         cls.works = cls.catalog["works"]
 
@@ -1008,6 +1004,15 @@ class CatalogTests(unittest.TestCase):
             for key in work["manuscript"]["cited_bib_keys"]
         }
         self.assertEqual(catalog_keys, set(self.manifest["active_bib_keys"]))
+        self.assertEqual(len(self.works), len(self.manifest["active_bib_keys"]))
+        self.assertTrue(all(work["manuscript"]["active"] for work in self.works))
+        self.assertTrue(
+            all(
+                work["manuscript"]["cited_bib_keys"]
+                == [work["manuscript"]["bib_key"]]
+                for work in self.works
+            )
+        )
 
     def test_taxonomy_representative_coverage(self) -> None:
         covered = {
@@ -1029,41 +1034,6 @@ class CatalogTests(unittest.TestCase):
                     subcategory.startswith(f"{level}."),
                     f"{work['id']}: {subcategory} does not belong to {level}",
                 )
-
-    def test_detailed_source_counts_are_preserved(self) -> None:
-        """Every curated entry is either in the catalog or declared excluded."""
-        counts = Counter(
-            work["catalog_source"]["collection"]
-            for work in self.works
-            if work["catalog_source"]["file"]
-            == "references/paper_detailed.md"
-        )
-        counts.update(
-            record["collection"] for record in self.exclusions["works"].values()
-        )
-        self.assertEqual(
-            counts,
-            Counter(
-                {
-                    "surveys": 15,
-                    "L0": 14,
-                    "L1": 182,
-                    "L2": 262,
-                    "L3": 27,
-                    "L4": 50,
-                    "cross_level": 45,
-                    "open_problems": 23,
-                }
-            ),
-        )
-
-    def test_exclusions_are_justified_and_uncited(self) -> None:
-        catalog_ids = {work["id"] for work in self.works}
-        for work_id, record in self.exclusions["works"].items():
-            self.assertNotIn(work_id, catalog_ids)
-            self.assertTrue(record.get("reason"))
-            self.assertTrue(record.get("evidence"))
-
 
 def extract_issue_form_field_blocks(text: str) -> dict[str, str]:
     """Split a GitHub issue form YAML body into per-field blocks keyed by id."""
@@ -1120,7 +1090,7 @@ class GitHubConfigTests(unittest.TestCase):
         "Code/project URLs are official or explicitly marked third-party",
         "Classification rationale names the evolution target",
         "Primary level and subcategory agree",
-        "Existing source counts and manuscript coverage do not regress",
+        "Catalog contains exactly the active manuscript papers",
         "Generated documentation is up to date",
         "No local file paths, private hosts, credentials, or unpublished "
         "identity-bearing metadata",

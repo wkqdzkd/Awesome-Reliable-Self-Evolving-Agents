@@ -23,11 +23,11 @@ LIVE_STATUSES = {"verified", "redirected"}
 ARTIFACT_STATUSES = VISIBLE_LINK_STATUSES | {"invalid", "unreachable"}
 
 LEVEL_BADGE_COLORS: dict[str, str] = {
-    "L0": "9AA5B1",
-    "L1": "4C78A8",
-    "L2": "2E8B57",
-    "L3": "E8842C",
-    "L4": "C0392B",
+    "L0": "57B36F",
+    "L1": "00A8BD",
+    "L2": "2496E8",
+    "L3": "7782DA",
+    "L4": "C65D97",
 }
 
 CONTENTS_BACKLINK = '<sub><a href="#toc">↑ contents</a></sub>'
@@ -1292,8 +1292,8 @@ def make_readme(
             "",
             "- 📚 `data/papers.json` is the canonical work catalog.",
             f"- 🧭 `data/taxonomy.json` is the canonical {core_ids[0]}-{core_ids[-1]} hierarchy.",
-            "- 🔎 `data/manuscript_manifest.json` records active citations and source hashes.",
-            "- ✅ `scripts/validate_catalog.py` enforces identifiers, counts, taxonomy, and coverage.",
+            "- 🔎 `data/manuscript_manifest.json` defines the exact set of papers used by the manuscript.",
+            "- ✅ `scripts/validate_catalog.py` enforces identifiers, taxonomy, and exact manuscript membership.",
             "- 🔗 `scripts/check_links.py` records live HTTP results without silently deleting announced links.",
             "",
             "Regenerate the list with:",
@@ -1307,9 +1307,11 @@ def make_readme(
             "",
             f"## 🤝 Contributing {CONTENTS_BACKLINK}",
             "",
-            "Paper suggestions and classification corrections are welcome. Every proposal must "
-            "include a canonical paper link, evidence for any code/project link, and an "
-            "evolution-target rationale. See [CONTRIBUTING.md](CONTRIBUTING.md).",
+            "Corrections to the 549 manuscript-used records are welcome. New papers belong "
+            "in the manuscript first; this repository intentionally does not retain "
+            "catalog-only additions. Every proposal must include a canonical paper link, "
+            "evidence for any code/project link, and an evolution-target rationale. "
+            "See [CONTRIBUTING.md](CONTRIBUTING.md).",
             "",
             "Catalog entries follow this format:",
             "",
@@ -1338,13 +1340,7 @@ def make_alignment_report(
     import_report: dict[str, Any] | None,
     validation: dict[str, Any],
 ) -> list[str]:
-    # These reconciliation counts describe the public catalog snapshot. The
-    # internal import report is optional in the release repository.
-    RELEASE_RECONCILIATION = {
-        "duplicate_bib_key_merges": 1,
-        "identity_alias_merges": 7,
-        "metadata_overrides_applied": 8,
-    }
+    _ = import_report
     core_levels = set(core_level_ids(taxonomy))
     labels = subcategory_labels(taxonomy)
     reconciled = [
@@ -1367,63 +1363,9 @@ def make_alignment_report(
         )
         if primary and cited_levels and any(level != primary for level in cited_levels):
             cross_discussions.append((bib_key, primary, cited_levels))
-    report = import_report or {}
-    alias_merge_count = len(report.get("duplicate_bib_key_merges", []))
-    if not import_report:
-        alias_merge_count = RELEASE_RECONCILIATION["duplicate_bib_key_merges"]
-    identity_alias_merge_count = len(report.get("identity_alias_merges", []))
-    if not import_report:
-        identity_alias_merge_count = RELEASE_RECONCILIATION[
-            "identity_alias_merges"
-        ]
-    excluded = report.get("excluded_works", [])
-    unmatched = report.get(
-        "unmatched_catalog_entries",
-        [
-            work["id"]
-            for work in works
-            if not work["manuscript"].get("bib_key")
-            and work.get("catalog_source", {}).get("file")
-            == "references/paper_detailed.md"
-        ],
-    )
-    detailed_catalog_count = report.get(
-        "detailed_catalog_count",
-        sum(
-            work.get("catalog_source", {}).get("file")
-            == "references/paper_detailed.md"
-            for work in works
-        ),
-    )
-    excluded_count = len(excluded) if import_report else 618 - detailed_catalog_count
-    unresolved_active_bib_keys = report.get(
-        "unresolved_active_bib_keys", manifest.get("unresolved_bib_keys", [])
-    )
-    active_keys_missing_from_catalog = report.get(
-        "active_keys_missing_from_catalog",
-        manifest.get("active_keys_missing_from_catalog", []),
-    )
-    active_manuscript_supplements = report.get(
-        "active_manuscript_supplements",
-        [
-            work
-            for work in works
-            if work["manuscript"].get("active")
-            and work.get("catalog_source", {}).get("file") == "reference.bib"
-        ],
-    )
-    curated_additions = report.get(
-        "curated_additions",
-        [
-            work
-            for work in works
-            if work.get("catalog_source", {}).get("file")
-            == "data/curated_additions.json"
-        ],
-    )
-    metadata_overrides_applied = report.get(
-        "metadata_overrides_applied",
-        RELEASE_RECONCILIATION["metadata_overrides_applied"],
+    unresolved_active_bib_keys = manifest.get("unresolved_bib_keys", [])
+    active_keys_missing_from_catalog = manifest.get(
+        "active_keys_missing_from_catalog", []
     )
     aliased = [
         work
@@ -1442,67 +1384,27 @@ def make_alignment_report(
         f"- Catalog validation: **{'PASS' if validation['valid'] else 'FAIL'}**",
         f"- Active manuscript references: **{validation['active_manuscript_coverage']}**",
         f"- Taxonomy-figure representatives: **{validation['taxonomy_representative_coverage']}**",
-        (
-            f"- Detailed catalog entries retained: "
-            f"**{detailed_catalog_count}/618** "
-            f"({count_phrase(excluded_count, 'entry', 'entries')} excluded)"
-        ),
+        f"- Repository paper records: **{len(works)}**",
         f"- Unresolved active BibTeX keys: **{len(unresolved_active_bib_keys)}**",
         f"- Active keys missing from the catalog: **{len(active_keys_missing_from_catalog)}**",
         "",
-        "The repository therefore covers every active citation in the compiled manuscript, "
-        "including references that were cited in TeX but absent from the 618-entry detailed catalog.",
+        "The repository contains exactly the papers used by the compiled manuscript: "
+        "one canonical record for each active BibTeX key and no catalog-only papers.",
         "",
-        "## Source-set reconciliation",
+        "## Membership policy",
         "",
-        "- The detailed catalog contributes 618 curated entries.",
+        f"- `data/manuscript_manifest.json` declares {len(manifest['active_bib_keys'])} active BibTeX keys.",
+        f"- `data/papers.json` stores {len(works)} active manuscript records.",
+        "- Validation rejects any record whose `manuscript.active` flag is false.",
+        "- A paper must first become an active manuscript citation before it can enter the repository catalog.",
         (
-            f"- {count_phrase(excluded_count, 'curated entry', 'curated entries')} "
-            f"{agrees(excluded_count, 'was', 'were')} excluded for failing the "
-            "inclusion criteria: a benchmark, position, or theory paper that "
-            "implements no self-evolving system, or a subject outside an agent "
-            "changing its own output, model, scaffold, updater, or criterion. "
-            "Each exclusion is recorded with its evidence in "
-            "`data/exclusions.json`."
-        ),
-        (
-            f"- {len(active_manuscript_supplements)} active manuscript references "
-            "were added because they were absent from that detailed catalog."
-        ),
-        (
-            f"- {len(curated_additions)} catalog-only works were added "
-            "under the same taxonomy, including post-cutoff papers and one recovered identity split."
-        ),
-        (
-            f"- {count_phrase(metadata_overrides_applied, 'curated record')} "
-            "had metadata reconciled against the manuscript, covering identifier "
-            "collisions and preprint identities that a published record has since "
-            "superseded."
-        ),
-        (
-            f"- {count_phrase(identity_alias_merge_count, 'published record')} merged into "
-            "the curated preprint entry through a declared identity alias, so the "
-            "manuscript's published citation and the catalog's preprint entry remain one work."
-        ),
-        (
-            f"- {count_phrase(len(reconciled), 'stale detailed-catalog placement')} "
+            f"- {count_phrase(len(reconciled), 'source placement')} "
             f"{agrees(len(reconciled), 'was', 'were')} reconciled against the active "
             "chapter text and taxonomy figure."
         ),
         (
             f"- {count_phrase(len(aliased), 'work')} {agrees(len(aliased), 'is', 'are')} "
-            "cited under a BibTeX key that differs from the key matched by the detailed "
-            "catalog; each is stored once under its canonical identifier, with "
-            f"{count_phrase(alias_merge_count, 'additional key')} folded in during import."
-        ),
-        (
-            f"- {count_phrase(len(unmatched), 'detailed-catalog work')} "
-            f"{agrees(len(unmatched), 'has', 'have')} no matching entry in the manuscript "
-            f"BibTeX library and {agrees(len(unmatched), 'remains', 'remain')} cataloged "
-            f"from {agrees(len(unmatched), 'its', 'their')} verified paper "
-            f"{agrees(len(unmatched), 'record', 'records')}: "
-            + ", ".join(f"`{item}`" for item in unmatched)
-            + "."
+            "stored under a canonical identifier while preserving a legacy BibTeX alias."
         ),
         "",
         "## Taxonomy lock",
@@ -1517,10 +1419,6 @@ def make_alignment_report(
             + "."
             for level in taxonomy["levels"]
         ),
-        "",
-        "The detailed catalog was curated under the manuscript's earlier L0-L4 numbering "
-        "and its earlier subsection structure; the importer crosswalks those headings onto "
-        "the taxonomy above rather than re-curating each entry.",
         "",
         "Primary level follows the deepest demonstrated active rewrite. A citation in another "
         "level's discussion does not silently change its primary classification; such appearances "
@@ -1565,7 +1463,8 @@ def make_alignment_report(
             "## Reproducibility",
             "",
             "The manifest stores SHA-256 hashes for the source bibliography and every TeX section. "
-            "Re-running the importer after a manuscript edit makes taxonomy or citation drift visible.",
+            "Validation also requires the catalog to match the active citation set exactly, "
+            "making additions, removals, taxonomy changes, or citation drift visible.",
             "",
             "Validation command:",
             "",
