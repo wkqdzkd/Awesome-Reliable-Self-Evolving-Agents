@@ -7,7 +7,6 @@ import argparse
 import json
 import re
 from collections import defaultdict
-from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -287,174 +286,9 @@ def configured_value(value: Any, default: str | None = None) -> str | None:
     return value.strip()
 
 
-ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-DEFAULT_NEWS_EMOJI = "✨"
-
-
-def parse_iso_date(value: Any) -> str | None:
-    """Return *YYYY-MM-DD* when *value* is a valid ISO calendar date."""
-    if not isinstance(value, str):
-        return None
-    candidate = value.strip()
-    if not ISO_DATE_RE.fullmatch(candidate):
-        return None
-    try:
-        date.fromisoformat(candidate)
-    except ValueError:
-        return None
-    return candidate
-
-
-def iso_date_from_value(value: Any) -> str | None:
-    """Extract an ISO calendar date from a manifest or audit date/datetime field."""
-    if not is_configured_value(value):
-        return None
-    assert isinstance(value, str)
-    date_value = parse_iso_date(value)
-    if date_value:
-        return date_value
-    try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00")).date().isoformat()
-    except ValueError:
-        return None
-
-
-def normalize_news_text(text: str) -> str:
-    """Collapse whitespace and newlines so list items stay on one line."""
+def normalize_inline_text(text: str) -> str:
+    """Collapse whitespace and newlines so text stays on one line."""
     return " ".join(text.split())
-
-
-def parse_manual_news_entries(
-    project_meta: dict[str, Any] | None,
-) -> list[dict[str, str]]:
-    """Return validated manual news entries in their configured order."""
-    meta = project_meta or {}
-    raw_news = meta.get("news")
-    if not isinstance(raw_news, list):
-        return []
-
-    entries: list[dict[str, str]] = []
-    for index, item in enumerate(raw_news):
-        if not isinstance(item, dict):
-            continue
-        date = parse_iso_date(item.get("date"))
-        text = configured_value(item.get("text"))
-        if not date or not text:
-            continue
-        emoji = configured_value(item.get("emoji"), default=DEFAULT_NEWS_EMOJI)
-        assert emoji is not None
-        entries.append(
-            {
-                "date": date,
-                "emoji": emoji,
-                "text": normalize_news_text(text),
-                "source": "manual",
-                "order": str(index),
-            }
-        )
-    return entries
-
-
-def build_auto_news_entries(
-    works: list[dict[str, Any]],
-    taxonomy: dict[str, Any],
-    manifest: dict[str, Any],
-    validation: dict[str, Any],
-    link_audit: dict[str, Any] | None,
-) -> list[dict[str, str]]:
-    """Return the three auto-generated What's New timeline entries."""
-    manifest_date = iso_date_from_value(manifest.get("generated_at"))
-    if not manifest_date:
-        return []
-
-    live_code = sum(
-        any(
-            artifact["kind"] == "code"
-            and effective_artifact_status(artifact, link_audit) in LIVE_STATUSES
-            for artifact in work["artifacts"]
-        )
-        for work in works
-    )
-    live_project = sum(
-        any(
-            artifact["kind"] == "project"
-            and effective_artifact_status(artifact, link_audit) in LIVE_STATUSES
-            for artifact in work["artifacts"]
-        )
-        for work in works
-    )
-    link_date = iso_date_from_value(
-        link_audit.get("checked_at") if link_audit else None
-    )
-    if not link_date:
-        link_date = manifest_date
-
-    return [
-        {
-            "date": manifest_date,
-            "emoji": "🏗️",
-            "text": (
-                f"Rebuilt the {len(taxonomy['levels'])}-level hierarchy and every "
-                "subsection from the manuscript's current chapter structure."
-            ),
-            "source": "auto",
-            "order": "0",
-        },
-        {
-            "date": manifest_date,
-            "emoji": "📊",
-            "text": (
-                f"Cataloged {len(works)} unique works and matched all "
-                f"{manifest['active_bib_key_count']} active manuscript references."
-            ),
-            "source": "auto",
-            "order": "1",
-        },
-        {
-            "date": link_date,
-            "emoji": "🔗",
-            "text": (
-                "Live-checked code/project links; "
-                f"{live_code} code and {live_project} project links are currently reachable."
-            ),
-            "source": "auto",
-            "order": "2",
-        },
-    ]
-
-
-def render_news_timeline_line(emoji: str, date: str, text: str) -> str:
-    """Render one What's New bullet in ``- <emoji> **[YYYY-MM-DD]** <text>`` form."""
-    return f"- {emoji} **[{date}]** {text}"
-
-
-def render_whats_new_timeline(
-    works: list[dict[str, Any]],
-    taxonomy: dict[str, Any],
-    manifest: dict[str, Any],
-    validation: dict[str, Any],
-    link_audit: dict[str, Any] | None,
-    project_meta: dict[str, Any] | None = None,
-) -> list[str]:
-    """Merge manual and auto news entries into a dated timeline."""
-    _ = validation
-    manual_entries = parse_manual_news_entries(project_meta)
-    auto_entries = build_auto_news_entries(
-        works, taxonomy, manifest, validation, link_audit
-    )
-    combined = manual_entries + auto_entries
-    combined.sort(
-        key=lambda item: (
-            item["date"],
-            1 if item["source"] == "manual" else 0,
-            -int(item["order"]),
-        ),
-        reverse=True,
-    )
-    return [
-        render_news_timeline_line(item["emoji"], item["date"], item["text"])
-        for item in combined
-    ]
 
 
 def get_configured(
@@ -548,7 +382,7 @@ def is_safe_absolute_http_url(value: str) -> bool:
 
 def normalize_related_list_description(text: str) -> str:
     """Collapse whitespace while preserving Markdown text on one line."""
-    lines = [normalize_news_text(line) for line in text.splitlines()]
+    lines = [normalize_inline_text(line) for line in text.splitlines()]
     return " ".join(line for line in lines if line)
 
 
@@ -747,6 +581,8 @@ def render_readme_header(
     meta = project_meta or {}
     paper = meta.get("paper") if isinstance(meta.get("paper"), dict) else {}
     github_slug = get_github_slug(meta)
+    contribution_text = get_configured(meta, "text")
+    contact_email = get_configured(meta, "contact_email")
 
     academic_badges = [
         badge_link(
@@ -824,19 +660,12 @@ def render_readme_header(
                 ),
             ]
         )
-    repo_badges.extend(
-        [
-            badge_link(
-                "LICENSES/CC-BY-4.0.txt",
-                "Data and docs license",
-                "https://img.shields.io/badge/data%20%26%20docs-CC%20BY%204.0-2E8B57?style=flat-square",
-            ),
-            badge_link(
-                "LICENSES/MIT.txt",
-                "Code license",
-                "https://img.shields.io/badge/code-MIT-2E8B57?style=flat-square",
-            ),
-        ]
+    repo_badges.append(
+        badge_link(
+            "LICENSE",
+            "License",
+            "https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square",
+        )
     )
 
     bibtex = meta.get("bibtex")
@@ -899,11 +728,30 @@ def render_readme_header(
             ]
         )
 
+    if contribution_text:
+        lines.extend(
+            [
+                f"> 🤝 {normalize_inline_text(contribution_text)}",
+                "",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "> 🤝 **Contributions welcome.** Suggest papers, fix links, or improve "
+                "classifications through an issue or pull request.",
+                "",
+            ]
+        )
+    if contact_email:
+        lines.extend(
+            [
+                f"> ✉️ **Contact:** {escape_html(contact_email)}",
+                "",
+            ]
+        )
     lines.extend(
         [
-            "> 🤝 **Contributions welcome.** Suggest papers, fix links, or improve "
-            "classifications through an issue or pull request.",
-            "",
             '<div align="center">',
             "<picture>",
             '  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.jpg">',
@@ -1295,21 +1143,6 @@ def make_readme(
         ),
         "---",
         "",
-        stable_anchor_div("whats-new"),
-        "",
-        f"## 🎉 What's New {CONTENTS_BACKLINK}",
-        "",
-        *render_whats_new_timeline(
-            works,
-            taxonomy,
-            manifest,
-            validation,
-            link_audit,
-            project_meta,
-        ),
-        "",
-        "---",
-        "",
         stable_anchor_div("why-this-list-is-different"),
         "",
         f"## 🧭 Why This List Is Different {CONTENTS_BACKLINK}",
@@ -1488,10 +1321,10 @@ def make_readme(
             "",
             f"## ⚖️ License {CONTENTS_BACKLINK}",
             "",
-            "Catalog data and documentation are licensed under "
-            "[CC BY 4.0](LICENSES/CC-BY-4.0.txt). Scripts and workflow code are licensed "
-            "under the [MIT License](LICENSES/MIT.txt). Third-party paper and repository "
-            "links remain subject to their respective licenses.",
+            "Original text, catalog data, code, and images in this repository are "
+            "licensed under the [MIT License](LICENSE). Linked papers, code repositories, "
+            "project pages, names, and third-party metadata remain subject to their "
+            "respective copyright and license terms.",
         ]
     )
     lines.extend(render_operations_footer(project_meta))

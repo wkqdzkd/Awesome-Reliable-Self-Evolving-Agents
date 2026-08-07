@@ -64,6 +64,5 @@ python scripts/generate_docs.py
 
 ## Licensing
 
-By contributing catalog data or documentation, you agree to license that
-contribution under CC BY 4.0. By contributing scripts or workflow code, you
-agree to license that contribution under MIT.
+By contributing to this repository, you agree to license your contribution
+under the MIT License in `LICENSE`.

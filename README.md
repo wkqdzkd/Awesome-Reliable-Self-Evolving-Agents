@@ -16,8 +16,7 @@ Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</e
   <a href="docs/ALIGNMENT_REPORT.md"><img alt="Manuscript coverage" src="https://img.shields.io/badge/manuscript-549%2F549-2E8B57?style=flat-square"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="Last commit" src="https://img.shields.io/github/last-commit/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=flat-square"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=social"></a>
-  <a href="LICENSES/CC-BY-4.0.txt"><img alt="Data and docs license" src="https://img.shields.io/badge/data%20%26%20docs-CC%20BY%204.0-2E8B57?style=flat-square"></a>
-  <a href="LICENSES/MIT.txt"><img alt="Code license" src="https://img.shields.io/badge/code-MIT-2E8B57?style=flat-square"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square"></a>
 </p>
 
 <p align="center">
@@ -29,7 +28,9 @@ Companion catalog for <em>Diving into Reliable Self-Evolving Agents: A Survey</e
 
 </div>
 
-> 🤝 **Contributions welcome.** Suggest papers, fix links, or improve classifications through an issue or pull request.
+> 🤝 Contributions are welcome: add a missing work in a PR using ``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.
+
+> ✉️ **Contact:** wkqscut@gmail.com, wenjinhou@zju.edu.cn, yanyuchen@zju.edu.cn, hehefan@zju.edu.cn
 
 <div align="center">
 <picture>
@@ -1110,7 +1111,7 @@ Catalog entries follow this format:
 
 ## ⚖️ License <sub><a href="#toc">↑ contents</a></sub>
 
-Catalog data and documentation are licensed under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Scripts and workflow code are licensed under the [MIT License](LICENSES/MIT.txt). Third-party paper and repository links remain subject to their respective licenses.
+Original text, catalog data, code, and images in this repository are licensed under the [MIT License](LICENSE). Linked papers, code repositories, project pages, names, and third-party metadata remain subject to their respective copyright and license terms.
 <div id="star-history"></div>
 
 ## ⭐ Star History <sub><a href="#toc">↑ contents</a></sub>

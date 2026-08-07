@@ -3,12 +3,14 @@
     "owner": "wkqdzkd",
     "repo": "Awesome-Reliable-Self-Evolving-Agents"
   },
-  "news": [
-    {
-      "date": "2026-08-06",
-      "emoji": "🚀",
-      "text": "Initial catalog release with 705 works and full manuscript alignment."
-    }
-  ],
+  "paper": {
+    "arxiv_id": "TODO",
+    "openreview_url": "",
+    "project_page": "",
+    "hf_paper": ""
+  },
+  "contact_email": "wkqscut@gmail.com, wenjinhou@zju.edu.cn, yanyuchen@zju.edu.cn, hehefan@zju.edu.cn",
+  "bibtex": "@article{TODO,\n  title   = {Diving into Reliable Self-Evolving Agents: A Survey},\n  year    = {2026}\n}",
+  "text": "Contributions are welcome: add a missing work in a PR using ``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.",
   "related_lists": []
 }

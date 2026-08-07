@@ -53,6 +53,19 @@ class ProjectMetaTests(unittest.TestCase):
             meta = GENERATE_DOCS.load_project_meta(path)
         self.assertEqual(meta, {})
 
+    def test_default_project_meta_has_contribution_text_and_contacts(self) -> None:
+        meta = GENERATE_DOCS.load_project_meta(ROOT / "data" / "project_meta.json")
+        self.assertEqual(
+            meta["text"],
+            "Contributions are welcome: add a missing work in a PR using "
+            "``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.",
+        )
+        self.assertEqual(
+            meta["contact_email"],
+            "wkqscut@gmail.com, wenjinhou@zju.edu.cn, "
+            "yanyuchen@zju.edu.cn, hehefan@zju.edu.cn",
+        )
+
 
 class ReadmeHeaderTests(unittest.TestCase):
     @classmethod
@@ -113,8 +126,10 @@ class ReadmeHeaderTests(unittest.TestCase):
             self.validation["active_manuscript_coverage"]
         ).replace("/", "%2F")
         self.assertIn(f"manuscript-{coverage}", header)
-        self.assertIn("data%20%26%20docs-CC%20BY%204.0", header)
-        self.assertIn("code-MIT", header)
+        self.assertIn("license-MIT", header)
+        self.assertIn('href="LICENSE"', header)
+        self.assertNotIn("CC%20BY", header)
+        self.assertNotIn("LICENSES/", header)
         self.assertIn("<picture>", header)
         self.assertIn('prefers-color-scheme: dark', header)
         self.assertIn('prefers-color-scheme: light', header)
@@ -135,6 +150,16 @@ class ReadmeHeaderTests(unittest.TestCase):
         self.assertNotIn('href="#citation"', header)
         self.assertNotIn('<a id="citation"></a>', header)
         self.assertNotIn("📚 Citation", header)
+        self.assertIn(
+            "Contributions are welcome: add a missing work in a PR using "
+            "``- **`Venue Year`** Title. [[paper](URL)] [[code](URL)]``.",
+            header,
+        )
+        self.assertIn(
+            "wkqscut@gmail.com, wenjinhou@zju.edu.cn, "
+            "yanyuchen@zju.edu.cn, hehefan@zju.edu.cn",
+            header,
+        )
 
     def test_full_meta_renders_conditional_badges_cite_and_citation(self) -> None:
         meta = {
@@ -178,6 +203,28 @@ class ReadmeHeaderTests(unittest.TestCase):
         self.assertIn("#data-and-reproducibility", readme)
         self.assertIn("CONTRIBUTING.md", readme)
         self.assertNotIn('href="#citation"', readme)
+
+    def test_make_readme_omits_whats_new_section(self) -> None:
+        readme = self._readme_text(
+            project_meta=json.loads(
+                (ROOT / "data" / "project_meta.json").read_text(encoding="utf-8")
+            )
+        )
+        self.assertNotIn('<div id="whats-new"></div>', readme)
+        self.assertNotIn("## 🎉 What's New", readme)
+
+    def test_make_readme_uses_repository_wide_mit_license(self) -> None:
+        readme = self._readme_text(
+            project_meta=json.loads(
+                (ROOT / "data" / "project_meta.json").read_text(encoding="utf-8")
+            )
+        )
+        license_section = readme.split('<div id="license"></div>', maxsplit=1)[1]
+        self.assertIn("[MIT License](LICENSE)", license_section)
+        self.assertIn("Original text, catalog data, code, and images", license_section)
+        self.assertIn("third-party metadata", license_section)
+        self.assertNotIn("CC BY", license_section)
+        self.assertNotIn("LICENSES/", license_section)
 
     def test_url_helpers_normalize_ids_and_escape_html(self) -> None:
         self.assertEqual(
@@ -241,244 +288,6 @@ class ReadmeHeaderTests(unittest.TestCase):
         self.assertIn("openreview.net/forum?id=abc123", header)
         self.assertIn("https://example.org/project", header)
         self.assertIn("https://huggingface.co/papers/2607.12345", header)
-
-
-class WhatsNewTimelineTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.taxonomy = json.loads(
-            (ROOT / "data" / "taxonomy.json").read_text(encoding="utf-8")
-        )
-        cls.validation = json.loads(
-            (ROOT / "data" / "validation_report.json").read_text(encoding="utf-8")
-        )
-        cls.manifest = json.loads(
-            (ROOT / "data" / "manuscript_manifest.json").read_text(encoding="utf-8")
-        )
-        cls.catalog = json.loads(
-            (ROOT / "data" / "papers.json").read_text(encoding="utf-8")
-        )
-        cls.works = cls.catalog["works"]
-
-    def _sample_works(self) -> list[dict[str, object]]:
-        return [
-            {
-                "artifacts": [
-                    {
-                        "kind": "code",
-                        "verification_status": "verified",
-                        "url": "https://example.com/code",
-                    }
-                ]
-            },
-            {
-                "artifacts": [
-                    {
-                        "kind": "project",
-                        "verification_status": "verified",
-                        "url": "https://example.com/project",
-                    }
-                ]
-            },
-        ]
-
-    def test_render_news_timeline_line_format(self) -> None:
-        line = GENERATE_DOCS.render_news_timeline_line(
-            "🚀", "2026-08-06", "Initial release."
-        )
-        self.assertEqual(line, "- 🚀 **[2026-08-06]** Initial release.")
-
-    def test_manual_entries_filter_todo_blank_and_invalid_dates(self) -> None:
-        meta = {
-            "news": [
-                {"date": "TODO", "text": "Should not appear."},
-                {"date": "2026-08-07", "text": "TODO: fill later"},
-                {"date": "2026-08-07", "text": "   "},
-                {"date": "08/07/2026", "text": "Wrong date format."},
-                "not-a-dict",
-                {
-                    "date": "2026-08-07",
-                    "emoji": "📣",
-                    "text": "Valid announcement.",
-                },
-            ]
-        }
-        entries = GENERATE_DOCS.parse_manual_news_entries(meta)
-        self.assertEqual(len(entries), 1)
-        self.assertEqual(entries[0]["text"], "Valid announcement.")
-
-    def test_manual_entries_filter_impossible_calendar_dates(self) -> None:
-        meta = {
-            "news": [
-                {"date": "2026-02-30", "text": "Impossible February date."},
-                {
-                    "date": "2026-08-07",
-                    "emoji": "📣",
-                    "text": "Valid announcement.",
-                },
-            ]
-        }
-        entries = GENERATE_DOCS.parse_manual_news_entries(meta)
-        self.assertEqual(len(entries), 1)
-        self.assertEqual(entries[0]["text"], "Valid announcement.")
-
-    def test_manual_news_dates_require_the_entire_iso_date_string(self) -> None:
-        entries = GENERATE_DOCS.parse_manual_news_entries(
-            {
-                "news": [
-                    {"date": "2026-08-06-not-iso", "text": "Reject suffix."},
-                    {"date": "2026-08-06", "text": "Accept exact date."},
-                ]
-            }
-        )
-        self.assertEqual([entry["text"] for entry in entries], ["Accept exact date."])
-
-    def test_manifest_and_audit_dates_accept_full_iso_datetimes(self) -> None:
-        self.assertEqual(
-            GENERATE_DOCS.iso_date_from_value("2026-08-06T15:04:05Z"),
-            "2026-08-06",
-        )
-        self.assertIsNone(
-            GENERATE_DOCS.iso_date_from_value("2026-08-06-not-iso")
-        )
-
-    def test_link_audit_invalid_calendar_date_falls_back_to_manifest(self) -> None:
-        lines = GENERATE_DOCS.render_whats_new_timeline(
-            works=self._sample_works(),
-            taxonomy=self.taxonomy,
-            manifest={"generated_at": "2026-08-06", "active_bib_key_count": 544},
-            validation={"active_manuscript_coverage": "544/544"},
-            link_audit={"checked_at": "2026-02-30"},
-            project_meta={"news": []},
-        )
-        self.assertEqual(len(lines), 3)
-        self.assertRegex(lines[2], r"\*\*\[2026-08-06\]\*\*")
-        self.assertIn("code and", lines[2])
-
-    def test_manual_entries_default_emoji_and_preserve_markdown_links(self) -> None:
-        meta = {
-            "news": [
-                {
-                    "date": "2026-08-08",
-                    "text": "Read [CONTRIBUTING.md](CONTRIBUTING.md)\nfor details.",
-                }
-            ]
-        }
-        lines = GENERATE_DOCS.render_whats_new_timeline(
-            works=self._sample_works(),
-            taxonomy=self.taxonomy,
-            manifest={"generated_at": "2026-08-06", "active_bib_key_count": 544},
-            validation=self.validation,
-            link_audit={"checked_at": "2026-08-06"},
-            project_meta=meta,
-        )
-        self.assertEqual(
-            lines[0],
-            "- ✨ **[2026-08-08]** Read [CONTRIBUTING.md](CONTRIBUTING.md) for details.",
-        )
-        self.assertNotIn("&lt;", lines[0])
-        self.assertNotIn("\\[", lines[0])
-
-    def test_manual_entries_sort_by_date_desc_preserving_config_order(self) -> None:
-        meta = {
-            "news": [
-                {"date": "2026-08-05", "emoji": "🅰️", "text": "Older entry."},
-                {"date": "2026-08-07", "emoji": "🅱️", "text": "Newer first."},
-                {"date": "2026-08-07", "emoji": "🅲", "text": "Newer second."},
-            ]
-        }
-        lines = GENERATE_DOCS.render_whats_new_timeline(
-            works=self._sample_works(),
-            taxonomy=self.taxonomy,
-            manifest={"generated_at": "TODO", "active_bib_key_count": 544},
-            validation=self.validation,
-            link_audit={"checked_at": "2026-08-06"},
-            project_meta=meta,
-        )
-        self.assertEqual(lines[0], "- 🅱️ **[2026-08-07]** Newer first.")
-        self.assertEqual(lines[1], "- 🅲 **[2026-08-07]** Newer second.")
-        self.assertEqual(lines[2], "- 🅰️ **[2026-08-05]** Older entry.")
-
-    def test_auto_entries_use_manifest_date_and_link_audit_fallback(self) -> None:
-        lines = GENERATE_DOCS.render_whats_new_timeline(
-            works=self._sample_works(),
-            taxonomy=self.taxonomy,
-            manifest={
-                "generated_at": "2026-08-06T15:04:05Z",
-                "active_bib_key_count": 544,
-            },
-            validation={"active_manuscript_coverage": "544/544"},
-            link_audit={"checked_at": "pending"},
-            project_meta={"news": []},
-        )
-        self.assertEqual(len(lines), 3)
-        self.assertRegex(lines[0], r"\*\*\[2026-08-06\]\*\*")
-        self.assertRegex(lines[1], r"\*\*\[2026-08-06\]\*\*")
-        self.assertRegex(lines[2], r"\*\*\[2026-08-06\]\*\*")
-        self.assertIn("5-level hierarchy", lines[0])
-        self.assertIn("2 unique works", lines[1])
-        self.assertIn("544 active manuscript references", lines[1])
-        self.assertIn("1 code and 1 project links", lines[2])
-
-    def test_same_date_manual_entries_precede_auto_entries(self) -> None:
-        meta = {
-            "news": [
-                {
-                    "date": "2026-08-06",
-                    "emoji": "🚀",
-                    "text": "Initial catalog release with 705 works.",
-                }
-            ]
-        }
-        lines = GENERATE_DOCS.render_whats_new_timeline(
-            works=self._sample_works(),
-            taxonomy=self.taxonomy,
-            manifest={"generated_at": "2026-08-06", "active_bib_key_count": 544},
-            validation={"active_manuscript_coverage": "544/544"},
-            link_audit={"checked_at": "2026-08-06"},
-            project_meta=meta,
-        )
-        self.assertEqual(len(lines), 4)
-        self.assertIn("Initial catalog release", lines[0])
-        self.assertIn("5-level hierarchy", lines[1])
-        self.assertIn("2 unique works", lines[2])
-        self.assertIn("code and", lines[3])
-
-    def test_default_project_meta_initial_release_appears_in_readme(self) -> None:
-        readme = "\n".join(
-            GENERATE_DOCS.make_readme(
-                self.works,
-                self.taxonomy,
-                self.manifest,
-                self.validation,
-                {"checked_at": "2026-08-06"},
-                self.catalog["title"],
-                self.catalog["survey_title"],
-                json.loads(
-                    (ROOT / "data" / "project_meta.json").read_text(encoding="utf-8")
-                ),
-            )
-        )
-        whats_new = readme.split("## 🎉 What's New")[1].split("---")[0]
-        self.assertIn(
-            "- 🚀 **[2026-08-06]** Initial catalog release with 705 works "
-            "and full manuscript alignment.",
-            whats_new,
-        )
-        generated_at = re.escape(self.manifest["generated_at"])
-        self.assertRegex(
-            whats_new,
-            rf"- .+ \*\*\[{generated_at}\]\*\* .+5-level hierarchy",
-        )
-        self.assertRegex(
-            whats_new,
-            rf"- .+ \*\*\[{generated_at}\]\*\* "
-            rf".+{len(self.works)} unique works",
-        )
-        self.assertRegex(
-            whats_new,
-            r"- .+ \*\*\[2026-08-06\]\*\* .+327 code and 91 project links",
-        )
 
 
 class OperationsFooterTests(unittest.TestCase):
