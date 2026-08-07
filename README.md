@@ -364,7 +364,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`ACL 2026 Findings`** SERM: SERM: Self-Evolving Relevance Model with Agent-Driven Learning from Massive Query Streams. [[paper](https://arxiv.org/abs/2601.09515)] `boundary`
 - **`arXiv 2026`** Variational Policy Distillation: Learning from Language Feedback via Variational Policy Distillation. [[paper](https://arxiv.org/abs/2605.15113)]
 - **`arXiv 2026`** ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision? [[paper](https://arxiv.org/abs/2604.07864)]
-- **`arXiv 2026`** π-Play: π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data. [[paper](https://arxiv.org/abs/2604.14054)] [[code](https://github.com/zhyaoch/pi-play)]
+- **`arXiv 2026`** π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data. [[paper](https://arxiv.org/abs/2604.14054)] [[code](https://github.com/zhyaoch/pi-play)]
 - **`CoLM 2025`** Collaborative self-play（元知识）: Don't lie to your friends: Learning what you know from collaborative self-play. [[paper](https://arxiv.org/abs/2503.14481)] `boundary`
 - **`NeurIPS 2025 (Spotlight)`** CURE: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning. [[paper](https://arxiv.org/abs/2506.03136)] [[code](https://github.com/Gen-Verse/CURE)]
 - **`NeurIPS 2025`** QiMeng-MuPa: QiMeng-MuPa: Mutual-Supervised Learning for Sequential-to-Parallel Code Translation. [[paper](https://arxiv.org/abs/2506.11153)] [[code](https://github.com/kcxain/mupa)]
