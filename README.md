@@ -7,10 +7,6 @@
 <strong>A curated collection of research on <em>self-evolving agents</em>, advancing reliable AI self-improvement.</strong><br>
 
 <p align="center">
-  <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg"></a>
-</p>
-
-<p align="center">
   <a href="#paper-catalog"><img alt="Papers" src="https://img.shields.io/badge/papers-549-6C5CE7?style=flat-square"></a>
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
   <a href="https://huggingface.co/papers/"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-Paper-FFD21E?style=flat-square&logo=huggingface&logoColor=black"></a>
