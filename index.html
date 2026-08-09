@@ -376,13 +376,212 @@ h4,
 }
 
 .hero-title {
+  --title-rotate-x: 0deg;
+  --title-rotate-y: 0deg;
+  --mobius-shift-x: 0px;
+  --mobius-shift-y: 0px;
+  --mobius-rotate-x: 0deg;
+  --mobius-rotate-y: 0deg;
   max-width: 14ch;
   margin: 0 auto 20px;
+  position: relative;
+  isolation: isolate;
   color: var(--ink);
   font-size: clamp(42px, 6.7vw, 76px);
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 1.02;
+  perspective: 900px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hero-title .title-copy {
+  position: relative;
+  z-index: 3;
+  display: block;
+  transform: rotateX(var(--title-rotate-x)) rotateY(var(--title-rotate-y));
+  transform-style: preserve-3d;
+  transition: transform 420ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  will-change: transform;
+}
+
+.hero-title .title-word {
+  --word-x: 0px;
+  --word-y: 0px;
+  --word-z: 0px;
+  --word-rotate: 0deg;
+  display: inline-block;
+  transform: translate3d(var(--word-x), var(--word-y), var(--word-z)) rotate(var(--word-rotate));
+  transform-style: preserve-3d;
+  transition: transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.hero-title .title-gradient-group {
+  display: block;
+  margin-top: 0.04em;
+}
+
+.hero-title .title-mobius {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: min(940px, 126vw);
+  aspect-ratio: 760 / 300;
+  transform:
+    translate3d(
+      calc(-50% + var(--mobius-shift-x)),
+      calc(-50% + var(--mobius-shift-y)),
+      -70px
+    )
+    rotateX(var(--mobius-rotate-x))
+    rotateY(var(--mobius-rotate-y))
+    scale(0.9);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 12px 24px rgba(60, 62, 190, 0.08));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 360ms ease, filter 360ms ease, transform 440ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.hero-title .title-mobius-stage,
+.hero-title .title-mobius-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-title .title-mobius-stage {
+  transform-origin: center;
+  animation: mobius-breathe 7.5s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.hero-title .title-mobius-svg {
+  overflow: visible;
+  transform-origin: center;
+}
+
+.hero-title .mobius-aura,
+.hero-title .mobius-outline,
+.hero-title .mobius-ribbon,
+.hero-title .mobius-glass,
+.hero-title .mobius-energy,
+.hero-title .mobius-sheen,
+.hero-title .mobius-cross-shadow {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-title .mobius-aura {
+  stroke: url("#title-mobius-gradient");
+  stroke-width: 48;
+  opacity: 0.12;
+  filter: url("#title-mobius-soft-glow");
+  animation: mobius-aura-pulse 4.8s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.hero-title .mobius-outline {
+  stroke: #263679;
+  stroke-width: 24;
+  opacity: 0.2;
+}
+
+.hero-title .mobius-ribbon {
+  stroke: url("#title-mobius-gradient");
+  stroke-width: 19;
+  filter: url("#title-mobius-crisp-glow");
+}
+
+.hero-title .mobius-glass {
+  stroke: url("#title-mobius-glass-gradient");
+  stroke-width: 9;
+  opacity: 0.42;
+}
+
+.hero-title .mobius-energy {
+  stroke: url("#title-mobius-energy-gradient");
+  stroke-width: 3.5;
+  stroke-dasharray: 54 170;
+  opacity: 0.72;
+  filter: url("#title-mobius-crisp-glow");
+  animation: mobius-flow 5.8s linear infinite;
+  animation-play-state: paused;
+}
+
+.hero-title .mobius-sheen {
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 2.4;
+  stroke-dasharray: 18 92 5 150;
+  opacity: 0.7;
+  animation: mobius-flow-reverse 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.hero-title .mobius-cross-shadow {
+  stroke: rgba(17, 26, 78, 0.34);
+  stroke-width: 28;
+  filter: url("#title-mobius-cross-blur");
+}
+
+.hero-title .mobius-front-glass {
+  opacity: 0.72;
+}
+
+.hero-title .mobius-particle {
+  fill: #dff7ff;
+  filter: url("#title-mobius-particle-glow");
+}
+
+.hero-title .mobius-particle.violet {
+  fill: #c4b5fd;
+}
+
+.hero-title.is-active .title-copy {
+  transition-duration: 90ms;
+}
+
+.hero-title.is-active .title-word {
+  transition-duration: 120ms;
+}
+
+.hero-title.is-active .title-mobius,
+.hero-title.is-energized .title-mobius,
+.hero-title:focus-visible .title-mobius {
+  transform:
+    translate3d(
+      calc(-50% + var(--mobius-shift-x)),
+      calc(-50% + var(--mobius-shift-y)),
+      -40px
+    )
+    rotateX(var(--mobius-rotate-x))
+    rotateY(var(--mobius-rotate-y))
+    scale(0.985);
+  filter: drop-shadow(0 14px 28px rgba(60, 62, 190, 0.12));
+  opacity: 0.24;
+}
+
+.hero-title.is-active .title-mobius-stage,
+.hero-title.is-energized .title-mobius-stage,
+.hero-title:focus-visible .title-mobius-stage,
+.hero-title.is-active .mobius-aura,
+.hero-title.is-energized .mobius-aura,
+.hero-title:focus-visible .mobius-aura,
+.hero-title.is-active .mobius-energy,
+.hero-title.is-energized .mobius-energy,
+.hero-title:focus-visible .mobius-energy,
+.hero-title.is-active .mobius-sheen,
+.hero-title.is-energized .mobius-sheen,
+.hero-title:focus-visible .mobius-sheen {
+  animation-play-state: running;
 }
 
 .hero-title .gradient-text {
@@ -390,8 +589,35 @@ h4,
   background-clip: text;
   background-size: 220% auto;
   color: transparent;
-  animation: shine 7s linear infinite;
+  transition: filter 320ms ease;
   -webkit-background-clip: text;
+}
+
+.hero-title.is-active .gradient-text,
+.hero-title.is-energized .gradient-text,
+.hero-title:focus-visible .gradient-text {
+  background-image: linear-gradient(105deg, #2496e8 0%, #0061b3 24%, #777fd6 52%, #9a62de 72%, #2496e8 100%);
+  background-size: 300% auto;
+  animation: shine 4.8s linear infinite;
+  filter: drop-shadow(0 12px 18px rgba(76, 68, 190, 0.23));
+}
+
+.hero-title.is-active .mobius-particle,
+.hero-title.is-energized .mobius-particle,
+.hero-title:focus-visible .mobius-particle {
+  animation-play-state: running;
+}
+
+.hero-title.is-energized .title-mobius-svg {
+  animation: mobius-boost 920ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.hero-title.is-energized .mobius-energy {
+  animation-duration: 1.15s;
+}
+
+.hero-title.is-diving .title-word {
+  animation: title-word-dive 720ms cubic-bezier(0.2, 0.72, 0.2, 1) var(--word-delay, 0ms);
 }
 
 .hero-subtitle {
@@ -1565,6 +1791,190 @@ section {
 }
 
 /* Motion */
+/* Shared restrained card interaction: local light, gentle perspective, and
+   content feedback without turning the page into a motion-heavy dashboard. */
+.feature-card,
+.taxonomy-step,
+.method-card,
+.audit-card,
+.application-card,
+.catalog-card,
+.about-card,
+.citation-box,
+.figure {
+  --card-pointer-x: 50%;
+  --card-pointer-y: 50%;
+  --card-tilt-x: 0deg;
+  --card-tilt-y: 0deg;
+  transform: perspective(900px) rotateX(var(--card-tilt-x)) rotateY(var(--card-tilt-y));
+  transform-style: preserve-3d;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.75, 0.2, 1),
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+  will-change: transform;
+}
+
+.feature-card.is-card-active,
+.taxonomy-step.is-card-active,
+.audit-card.is-card-active,
+.application-card.is-card-active,
+.catalog-card.is-card-active,
+.about-card.is-card-active,
+.citation-box.is-card-active,
+.figure.is-card-active {
+  transform:
+    perspective(900px)
+    translateY(-3px)
+    rotateX(var(--card-tilt-x))
+    rotateY(var(--card-tilt-y));
+  box-shadow: var(--shadow-md);
+}
+
+.method-card.is-card-active {
+  transform:
+    perspective(900px)
+    translateX(3px)
+    rotateX(var(--card-tilt-x))
+    rotateY(var(--card-tilt-y));
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card::before,
+.taxonomy-step::after,
+.method-card::after,
+.audit-card::after,
+.application-card::after,
+.catalog-card::after,
+.about-card::before,
+.citation-box::after,
+.figure::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      250px circle at var(--card-pointer-x) var(--card-pointer-y),
+      color-mix(in srgb, var(--card-accent, var(--brand)) 13%, transparent),
+      transparent 68%
+    );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.feature-card > *,
+.taxonomy-step > *,
+.method-card > *,
+.audit-card > *,
+.application-card > *,
+.catalog-card > *,
+.about-card > *,
+.citation-box > *,
+.figure > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card.is-card-active::before,
+.taxonomy-step.is-card-active::after,
+.method-card.is-card-active::after,
+.audit-card.is-card-active::after,
+.application-card.is-card-active::after,
+.catalog-card.is-card-active::after,
+.about-card.is-card-active::before,
+.citation-box.is-card-active::after,
+.figure.is-card-active::after {
+  opacity: 1;
+}
+
+.feature-card {
+  --card-accent: var(--brand);
+}
+
+.taxonomy-step,
+.method-card {
+  --card-accent: var(--level);
+}
+
+.application-card {
+  --card-accent: var(--app);
+}
+
+.catalog-card {
+  --card-accent: var(--catalog);
+}
+
+.audit-card,
+.about-card,
+.figure {
+  --card-accent: var(--brand-2);
+}
+
+.citation-box {
+  --card-accent: #777fd6;
+}
+
+.feature-card.is-card-active .feature-number,
+.taxonomy-step.is-card-active .level-code,
+.catalog-card.is-card-active strong {
+  transform: translateY(-2px);
+}
+
+.feature-number,
+.taxonomy-step .level-code,
+.catalog-card strong {
+  display: inline-block;
+  transition: transform 220ms ease;
+}
+
+.method-card.is-card-active .count-chip {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--level) 18%, transparent);
+}
+
+.count-chip {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.application-card.is-card-active .app-icon {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 7px 16px color-mix(in srgb, var(--app) 24%, transparent);
+}
+
+.app-icon {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.catalog-card small {
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.catalog-card.is-card-active small {
+  transform: translateX(3px);
+  color: var(--catalog);
+}
+
+.figure img {
+  transition: transform 420ms cubic-bezier(0.2, 0.75, 0.2, 1), filter 320ms ease;
+}
+
+.figure.is-card-active img {
+  transform: scale(1.008);
+  filter: saturate(1.025) contrast(1.015);
+}
+
+.citation-box::after {
+  background:
+    radial-gradient(
+      300px circle at var(--card-pointer-x) var(--card-pointer-y),
+      rgba(119, 127, 214, 0.16),
+      transparent 70%
+    );
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -1608,6 +2018,66 @@ section {
 @keyframes shine {
   to {
     background-position: 220% center;
+  }
+}
+
+@keyframes mobius-breathe {
+  0%,
+  100% {
+    transform: rotate(-0.8deg) scale(0.985);
+  }
+  50% {
+    transform: rotate(0.8deg) scale(1.02);
+  }
+}
+
+@keyframes mobius-aura-pulse {
+  0%,
+  100% {
+    opacity: 0.08;
+    stroke-width: 44;
+  }
+  50% {
+    opacity: 0.16;
+    stroke-width: 52;
+  }
+}
+
+@keyframes mobius-flow {
+  to {
+    stroke-dashoffset: -448;
+  }
+}
+
+@keyframes mobius-flow-reverse {
+  to {
+    stroke-dashoffset: 530;
+  }
+}
+
+@keyframes mobius-boost {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  34% {
+    transform: rotate(-1.8deg) scale(1.065);
+  }
+  68% {
+    transform: rotate(1.2deg) scale(0.99);
+  }
+}
+
+@keyframes title-word-dive {
+  0%,
+  100% {
+    transform: translate3d(var(--word-x), var(--word-y), var(--word-z)) rotate(var(--word-rotate));
+  }
+  36% {
+    transform: translate3d(var(--word-x), calc(var(--word-y) + 13px), calc(var(--word-z) - 12px)) rotate(calc(var(--word-rotate) - 1deg)) scale(0.96);
+  }
+  70% {
+    transform: translate3d(var(--word-x), calc(var(--word-y) - 7px), calc(var(--word-z) + 10px)) rotate(calc(var(--word-rotate) + 0.7deg)) scale(1.025);
   }
 }
 
@@ -1723,9 +2193,14 @@ section {
     overflow-wrap: normal;
   }
 
-  .hero-title .gradient-text {
-    display: block;
+  .hero-title .title-gradient-group {
     font-size: 0.88em;
+  }
+
+  .hero-title .title-mobius {
+    width: 150vw;
+    max-width: 690px;
+    opacity: 0;
   }
 
   .hero-subtitle,
@@ -1888,11 +2363,58 @@ section {
   .cursor-particles {
     display: none;
   }
+
+  .hero-title .title-copy,
+  .hero-title .title-word {
+    transform: none !important;
+  }
+
+  .hero-title .title-mobius {
+    transform: translate3d(-50%, -50%, -70px) scale(0.96);
+    filter: none;
+    opacity: 0;
+  }
+
+  .feature-card,
+  .taxonomy-step,
+  .method-card,
+  .audit-card,
+  .application-card,
+  .catalog-card,
+  .about-card,
+  .citation-box,
+  .figure {
+    transform: none !important;
+  }
+
+  .feature-card::before,
+  .taxonomy-step::after,
+  .method-card::after,
+  .audit-card::after,
+  .application-card::after,
+  .catalog-card::after,
+  .about-card::before,
+  .citation-box::after,
+  .figure::after {
+    display: none;
+  }
 }
 
 @media (hover: none), (pointer: coarse) {
   .cursor-particles {
     display: none;
+  }
+
+  .feature-card,
+  .taxonomy-step,
+  .method-card,
+  .audit-card,
+  .application-card,
+  .catalog-card,
+  .about-card,
+  .citation-box,
+  .figure {
+    transform: none;
   }
 }
     </style>
@@ -1940,8 +2462,187 @@ section {
       <div class="hero-blob two" aria-hidden="true"></div>
       <div class="wrap hero-inner">
         <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Survey companion &amp; reading list</p>
-        <h1 class="hero-title">
-          Diving into Reliable <span class="gradient-text">Self-Evolving Agents</span>
+        <h1
+          class="hero-title"
+          data-interactive-title
+          aria-label="Diving into Reliable Self-Evolving Agents"
+          tabindex="0"
+          title="Move across the title, then click to energize the Möbius loop"
+        >
+          <span class="title-mobius" aria-hidden="true">
+            <span class="title-mobius-stage">
+              <svg class="title-mobius-svg" viewBox="0 0 760 300" role="presentation">
+                <defs>
+                  <path
+                    id="title-mobius-path"
+                    d="M80 150 C140 45 250 45 380 150 C510 255 620 255 680 150 C620 45 510 45 380 150 C250 255 140 255 80 150"
+                  ></path>
+                  <path
+                    id="title-mobius-front-path"
+                    d="M292 96 C326 108 356 131 380 150 C408 172 441 198 476 212"
+                  ></path>
+
+                  <linearGradient
+                    id="title-mobius-gradient"
+                    x1="-80"
+                    y1="32"
+                    x2="820"
+                    y2="268"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#65dcff">
+                      <animate
+                        attributeName="stop-color"
+                        values="#65dcff;#2496e8;#777fd6;#65dcff"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <stop offset="0.2" stop-color="#0788ea">
+                      <animate
+                        attributeName="stop-color"
+                        values="#0788ea;#5856d6;#a855f7;#0788ea"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <stop offset="0.43" stop-color="#4f62d7">
+                      <animate
+                        attributeName="stop-color"
+                        values="#4f62d7;#9b5de5;#0063ca;#4f62d7"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <stop offset="0.66" stop-color="#a45ce2">
+                      <animate
+                        attributeName="stop-color"
+                        values="#a45ce2;#3767d9;#7c3aed;#a45ce2"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <stop offset="0.84" stop-color="#5146c8">
+                      <animate
+                        attributeName="stop-color"
+                        values="#5146c8;#00a8e8;#9966e8;#5146c8"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <stop offset="1" stop-color="#42c7ff">
+                      <animate
+                        attributeName="stop-color"
+                        values="#42c7ff;#7567df;#2496e8;#42c7ff"
+                        dur="8s"
+                        repeatCount="indefinite"
+                      ></animate>
+                    </stop>
+                    <animate
+                      attributeName="x1"
+                      values="-160;180;-160"
+                      dur="9s"
+                      repeatCount="indefinite"
+                    ></animate>
+                    <animate
+                      attributeName="x2"
+                      values="720;1040;720"
+                      dur="9s"
+                      repeatCount="indefinite"
+                    ></animate>
+                  </linearGradient>
+
+                  <linearGradient
+                    id="title-mobius-glass-gradient"
+                    x1="80"
+                    y1="68"
+                    x2="680"
+                    y2="230"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#ffffff" stop-opacity="0.86"></stop>
+                    <stop offset="0.22" stop-color="#8be2ff" stop-opacity="0.3"></stop>
+                    <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.08"></stop>
+                    <stop offset="0.74" stop-color="#d9c8ff" stop-opacity="0.42"></stop>
+                    <stop offset="1" stop-color="#ffffff" stop-opacity="0.76"></stop>
+                  </linearGradient>
+
+                  <linearGradient
+                    id="title-mobius-energy-gradient"
+                    x1="70"
+                    y1="150"
+                    x2="690"
+                    y2="150"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#ffffff" stop-opacity="0"></stop>
+                    <stop offset="0.25" stop-color="#bdefff"></stop>
+                    <stop offset="0.52" stop-color="#ffffff"></stop>
+                    <stop offset="0.76" stop-color="#d7c4ff"></stop>
+                    <stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop>
+                  </linearGradient>
+
+                  <filter id="title-mobius-soft-glow" x="-45%" y="-80%" width="190%" height="260%">
+                    <feGaussianBlur stdDeviation="18"></feGaussianBlur>
+                  </filter>
+                  <filter id="title-mobius-crisp-glow" x="-35%" y="-65%" width="170%" height="230%">
+                    <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                    <feMerge>
+                      <feMergeNode in="blur"></feMergeNode>
+                      <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                  <filter id="title-mobius-cross-blur" x="-45%" y="-75%" width="190%" height="250%">
+                    <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+                  </filter>
+                  <filter id="title-mobius-particle-glow" x="-500%" y="-500%" width="1000%" height="1000%">
+                    <feGaussianBlur stdDeviation="3" result="particleBlur"></feGaussianBlur>
+                    <feMerge>
+                      <feMergeNode in="particleBlur"></feMergeNode>
+                      <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <use class="mobius-aura" href="#title-mobius-path"></use>
+                <use class="mobius-outline" href="#title-mobius-path"></use>
+                <use class="mobius-ribbon" href="#title-mobius-path"></use>
+                <use class="mobius-glass" href="#title-mobius-path"></use>
+                <use class="mobius-energy" href="#title-mobius-path"></use>
+                <use class="mobius-sheen" href="#title-mobius-path"></use>
+
+                <use class="mobius-cross-shadow" href="#title-mobius-front-path"></use>
+                <use class="mobius-ribbon mobius-front-glass" href="#title-mobius-front-path"></use>
+                <use class="mobius-glass mobius-front-glass" href="#title-mobius-front-path"></use>
+                <use class="mobius-energy mobius-front-glass" href="#title-mobius-front-path"></use>
+
+                <circle class="mobius-particle" r="4.2">
+                  <animateMotion dur="5.6s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#title-mobius-path"></mpath>
+                  </animateMotion>
+                </circle>
+                <circle class="mobius-particle violet" r="3.4">
+                  <animateMotion begin="-1.8s" dur="6.8s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#title-mobius-path"></mpath>
+                  </animateMotion>
+                </circle>
+                <circle class="mobius-particle" r="2.7">
+                  <animateMotion begin="-3.7s" dur="8.2s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#title-mobius-path"></mpath>
+                  </animateMotion>
+                </circle>
+              </svg>
+            </span>
+          </span>
+          <span class="title-copy" aria-hidden="true">
+            <span class="title-word">Diving</span>
+            <span class="title-word">into</span>
+            <span class="title-word">Reliable</span>
+            <span class="title-gradient-group">
+              <span class="title-word gradient-text">Self-Evolving</span>
+              <span class="title-word gradient-text">Agents</span>
+            </span>
+          </span>
         </h1>
         <p class="hero-subtitle">
           A curated collection of research on <strong>self-evolving agents</strong>, advancing reliable AI
@@ -2752,6 +3453,170 @@ section {
   window.addEventListener("resize", () => {
     if (window.innerWidth > 900) setMenu(false);
   }, { passive: true });
+
+  function initInteractiveTitle() {
+    const title = document.querySelector("[data-interactive-title]");
+    if (!(title instanceof HTMLElement)) return;
+
+    if (reduceMotion) {
+      const mobiusSvg = title.querySelector(".title-mobius-svg");
+      if (mobiusSvg instanceof SVGSVGElement && typeof mobiusSvg.pauseAnimations === "function") {
+        mobiusSvg.pauseAnimations();
+      }
+      return;
+    }
+
+    const copy = title.querySelector(".title-copy");
+    const words = [...title.querySelectorAll(".title-word")];
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    let diveTimer = 0;
+
+    words.forEach((word, index) => {
+      word.style.setProperty("--word-delay", `${index * 42}ms`);
+    });
+
+    function resetTitle() {
+      title.classList.remove("is-active");
+      title.style.setProperty("--title-rotate-x", "0deg");
+      title.style.setProperty("--title-rotate-y", "0deg");
+      title.style.setProperty("--mobius-shift-x", "0px");
+      title.style.setProperty("--mobius-shift-y", "0px");
+      title.style.setProperty("--mobius-rotate-x", "0deg");
+      title.style.setProperty("--mobius-rotate-y", "0deg");
+      words.forEach((word) => {
+        word.style.setProperty("--word-x", "0px");
+        word.style.setProperty("--word-y", "0px");
+        word.style.setProperty("--word-z", "0px");
+        word.style.setProperty("--word-rotate", "0deg");
+      });
+    }
+
+    function triggerDive() {
+      window.clearTimeout(diveTimer);
+      title.classList.remove("is-diving");
+      title.classList.remove("is-energized");
+      void title.offsetWidth;
+      title.classList.add("is-diving");
+      title.classList.add("is-energized");
+      diveTimer = window.setTimeout(() => {
+        title.classList.remove("is-diving");
+        title.classList.remove("is-energized");
+      }, 980);
+    }
+
+    if (finePointer) {
+      title.addEventListener("pointerenter", () => title.classList.add("is-active"));
+
+      title.addEventListener("pointermove", (event) => {
+        const rect = title.getBoundingClientRect();
+        const localX = Math.min(Math.max(event.clientX - rect.left, 0), rect.width);
+        const localY = Math.min(Math.max(event.clientY - rect.top, 0), rect.height);
+        const normalizedX = localX / rect.width - 0.5;
+        const normalizedY = localY / rect.height - 0.5;
+
+        title.classList.add("is-active");
+        title.style.setProperty("--title-rotate-x", `${normalizedY * -5.5}deg`);
+        title.style.setProperty("--title-rotate-y", `${normalizedX * 7}deg`);
+        title.style.setProperty("--mobius-shift-x", `${normalizedX * 15}px`);
+        title.style.setProperty("--mobius-shift-y", `${normalizedY * 9}px`);
+        title.style.setProperty("--mobius-rotate-x", `${normalizedY * -4}deg`);
+        title.style.setProperty("--mobius-rotate-y", `${normalizedX * 6}deg`);
+
+        words.forEach((word, index) => {
+          const depth = (index + 1) / words.length;
+          word.style.setProperty("--word-x", `${normalizedX * 7 * depth}px`);
+          word.style.setProperty("--word-y", `${normalizedY * 5 * depth}px`);
+          word.style.setProperty("--word-z", `${8 + depth * 17}px`);
+          word.style.setProperty("--word-rotate", `${normalizedX * depth * 0.42}deg`);
+        });
+      });
+
+      title.addEventListener("pointerleave", resetTitle);
+      title.addEventListener("click", triggerDive);
+    } else {
+      title.addEventListener("click", triggerDive);
+    }
+
+    title.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      triggerDive();
+    });
+
+    if (copy instanceof HTMLElement) {
+      copy.addEventListener("animationend", () => {
+        title.classList.remove("is-diving");
+        title.classList.remove("is-energized");
+      });
+    }
+  }
+
+  initInteractiveTitle();
+
+  function initInteractiveCards() {
+    if (reduceMotion || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    const cards = document.querySelectorAll(
+      ".feature-card, .taxonomy-step, .method-card, .audit-card, .application-card, " +
+      ".catalog-card, .about-card, .citation-box, .figure",
+    );
+
+    cards.forEach((card) => {
+      let cardFrame = 0;
+      let pendingX = 0;
+      let pendingY = 0;
+
+      function renderCardPointer() {
+        cardFrame = 0;
+        const rect = card.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+
+        const localX = Math.min(Math.max(pendingX - rect.left, 0), rect.width);
+        const localY = Math.min(Math.max(pendingY - rect.top, 0), rect.height);
+        const normalizedX = localX / rect.width - 0.5;
+        const normalizedY = localY / rect.height - 0.5;
+        const maxTilt = card.classList.contains("figure") ? 1.1 : 1.8;
+
+        card.style.setProperty("--card-pointer-x", `${(localX / rect.width) * 100}%`);
+        card.style.setProperty("--card-pointer-y", `${(localY / rect.height) * 100}%`);
+        card.style.setProperty("--card-tilt-x", `${normalizedY * -maxTilt}deg`);
+        card.style.setProperty("--card-tilt-y", `${normalizedX * maxTilt}deg`);
+      }
+
+      card.addEventListener("pointerenter", (event) => {
+        pendingX = event.clientX;
+        pendingY = event.clientY;
+        card.classList.add("is-card-active");
+        renderCardPointer();
+      });
+
+      card.addEventListener("pointermove", (event) => {
+        pendingX = event.clientX;
+        pendingY = event.clientY;
+        if (cardFrame) return;
+        cardFrame = window.requestAnimationFrame(renderCardPointer);
+      }, { passive: true });
+
+      card.addEventListener("pointerleave", () => {
+        if (cardFrame) {
+          window.cancelAnimationFrame(cardFrame);
+          cardFrame = 0;
+        }
+        card.classList.remove("is-card-active");
+        card.style.setProperty("--card-pointer-x", "50%");
+        card.style.setProperty("--card-pointer-y", "50%");
+        card.style.setProperty("--card-tilt-x", "0deg");
+        card.style.setProperty("--card-tilt-y", "0deg");
+      });
+
+      if (card.matches("a, [tabindex]")) {
+        card.addEventListener("focus", () => card.classList.add("is-card-active"));
+        card.addEventListener("blur", () => card.classList.remove("is-card-active"));
+      }
+    });
+  }
+
+  initInteractiveCards();
 
   const revealItems = document.querySelectorAll(".reveal");
   revealItems.forEach((item) => item.classList.add("in"));
