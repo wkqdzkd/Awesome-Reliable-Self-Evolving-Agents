@@ -26,6 +26,7 @@
     >
     <title>Awesome Reliable Self-Evolving Agents</title>
     <link rel="canonical" href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/">
+    <script>document.documentElement.classList.add("js");</script>
     <!-- <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +72,7 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   background: var(--bg);
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -79,7 +80,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.menu-open {
+body.menu-open,
+body.lightbox-open {
   overflow: hidden;
 }
 
@@ -157,6 +159,29 @@ h4,
 }
 
 /* Navigation */
+.reading-progress {
+  position: fixed;
+  z-index: 260;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  overflow: hidden;
+  background: rgba(0, 97, 179, 0.1);
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, #08a4b7, #2496e8 45%, #777fd6);
+  box-shadow: 0 0 12px rgba(36, 150, 232, 0.48);
+  will-change: transform;
+}
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -231,6 +256,37 @@ h4,
   text-decoration: none;
 }
 
+.nav-github {
+  display: inline-flex;
+  min-height: 38px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-left: 5px;
+  padding: 8px 13px;
+  border: 1px solid rgba(0, 97, 179, 0.2);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-size: 12.5px;
+  font-weight: 800;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.nav-github:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 97, 179, 0.38);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.nav-github svg {
+  width: 16px;
+  height: 16px;
+}
+
 .nav-toggle {
   display: none;
   width: 40px;
@@ -255,7 +311,8 @@ h4,
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 102px 0 80px;
+  min-height: min(860px, calc(100svh - 62px));
+  padding: clamp(62px, 8vh, 88px) 0 clamp(56px, 7vh, 72px);
   background:
     radial-gradient(120% 90% at 12% 0%, rgba(36, 150, 232, 0.17), transparent 54%),
     radial-gradient(115% 90% at 90% 4%, rgba(0, 97, 179, 0.14), transparent 55%),
@@ -318,12 +375,20 @@ h4,
 .hero-inner {
   position: relative;
   z-index: 2;
+  display: flex;
+  min-height: calc(min(860px, 100svh - 62px) - clamp(118px, 15vh, 160px));
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-inner > * {
   opacity: 0;
   transform: translateY(18px);
   animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.hero-inner > .eyebrow {
+  align-self: center;
 }
 
 .hero-inner > :nth-child(1) {
@@ -622,7 +687,7 @@ h4,
 
 .hero-subtitle {
   max-width: 67ch;
-  margin: 0 auto 24px;
+  margin: 0 auto 22px;
   color: var(--muted);
   font-size: clamp(15px, 2vw, 20px);
   font-weight: 500;
@@ -635,7 +700,7 @@ h4,
 
 .hero-authors {
   max-width: 94ch;
-  margin: 0 auto;
+  margin: 24px auto 0;
   color: #48546c;
   text-align: center;
 }
@@ -694,7 +759,7 @@ h4,
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 32px 0 0;
+  margin: 0;
 }
 
 .button {
@@ -766,7 +831,8 @@ h4,
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 680px;
-  margin: 42px auto 0;
+  width: 100%;
+  margin: 30px auto 0;
   border: 1px solid rgba(221, 226, 242, 0.86);
   border-radius: 17px;
   background: rgba(255, 255, 255, 0.72);
@@ -809,7 +875,7 @@ main {
 
 section {
   position: relative;
-  padding: 84px 0;
+  padding: 78px 0;
   scroll-margin-top: 70px;
 }
 
@@ -822,7 +888,7 @@ section {
 
 .section-head {
   max-width: 76ch;
-  margin: 0 auto 46px;
+  margin: 0 auto 40px;
   text-align: center;
 }
 
@@ -853,7 +919,7 @@ section {
 }
 
 .section-title {
-  margin: 0 0 13px;
+  margin: 0 0 12px;
   color: var(--ink);
   font-size: clamp(27px, 3.7vw, 40px);
   font-weight: 800;
@@ -881,6 +947,51 @@ section {
   background: var(--surface);
   box-shadow: var(--shadow-md);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.figure[data-lightbox-ready] {
+  cursor: zoom-in;
+}
+
+.figure[data-lightbox-ready]:focus-visible {
+  outline: 3px solid rgba(0, 97, 179, 0.34);
+  outline-offset: 5px;
+}
+
+.figure-zoom-hint {
+  position: absolute !important;
+  z-index: 4 !important;
+  top: 29px;
+  right: 29px;
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  background: rgba(12, 24, 49, 0.78);
+  color: #fff;
+  box-shadow: 0 7px 20px rgba(10, 19, 39, 0.18);
+  font-size: 11.5px;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.figure-zoom-hint svg {
+  width: 15px;
+  height: 15px;
+}
+
+.figure[data-lightbox-ready]:hover .figure-zoom-hint,
+.figure[data-lightbox-ready]:focus-visible .figure-zoom-hint {
+  opacity: 1;
+  transform: none;
 }
 
 .figure::before {
@@ -1790,6 +1901,137 @@ section {
   margin-top: 16px;
 }
 
+/* Figure viewer and long-page controls */
+.back-to-top {
+  position: fixed;
+  z-index: 90;
+  right: max(20px, calc((100vw - var(--max-width)) / 2 - 64px));
+  bottom: 22px;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  transform: translateY(14px) scale(0.94);
+  place-items: center;
+  border: 1px solid rgba(0, 97, 179, 0.22);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--brand-3);
+  box-shadow: 0 14px 32px rgba(17, 26, 46, 0.16);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(12px);
+}
+
+.back-to-top.visible {
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(17, 26, 46, 0.2);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+.figure-lightbox {
+  position: fixed;
+  z-index: 300;
+  inset: 0;
+  display: grid;
+  padding: 32px;
+  place-items: center;
+  background: rgba(7, 12, 28, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  backdrop-filter: blur(12px);
+}
+
+.figure-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.figure-lightbox-dialog {
+  position: relative;
+  display: flex;
+  width: min(1500px, 96vw);
+  max-height: calc(100svh - 64px);
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(12px) scale(0.985);
+  transition: transform 0.22s ease;
+}
+
+.figure-lightbox.open .figure-lightbox-dialog {
+  transform: none;
+}
+
+.figure-lightbox-image {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100svh - 142px);
+  margin: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+  object-fit: contain;
+}
+
+.figure-lightbox-caption {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #edf4ff;
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.figure-lightbox-close {
+  position: absolute;
+  z-index: 2;
+  top: -18px;
+  right: -18px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  background: rgba(13, 20, 43, 0.9);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+}
+
+.figure-lightbox-close:hover {
+  background: #fff;
+  color: var(--ink);
+}
+
+.figure-lightbox-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 /* Motion */
 /* Shared restrained card interaction: local light, gentle perspective, and
    content feedback without turning the page into a motion-heavy dashboard. */
@@ -1975,13 +2217,13 @@ section {
     );
 }
 
-.reveal {
+html.js .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 0.62s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.62s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.reveal.in {
+html.js .reveal.in {
   opacity: 1;
   transform: none;
 }
@@ -2094,6 +2336,10 @@ section {
     font-size: 12.5px;
   }
 
+  .nav-github {
+    padding-inline: 10px;
+  }
+
   .feature-cards,
   .catalog-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2142,6 +2388,10 @@ section {
     display: grid;
   }
 
+  .nav-github {
+    display: none;
+  }
+
   .foundation-grid,
   .level-layout,
   .level-layout.reverse,
@@ -2164,33 +2414,58 @@ section {
   }
 
   .nav-inner {
+    min-height: 60px;
     padding-inline: 18px;
   }
 
   .brand-name {
-    max-width: 235px;
+    max-width: min(235px, calc(100vw - 126px));
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .hero {
-    padding: 72px 0 58px;
+    min-height: 0;
+    padding: 48px 0 48px;
+    text-align: left;
+  }
+
+  .hero-inner {
+    min-height: 0;
+    justify-content: flex-start;
   }
 
   .eyebrow {
     max-width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
     font-size: 10.5px;
     letter-spacing: 0.06em;
-    text-align: center;
+    text-align: left;
+  }
+
+  .hero-inner > .eyebrow {
+    align-self: flex-start;
   }
 
   .hero-title {
     width: 100%;
     max-width: 100%;
+    margin: 0 0 14px;
     font-size: clamp(30px, 8.6vw, 40px);
     letter-spacing: -0.035em;
-    overflow-wrap: normal;
+    line-height: 1.06;
+    overflow-wrap: anywhere;
+    text-align: left;
+  }
+
+  .hero-title .title-copy,
+  .hero-title .title-gradient-group {
+    display: block;
+  }
+
+  .hero-title .title-word {
+    white-space: normal;
   }
 
   .hero-title .title-gradient-group {
@@ -2198,6 +2473,7 @@ section {
   }
 
   .hero-title .title-mobius {
+    display: none;
     width: 150vw;
     max-width: 690px;
     opacity: 0;
@@ -2209,50 +2485,120 @@ section {
     overflow-wrap: anywhere;
   }
 
-  .author-list {
+  .hero-subtitle {
+    margin: 0 0 22px;
+    font-size: 15px;
+    line-height: 1.58;
+    text-align: left;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin: 0;
+  }
+
+  .hero-actions .button {
+    width: auto;
+    max-width: none;
+    min-height: 44px;
+    padding: 10px 12px;
     font-size: 12.5px;
-    line-height: 1.75;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .hero-actions .primary {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+    margin-top: 18px;
+    border-radius: 14px;
+  }
+
+  .hero-stat {
+    min-width: 0;
+    padding: 12px 6px 11px;
+    text-align: center;
+  }
+
+  .hero-stat + .hero-stat::before {
+    top: 12px;
+    right: auto;
+    bottom: 12px;
+    left: 0;
+    width: 1px;
+    height: auto;
+  }
+
+  .hero-stat strong {
+    font-size: 20px;
+  }
+
+  .hero-stat span {
+    display: block;
+    margin-top: 3px;
+    font-size: 9.5px;
+    line-height: 1.3;
+  }
+
+  .hero-authors {
+    margin-top: 24px;
+    padding-top: 21px;
+    border-top: 1px solid rgba(0, 97, 179, 0.12);
+    text-align: left;
+  }
+
+  .author-list {
+    font-size: 11.5px;
+    line-height: 1.65;
   }
 
   .author-roles,
   .author-affiliations {
-    gap: 2px 10px;
-    font-size: 11.5px;
+    justify-content: flex-start;
+    gap: 2px 9px;
+    font-size: 10.5px;
+    line-height: 1.55;
   }
 
-  .hero-actions {
-    gap: 10px;
-  }
-
-  .button {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hero-stats {
-    grid-template-columns: 1fr;
-    max-width: 330px;
-  }
-
-  .hero-stat + .hero-stat::before {
-    top: 0;
-    right: 22px;
-    bottom: auto;
-    left: 22px;
-    width: auto;
-    height: 1px;
+  .author-line,
+  .author {
+    white-space: normal;
   }
 
   section {
-    padding: 64px 0;
+    padding: 56px 0;
   }
 
   .section-head {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .section-kicker {
+    margin-bottom: 10px;
+    font-size: 11.5px;
+  }
+
+  .section-kicker .badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section-title {
+    font-size: clamp(25px, 7.4vw, 32px);
+    line-height: 1.16;
   }
 
   .section-subtitle {
-    font-size: 15px;
+    font-size: 14.5px;
+    line-height: 1.6;
   }
 
   .figure {
@@ -2260,9 +2606,19 @@ section {
     border-radius: 16px;
   }
 
+  .figure-zoom-hint {
+    top: 18px;
+    right: 18px;
+    min-height: 32px;
+    padding: 6px 9px;
+    opacity: 0.92;
+    transform: none;
+  }
+
   .figure-caption {
     padding-inline: 3px;
-    font-size: 12.5px;
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   .prose {
@@ -2279,6 +2635,22 @@ section {
   .catalog-summary,
   .reliability-callout {
     grid-template-columns: 1fr;
+  }
+
+  .taxonomy-rail {
+    width: calc(100% + 18px);
+    margin-right: -18px;
+    grid-template-columns: repeat(5, minmax(168px, 72vw));
+    gap: 10px;
+    padding: 4px 18px 16px 2px;
+    scroll-padding-inline: 2px 18px;
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+
+  .taxonomy-step {
+    min-height: 158px;
+    padding: 20px 17px;
   }
 
   .feature-card {
@@ -2320,14 +2692,79 @@ section {
   }
 
   .citation-actions .button {
+    width: 100%;
     max-width: none;
+  }
+
+  .citation-code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: 44px;
+    height: 44px;
+  }
+
+  .figure-lightbox {
+    padding: 16px;
+  }
+
+  .figure-lightbox-dialog {
+    width: 100%;
+    max-height: calc(100svh - 32px);
+    gap: 10px;
+  }
+
+  .figure-lightbox-image {
+    max-height: calc(100svh - 112px);
+    border-radius: 12px;
+  }
+
+  .figure-lightbox-caption {
+    font-size: 11.5px;
+    text-align: left;
+  }
+
+  .figure-lightbox-close {
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 420px) {
   .brand-name {
-    max-width: 195px;
+    max-width: calc(100vw - 126px);
     font-size: 13px;
+  }
+
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .hero-title {
+    font-size: clamp(29px, 8.2vw, 34px);
+  }
+
+  .hero-actions .button {
+    padding-inline: 9px;
+    font-size: 11.5px;
+  }
+
+  .hero-stat {
+    padding-inline: 4px;
+  }
+
+  .hero-stat span {
+    font-size: 8.7px;
   }
 
   .criterion-node {
@@ -2354,7 +2791,7 @@ section {
     transition-duration: 0.01ms !important;
   }
 
-  .reveal,
+  html.js .reveal,
   .hero-inner > * {
     opacity: 1;
     transform: none;
@@ -2398,6 +2835,13 @@ section {
   .figure::after {
     display: none;
   }
+
+  .reading-progress-bar,
+  .back-to-top,
+  .figure-lightbox,
+  .figure-lightbox-dialog {
+    transition: none;
+  }
 }
 
 @media (hover: none), (pointer: coarse) {
@@ -2421,6 +2865,16 @@ section {
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <div
+      class="reading-progress"
+      role="progressbar"
+      aria-label="Page reading progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+    >
+      <span class="reading-progress-bar"></span>
+    </div>
     <canvas class="cursor-particles" aria-hidden="true"></canvas>
 
     <nav class="site-nav" aria-label="Primary navigation">
@@ -2453,6 +2907,18 @@ section {
           <a href="#papers">Papers</a>
           <a href="#about">About</a>
         </div>
+        <a
+          class="nav-github"
+          href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open the GitHub repository in a new tab"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.03c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18a10.96 10.96 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"></path>
+          </svg>
+          GitHub
+        </a>
       </div>
     </nav>
 
@@ -2648,39 +3114,6 @@ section {
           A curated collection of research on <strong>self-evolving agents</strong>, advancing reliable AI
           self-improvement.
         </p>
-        <div class="hero-authors" aria-label="Paper authors, roles, and affiliations">
-          <p class="author-list">
-            <span class="author-line">
-              <span class="author"><strong>Kaiqi Wang</strong><sup>1,*,‡</sup>,</span>
-              <span class="author"><strong>Wenjin Hou</strong><sup>1,2,*</sup>,</span>
-              <span class="author"><strong>Yuchen Yan</strong><sup>1,2,*</sup>,</span>
-              <span class="author"><strong>Hongrui Jia</strong><sup>1,3,*</sup>,</span>
-              <span class="author"><strong>Zhisheng Zhong</strong><sup>1,*</sup>,</span>
-              <span class="author"><strong>Botao Ren</strong><sup>1,4,*</sup></span>
-            </span>
-            <span class="author-line">
-              <span class="author"><strong>Yifei Chen</strong><sup>1</sup>,</span>
-              <span class="author"><strong>Songyang Zhang</strong><sup>1,§</sup>,</span>
-              <span class="author"><strong>Yongliang Shen</strong><sup>2</sup>,</span>
-              <span class="author"><strong>Jun Xiao</strong><sup>2</sup>,</span>
-              <span class="author"><strong>Yi Yang</strong><sup>2</sup>,</span>
-              <span class="author"><strong>Yueting Zhuang</strong><sup>2</sup>,</span>
-              <span class="author"><strong>Hehe Fan</strong><sup>2,†</sup></span>
-            </span>
-          </p>
-          <p class="author-roles">
-            <span><sup>*</sup> Core Contributors</span>
-            <span><sup>‡</sup> Project Lead</span>
-            <span><sup>§</sup> Project Supervisor</span>
-            <span><sup>†</sup> Corresponding Author</span>
-          </p>
-          <p class="author-affiliations">
-            <span><sup>1</sup> Tencent Hunyuan</span>
-            <span><sup>2</sup> Zhejiang University</span>
-            <span><sup>3</sup> Peking University</span>
-            <span><sup>4</sup> Tsinghua University</span>
-          </p>
-        </div>
         <div class="hero-actions">
           <span class="button disabled" aria-disabled="true" title="The manuscript link has not been published yet">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2720,6 +3153,39 @@ section {
             <strong data-count="8">8</strong>
             <span>catalog sections</span>
           </div>
+        </div>
+        <div class="hero-authors" aria-label="Paper authors, roles, and affiliations">
+          <p class="author-list">
+            <span class="author-line">
+              <span class="author"><strong>Kaiqi Wang</strong><sup>1,*,‡</sup>,</span>
+              <span class="author"><strong>Wenjin Hou</strong><sup>1,2,*</sup>,</span>
+              <span class="author"><strong>Yuchen Yan</strong><sup>1,2,*</sup>,</span>
+              <span class="author"><strong>Hongrui Jia</strong><sup>1,3,*</sup>,</span>
+              <span class="author"><strong>Zhisheng Zhong</strong><sup>1,*</sup>,</span>
+              <span class="author"><strong>Botao Ren</strong><sup>1,4,*</sup></span>
+            </span>
+            <span class="author-line">
+              <span class="author"><strong>Yifei Chen</strong><sup>1</sup>,</span>
+              <span class="author"><strong>Songyang Zhang</strong><sup>1,§</sup>,</span>
+              <span class="author"><strong>Yongliang Shen</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Jun Xiao</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Yi Yang</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Yueting Zhuang</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Hehe Fan</strong><sup>2,†</sup></span>
+            </span>
+          </p>
+          <p class="author-roles">
+            <span><sup>*</sup> Core Contributors</span>
+            <span><sup>‡</sup> Project Lead</span>
+            <span><sup>§</sup> Project Supervisor</span>
+            <span><sup>†</sup> Corresponding Author</span>
+          </p>
+          <p class="author-affiliations">
+            <span><sup>1</sup> Tencent Hunyuan</span>
+            <span><sup>2</sup> Zhejiang University</span>
+            <span><sup>3</sup> Peking University</span>
+            <span><sup>4</sup> Tsinghua University</span>
+          </p>
         </div>
       </div>
     </header>
@@ -3429,6 +3895,31 @@ section {
       </div>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="m6 14 6-6 6 6"></path>
+      </svg>
+    </button>
+
+    <div class="figure-lightbox" aria-hidden="true">
+      <div
+        class="figure-lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="figure-lightbox-title"
+        aria-describedby="figure-lightbox-caption"
+      >
+        <h2 class="sr-only" id="figure-lightbox-title">Expanded research figure</h2>
+        <button class="figure-lightbox-close" type="button" aria-label="Close expanded figure" title="Close (Esc)">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+        <img class="figure-lightbox-image" src="" alt="">
+        <p class="figure-lightbox-caption" id="figure-lightbox-caption"></p>
+      </div>
+    </div>
+
     <script>
 (() => {
   "use strict";
@@ -3436,6 +3927,9 @@ section {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.getElementById("nav-links");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const progress = document.querySelector(".reading-progress");
+  const progressBar = document.querySelector(".reading-progress-bar");
+  const backToTop = document.querySelector(".back-to-top");
 
   function setMenu(open) {
     if (!navToggle || !navLinks) return;
@@ -3553,6 +4047,115 @@ section {
 
   initInteractiveTitle();
 
+  function initFigureLightbox() {
+    const lightbox = document.querySelector(".figure-lightbox");
+    const dialog = lightbox?.querySelector(".figure-lightbox-dialog");
+    const lightboxImage = lightbox?.querySelector(".figure-lightbox-image");
+    const lightboxCaption = lightbox?.querySelector(".figure-lightbox-caption");
+    const closeButton = lightbox?.querySelector(".figure-lightbox-close");
+    const figures = [...document.querySelectorAll("figure.figure")].filter((figure) =>
+      figure.querySelector("img"),
+    );
+
+    if (
+      !(lightbox instanceof HTMLElement) ||
+      !(dialog instanceof HTMLElement) ||
+      !(lightboxImage instanceof HTMLImageElement) ||
+      !(lightboxCaption instanceof HTMLElement) ||
+      !(closeButton instanceof HTMLButtonElement)
+    ) {
+      return;
+    }
+
+    let opener = null;
+
+    function openFigure(figure) {
+      const sourceImage = figure.querySelector("img");
+      if (!(sourceImage instanceof HTMLImageElement)) return;
+
+      opener = document.activeElement instanceof HTMLElement ? document.activeElement : figure;
+      lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+      lightboxImage.alt = sourceImage.alt;
+      lightboxCaption.textContent =
+        figure.querySelector("figcaption")?.textContent?.replace(/\s+/g, " ").trim() || sourceImage.alt;
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+      closeButton.focus({ preventScroll: true });
+    }
+
+    function closeFigure() {
+      if (!lightbox.classList.contains("open")) return;
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+      if (opener instanceof HTMLElement) opener.focus({ preventScroll: true });
+      opener = null;
+    }
+
+    figures.forEach((figure, index) => {
+      const caption = figure.querySelector("figcaption");
+      const label = caption?.textContent?.replace(/\s+/g, " ").trim() || `Figure ${index + 1}`;
+      const hint = document.createElement("span");
+      hint.className = "figure-zoom-hint";
+      hint.setAttribute("aria-hidden", "true");
+      hint.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.4-3.4M11 8v6M8 11h6"></path>
+        </svg>
+        Enlarge
+      `;
+
+      figure.dataset.lightboxReady = "";
+      figure.tabIndex = 0;
+      figure.setAttribute("role", "button");
+      figure.setAttribute("aria-haspopup", "dialog");
+      figure.setAttribute("aria-label", `Open enlarged view. ${label}`);
+      figure.appendChild(hint);
+
+      figure.addEventListener("click", () => openFigure(figure));
+      figure.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openFigure(figure);
+      });
+    });
+
+    closeButton.addEventListener("click", closeFigure);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeFigure();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("open")) return;
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeFigure();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const focusable = [...dialog.querySelectorAll("button, [href], [tabindex]:not([tabindex='-1'])")]
+        .filter((element) => !element.hasAttribute("disabled"));
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
+
+  initFigureLightbox();
+
   function initInteractiveCards() {
     if (reduceMotion || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
@@ -3637,15 +4240,40 @@ section {
     });
   }
 
+  function updateLongPageControls() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollRange = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const percent = Math.min(Math.max((scrollTop / scrollRange) * 100, 0), 100);
+
+    if (progressBar instanceof HTMLElement) {
+      progressBar.style.transform = `scaleX(${percent / 100})`;
+    }
+    if (progress instanceof HTMLElement) {
+      progress.setAttribute("aria-valuenow", String(Math.round(percent)));
+    }
+    backToTop?.classList.toggle("visible", scrollTop > Math.max(window.innerHeight * 0.65, 520));
+  }
+
+  backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
   let scrollFrame = 0;
-  window.addEventListener("scroll", () => {
+  function requestScrollUpdate() {
     if (scrollFrame) return;
     scrollFrame = window.requestAnimationFrame(() => {
       updateActiveNavigation();
+      updateLongPageControls();
       scrollFrame = 0;
     });
+  }
+
+  window.addEventListener("scroll", () => {
+    requestScrollUpdate();
   }, { passive: true });
   updateActiveNavigation();
+  updateLongPageControls();
+  window.addEventListener("resize", requestScrollUpdate, { passive: true });
 
   document.querySelectorAll("[data-count]").forEach((element) => {
     const target = Number(element.dataset.count);
