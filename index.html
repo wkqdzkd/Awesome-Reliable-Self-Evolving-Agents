@@ -1,0 +1,3073 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fc">
+    <meta
+      name="description"
+      content="A curated collection of 549 works on reliable self-evolving agents, organized by what changes and what evidence supports improvement."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Awesome Reliable Self-Evolving Agents">
+    <meta
+      property="og:description"
+      content="The L0–L4 landscape of reliable AI self-improvement, from task-local outputs to evolving criteria."
+    >
+    <meta property="og:url" content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/">
+    <meta
+      property="og:image"
+      content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/assets/teaser_web.png"
+    >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:image"
+      content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/assets/teaser_web.png"
+    >
+    <title>Awesome Reliable Self-Evolving Agents</title>
+    <link rel="canonical" href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/">
+    <!-- <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;family=Sora:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+:root {
+  --bg: #f6f8fc;
+  --bg-2: #eef3fb;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.72);
+  --ink: #111a2e;
+  --ink-2: #2b3551;
+  --muted: #5f6b7e;
+  --line: #e1e8f3;
+  --brand: #0061b3;
+  --brand-2: #0063ca;
+  --brand-3: #005098;
+  --brand-soft: #e4f5ff;
+  --green: #57a969;
+  --cyan: #08a4b7;
+  --blue: #268fe0;
+  --violet: #777fd6;
+  --pink: #c45b95;
+  --shadow-sm: 0 1px 2px rgba(17, 26, 46, 0.05), 0 5px 16px rgba(17, 26, 46, 0.05);
+  --shadow-md: 0 10px 32px rgba(17, 26, 46, 0.09);
+  --shadow-lg: 0 28px 70px rgba(17, 26, 46, 0.15);
+  --gradient: linear-gradient(120deg, #2496e8 0%, #0061b3 56%, #005098 100%);
+  --radius: 20px;
+  --max-width: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: var(--brand-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(0, 97, 179, 0.28);
+  outline-offset: 3px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title,
+.brand-name {
+  font-family: "Sora", "Inter", sans-serif;
+}
+
+.wrap {
+  width: min(100% - 48px, var(--max-width));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 1000;
+  padding: 9px 14px;
+  transform: translateY(-160%);
+  border-radius: 9px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 800;
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: none;
+  text-decoration: none;
+}
+
+.cursor-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-particles.visible {
+  opacity: 1;
+}
+
+/* Navigation */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(225, 232, 243, 0.9);
+  background: rgba(246, 248, 252, 0.78);
+  backdrop-filter: saturate(180%) blur(16px);
+}
+
+.nav-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: var(--max-width);
+  min-height: 62px;
+  margin-inline: auto;
+  padding: 10px 24px;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  color: var(--ink);
+}
+
+.nav-brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e4f5ff, #d6e7fa);
+  box-shadow: 0 5px 14px rgba(0, 97, 179, 0.2);
+  font-size: 18px;
+}
+
+.brand-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  padding: 7px 10px;
+  border-radius: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--brand-soft);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 102px 0 80px;
+  background:
+    radial-gradient(120% 90% at 12% 0%, rgba(36, 150, 232, 0.17), transparent 54%),
+    radial-gradient(115% 90% at 90% 4%, rgba(0, 97, 179, 0.14), transparent 55%),
+    linear-gradient(160deg, #e4f5ff 0%, #eef6ff 38%, var(--bg) 70%, #f2f8ff 100%);
+  text-align: center;
+}
+
+.hero::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 97, 179, 0.052) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 97, 179, 0.052) 1px, transparent 1px);
+  background-size: 44px 44px;
+  content: "";
+  mask-image: radial-gradient(74% 68% at 50% 27%, #000, transparent 82%);
+  pointer-events: none;
+}
+
+.hero-aurora {
+  position: absolute;
+  z-index: 0;
+  inset: -25%;
+  background:
+    conic-gradient(from 5deg at 28% 28%, rgba(36, 150, 232, 0.19), transparent 31%),
+    conic-gradient(from 155deg at 74% 42%, rgba(0, 97, 179, 0.16), transparent 34%);
+  filter: blur(72px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: aurora 24s linear infinite;
+}
+
+.hero-blob {
+  position: absolute;
+  z-index: 0;
+  border-radius: 999px;
+  filter: blur(92px);
+  opacity: 0.17;
+  animation: float 16s ease-in-out infinite;
+}
+
+.hero-blob.one {
+  top: -200px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  background: #2496e8;
+}
+
+.hero-blob.two {
+  top: -160px;
+  right: -120px;
+  width: 470px;
+  height: 470px;
+  background: #0061b3;
+  animation-delay: -6s;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-inner > * {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.hero-inner > :nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.hero-inner > :nth-child(2) {
+  animation-delay: 0.13s;
+}
+
+.hero-inner > :nth-child(3) {
+  animation-delay: 0.22s;
+}
+
+.hero-inner > :nth-child(4) {
+  animation-delay: 0.31s;
+}
+
+.hero-inner > :nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.hero-inner > :nth-child(6) {
+  animation-delay: 0.49s;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 22px;
+  padding: 7px 12px;
+  border: 1px solid rgba(0, 97, 179, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+  color: var(--brand-3);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(87, 169, 105, 0.12);
+}
+
+.hero-title {
+  max-width: 14ch;
+  margin: 0 auto 20px;
+  color: var(--ink);
+  font-size: clamp(42px, 6.7vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.hero-title .gradient-text {
+  background: linear-gradient(105deg, #2496e8 0%, #0061b3 52%, #2496e8 100%);
+  background-clip: text;
+  background-size: 220% auto;
+  color: transparent;
+  animation: shine 7s linear infinite;
+  -webkit-background-clip: text;
+}
+
+.hero-subtitle {
+  max-width: 67ch;
+  margin: 0 auto 24px;
+  color: var(--muted);
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 500;
+}
+
+.hero-subtitle strong {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.hero-authors {
+  max-width: 94ch;
+  margin: 0 auto;
+  color: #48546c;
+  text-align: center;
+}
+
+.author-list {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.author-line {
+  display: block;
+}
+
+.author {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.author strong {
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.hero-authors sup {
+  margin-left: 1px;
+  color: var(--brand);
+  font-size: 0.72em;
+  font-weight: 800;
+}
+
+.author-roles,
+.author-affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px 15px;
+  margin: 5px auto 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+.author-roles span,
+.author-affiliations span {
+  white-space: nowrap;
+}
+
+.author-affiliations {
+  margin-top: 3px;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px 0 0;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 47px;
+  padding: 11px 21px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  font-size: 14px;
+  font-weight: 800;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5ed;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.button.primary {
+  border-color: transparent;
+  background: linear-gradient(135deg, #2496e8, #0061b3);
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(0, 97, 179, 0.28);
+}
+
+.button.primary::after {
+  position: absolute;
+  top: 0;
+  left: -125%;
+  width: 62%;
+  height: 100%;
+  transform: skewX(-18deg);
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.46), transparent);
+  content: "";
+  transition: left 0.62s ease;
+}
+
+.button.primary:hover::after {
+  left: 145%;
+}
+
+.button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.button.disabled {
+  cursor: default;
+  opacity: 0.68;
+}
+
+.button.disabled:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 680px;
+  margin: 42px auto 0;
+  border: 1px solid rgba(221, 226, 242, 0.86);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+}
+
+.hero-stat {
+  position: relative;
+  padding: 14px 20px;
+}
+
+.hero-stat + .hero-stat::before {
+  position: absolute;
+  top: 17px;
+  bottom: 17px;
+  left: 0;
+  width: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.hero-stat strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.hero-stat span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Shared section styles */
+main {
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  padding: 84px 0;
+  scroll-margin-top: 70px;
+}
+
+.band {
+  background:
+    radial-gradient(60% 100% at 100% 0%, rgba(47, 105, 223, 0.055), transparent 60%),
+    radial-gradient(60% 100% at 0% 100%, rgba(0, 97, 179, 0.055), transparent 60%),
+    var(--bg-2);
+}
+
+.section-head {
+  max-width: 76ch;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: var(--brand);
+  font-size: 12.5px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-kicker .badge {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 97, 179, 0.28);
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.section-title {
+  margin: 0 0 13px;
+  color: var(--ink);
+  font-size: clamp(27px, 3.7vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16.5px;
+}
+
+.section-subtitle strong {
+  color: var(--ink);
+}
+
+.figure {
+  position: relative;
+  overflow: hidden;
+  margin-inline: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.figure::before {
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent, rgba(0, 97, 179, 0.28), transparent);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.figure:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.figure:hover::before {
+  opacity: 1;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 13px;
+}
+
+.figure.hero-figure img {
+  aspect-ratio: 1640 / 950;
+  object-fit: cover;
+}
+
+.figure-caption {
+  max-width: 86ch;
+  margin: 16px auto 3px;
+  color: var(--muted);
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.figure-caption strong {
+  color: var(--ink);
+}
+
+.prose {
+  max-width: 80ch;
+  margin-inline: auto;
+  color: var(--ink-2);
+  font-size: 17px;
+}
+
+.prose p {
+  margin: 0 0 16px;
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+.intro-block {
+  max-width: 82ch;
+  margin: 52px auto 0;
+  text-align: center;
+}
+
+.intro-block h3 {
+  margin: 0 0 21px;
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.intro-block .prose {
+  text-align: left;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+  padding: 23px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  transform: scaleY(0.35);
+  transform-origin: top;
+  background: var(--gradient);
+  content: "";
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #d5dcee;
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card:hover::after {
+  transform: scaleY(1);
+}
+
+.feature-number {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  font-family: "Sora", sans-serif;
+  font-size: 29px;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  -webkit-background-clip: text;
+}
+
+.feature-card h4 {
+  margin: 13px 0 8px;
+  font-size: 16.5px;
+  letter-spacing: -0.01em;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+/* Foundation */
+.foundation-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.principles {
+  display: grid;
+  gap: 14px;
+}
+
+.principle {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.principle:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.principle h4 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 5px;
+  font-size: 15.5px;
+}
+
+.principle p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.principle-icon {
+  display: grid;
+  width: 27px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+/* Taxonomy summary */
+.taxonomy-rail {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.taxonomy-step {
+  --level: var(--brand);
+  position: relative;
+  min-height: 178px;
+  padding: 22px 18px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--level) 24%, white);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--level) 8%, white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taxonomy-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.taxonomy-step::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: var(--level);
+  content: "";
+}
+
+.taxonomy-step.l0 {
+  --level: var(--green);
+}
+
+.taxonomy-step.l1 {
+  --level: var(--cyan);
+}
+
+.taxonomy-step.l2 {
+  --level: var(--blue);
+}
+
+.taxonomy-step.l3 {
+  --level: var(--violet);
+}
+
+.taxonomy-step.l4 {
+  --level: var(--pink);
+}
+
+.taxonomy-step .level-code {
+  color: var(--level);
+  font-family: "Sora", sans-serif;
+  font-size: 32px;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.taxonomy-step h3 {
+  margin: 8px 0 7px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.taxonomy-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.boundary-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 760px;
+  margin: 28px auto 0;
+  padding: 13px 18px;
+  border: 1px dashed #cdd4e7;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.boundary-note strong {
+  color: var(--brand);
+}
+
+/* Individual levels */
+.level-section {
+  --level: var(--brand);
+  --level-soft: #f0efff;
+}
+
+.level-section.level-0 {
+  --level: var(--green);
+  --level-soft: #edf8ef;
+}
+
+.level-section.level-1 {
+  --level: var(--cyan);
+  --level-soft: #eaf8fa;
+}
+
+.level-section.level-2 {
+  --level: var(--blue);
+  --level-soft: #ebf4fd;
+}
+
+.level-section.level-3 {
+  --level: var(--violet);
+  --level-soft: #f0f0fc;
+}
+
+.level-section.level-4 {
+  --level: var(--pink);
+  --level-soft: #faedf5;
+}
+
+.level-section .section-kicker {
+  color: var(--level);
+}
+
+.level-section .section-kicker .badge {
+  background: var(--level);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--level) 32%, transparent);
+}
+
+.level-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.level-layout.reverse {
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.level-layout.reverse .figure {
+  order: 2;
+}
+
+.method-grid {
+  display: grid;
+  gap: 13px;
+}
+
+.method-card {
+  position: relative;
+  padding: 17px 18px 17px 19px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--level) 20%, white);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.method-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: var(--level);
+  content: "";
+}
+
+.method-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.method-card h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.method-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.count-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: var(--level-soft);
+  color: var(--level);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.level-total {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.level-total strong {
+  color: var(--level);
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+}
+
+.criterion-map {
+  position: relative;
+  min-height: 350px;
+  padding: 34px;
+  overflow: hidden;
+  border: 1px solid #edcee0;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(196, 91, 149, 0.13), transparent 34%),
+    linear-gradient(145deg, #fff, #fdf6fa);
+  box-shadow: var(--shadow-md);
+}
+
+.criterion-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 142px;
+  height: 142px;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border: 8px solid rgba(196, 91, 149, 0.14);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ca6ca0, #a94880);
+  color: #fff;
+  box-shadow: 0 16px 34px rgba(166, 64, 121, 0.25);
+  text-align: center;
+}
+
+.criterion-center strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.criterion-center span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.criterion-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(196, 91, 149, 0.35);
+  border-radius: 50%;
+  animation: orbit 24s linear infinite;
+}
+
+.criterion-node {
+  position: absolute;
+  z-index: 3;
+  width: 150px;
+  padding: 12px 13px;
+  border: 1px solid #ecc9dd;
+  border-radius: 13px;
+  background: #fff;
+  color: #7c315d;
+  box-shadow: var(--shadow-sm);
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.criterion-node.one {
+  top: 28px;
+  left: 28px;
+}
+
+.criterion-node.two {
+  top: 28px;
+  right: 28px;
+}
+
+.criterion-node.three {
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Reliability */
+.reliability-callout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.audit-card {
+  position: relative;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.audit-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background: var(--gradient);
+  content: "";
+}
+
+.audit-card .audit-index {
+  color: var(--brand);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.audit-card h3 {
+  margin: 8px 0 8px;
+  font-size: 17px;
+}
+
+.audit-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+/* Applications */
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.application-card {
+  --app: var(--brand);
+  padding: 21px 19px;
+  border: 1px solid color-mix(in srgb, var(--app) 22%, white);
+  border-radius: 17px;
+  background: color-mix(in srgb, var(--app) 6%, white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-card:nth-child(2) {
+  --app: #36a66d;
+}
+
+.application-card:nth-child(3) {
+  --app: #8356ca;
+}
+
+.application-card:nth-child(4) {
+  --app: #e97d2e;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.app-icon {
+  display: grid;
+  width: 44px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--app);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.application-card h3 {
+  min-height: 48px;
+  margin: 13px 0 8px;
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.application-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+/* Catalog */
+.catalog-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.catalog-card {
+  --catalog: var(--brand);
+  position: relative;
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catalog-card:nth-child(2) {
+  --catalog: var(--green);
+}
+
+.catalog-card:nth-child(3) {
+  --catalog: var(--cyan);
+}
+
+.catalog-card:nth-child(4) {
+  --catalog: var(--blue);
+}
+
+.catalog-card:nth-child(5) {
+  --catalog: var(--violet);
+}
+
+.catalog-card:nth-child(6) {
+  --catalog: var(--pink);
+}
+
+.catalog-card:nth-child(7) {
+  --catalog: #44557a;
+}
+
+.catalog-card:nth-child(8) {
+  --catalog: #e47a31;
+}
+
+.catalog-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: var(--catalog);
+  content: "";
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.catalog-card strong {
+  color: var(--catalog);
+  font-family: "Sora", sans-serif;
+  font-size: 25px;
+}
+
+.catalog-card span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.catalog-card small {
+  margin-top: auto;
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 650;
+}
+
+.catalog-action {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.catalog-action p {
+  max-width: 62ch;
+  margin: 14px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* About and citation */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 22px;
+}
+
+.about-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+}
+
+.about-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-list {
+  display: grid;
+  gap: 9px;
+  margin: 19px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink-2);
+  font-size: 13.5px;
+  word-break: break-word;
+}
+
+.contact-list a:hover {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.contact-list svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: var(--brand);
+}
+
+.citation-box {
+  position: relative;
+  min-height: 100%;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid #242b52;
+  border-radius: var(--radius);
+  background: #0d1227;
+  color: #dce3f8;
+  box-shadow: var(--shadow-md);
+}
+
+.citation-box::before {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(36, 150, 232, 0.2);
+  content: "";
+  filter: blur(20px);
+}
+
+.citation-label {
+  position: relative;
+  color: #aebcff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.citation-box h3 {
+  position: relative;
+  margin: 11px 0 12px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.citation-box p {
+  position: relative;
+  margin: 0 0 20px;
+  color: #aeb8d6;
+  font-size: 14px;
+}
+
+.citation-code {
+  position: relative;
+  display: block;
+  padding: 15px 16px;
+  overflow: auto;
+  border: 1px solid #293252;
+  border-radius: 12px;
+  background: #090d1d;
+  color: #cbd4ee;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.citation-code .accent {
+  color: #9fb0ff;
+}
+
+.citation-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.citation-actions .button {
+  min-height: 41px;
+  border-color: #30395d;
+  background: #151c38;
+  color: #fff;
+  box-shadow: none;
+  font-size: 12.5px;
+}
+
+.citation-actions .button:hover {
+  border-color: #55618d;
+  box-shadow: none;
+}
+
+/* Footer */
+.site-footer {
+  padding: 52px 0 62px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.footer-mark {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 15px;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #e4f5ff, #d6e7fa);
+  box-shadow: var(--shadow-sm);
+  font-size: 27px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+.site-footer a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+/* Motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.62s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.62s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes aurora {
+  0% {
+    transform: rotate(0deg) scale(1.04);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.14);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.04);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(22px, 34px);
+  }
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 220% center;
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1040px) {
+  .nav-links a {
+    padding-inline: 8px;
+    font-size: 12.5px;
+  }
+
+  .feature-cards,
+  .catalog-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .taxonomy-rail {
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    overflow-x: auto;
+    padding: 4px 3px 18px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .taxonomy-step {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    padding: 10px 20px 17px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .foundation-grid,
+  .level-layout,
+  .level-layout.reverse,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .level-layout.reverse .figure {
+    order: initial;
+  }
+
+  .application-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .wrap {
+    width: min(100% - 36px, var(--max-width));
+  }
+
+  .nav-inner {
+    padding-inline: 18px;
+  }
+
+  .brand-name {
+    max-width: 235px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero {
+    padding: 72px 0 58px;
+  }
+
+  .eyebrow {
+    max-width: 100%;
+    justify-content: center;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8.6vw, 40px);
+    letter-spacing: -0.035em;
+    overflow-wrap: normal;
+  }
+
+  .hero-title .gradient-text {
+    display: block;
+    font-size: 0.88em;
+  }
+
+  .hero-subtitle,
+  .hero-authors {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .author-list {
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+
+  .author-roles,
+  .author-affiliations {
+    gap: 2px 10px;
+    font-size: 11.5px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+  }
+
+  .hero-stat + .hero-stat::before {
+    top: 0;
+    right: 22px;
+    bottom: auto;
+    left: 22px;
+    width: auto;
+    height: 1px;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+
+  .section-head {
+    margin-bottom: 35px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .figure {
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .figure-caption {
+    padding-inline: 3px;
+    font-size: 12.5px;
+  }
+
+  .prose {
+    font-size: 16px;
+  }
+
+  .intro-block {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .feature-cards,
+  .application-grid,
+  .catalog-summary,
+  .reliability-callout {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 0;
+  }
+
+  .criterion-map {
+    min-height: 430px;
+    padding: 18px;
+  }
+
+  .criterion-node {
+    width: 132px;
+    font-size: 11px;
+  }
+
+  .criterion-node.one {
+    top: 25px;
+    left: 14px;
+  }
+
+  .criterion-node.two {
+    top: 25px;
+    right: 14px;
+  }
+
+  .criterion-node.three {
+    bottom: 28px;
+  }
+
+  .criterion-orbit {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about-card,
+  .citation-box {
+    padding: 22px;
+  }
+
+  .citation-actions .button {
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-name {
+    max-width: 195px;
+    font-size: 13px;
+  }
+
+  .criterion-node {
+    width: 116px;
+    padding: 10px;
+  }
+
+  .criterion-center {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .hero-inner > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .cursor-particles {
+    display: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-particles {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <canvas class="cursor-particles" aria-hidden="true"></canvas>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#top" aria-label="Reliable Self-Evolving Agents home">
+          <span class="brand-mark" aria-hidden="true">🧬</span>
+          <span class="brand-name">Reliable Self-Evolving Agents</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Open navigation menu"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#landscape">Landscape</a>
+          <a href="#overview">Overview</a>
+          <a href="#foundations">Foundations</a>
+          <a href="#taxonomy">Taxonomy</a>
+          <a href="#levels">Levels</a>
+          <a href="#reliability">Reliability</a>
+          <a href="#applications">Applications</a>
+          <a href="#papers">Papers</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-aurora" aria-hidden="true"></div>
+      <div class="hero-blob one" aria-hidden="true"></div>
+      <div class="hero-blob two" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Survey companion &amp; reading list</p>
+        <h1 class="hero-title">
+          Diving into Reliable <span class="gradient-text">Self-Evolving Agents</span>
+        </h1>
+        <p class="hero-subtitle">
+          A curated collection of research on <strong>self-evolving agents</strong>, advancing reliable AI
+          self-improvement.
+        </p>
+        <div class="hero-authors" aria-label="Paper authors, roles, and affiliations">
+          <p class="author-list">
+            <span class="author-line">
+              <span class="author"><strong>Kaiqi Wang</strong><sup>1,*,‡</sup>,</span>
+              <span class="author"><strong>Wenjin Hou</strong><sup>1,2,*</sup>,</span>
+              <span class="author"><strong>Yuchen Yan</strong><sup>1,2,*</sup>,</span>
+              <span class="author"><strong>Hongrui Jia</strong><sup>1,3,*</sup>,</span>
+              <span class="author"><strong>Zhisheng Zhong</strong><sup>1,*</sup>,</span>
+              <span class="author"><strong>Botao Ren</strong><sup>1,4,*</sup></span>
+            </span>
+            <span class="author-line">
+              <span class="author"><strong>Yifei Chen</strong><sup>1</sup>,</span>
+              <span class="author"><strong>Songyang Zhang</strong><sup>1,§</sup>,</span>
+              <span class="author"><strong>Yongliang Shen</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Jun Xiao</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Yi Yang</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Yueting Zhuang</strong><sup>2</sup>,</span>
+              <span class="author"><strong>Hehe Fan</strong><sup>2,†</sup></span>
+            </span>
+          </p>
+          <p class="author-roles">
+            <span><sup>*</sup> Core Contributors</span>
+            <span><sup>‡</sup> Project Lead</span>
+            <span><sup>§</sup> Project Supervisor</span>
+            <span><sup>†</sup> Corresponding Author</span>
+          </p>
+          <p class="author-affiliations">
+            <span><sup>1</sup> Tencent Hunyuan</span>
+            <span><sup>2</sup> Zhejiang University</span>
+            <span><sup>3</sup> Peking University</span>
+            <span><sup>4</sup> Tsinghua University</span>
+          </p>
+        </div>
+        <div class="hero-actions">
+          <span class="button disabled" aria-disabled="true" title="The manuscript link has not been published yet">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2h9l5 5v15H6z"></path>
+              <path d="M14 2v6h6M9 13h6M9 17h6"></path>
+            </svg>
+            Paper · coming soon
+          </span>
+          <a
+            class="button primary"
+            href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.03c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18a10.96 10.96 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"></path>
+            </svg>
+            Code / Reading List
+          </a>
+          <a class="button" href="#taxonomy">
+            Explore L0–L4
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-stats" aria-label="Collection statistics">
+          <div class="hero-stat">
+            <strong data-count="549">549</strong>
+            <span>manuscript-used works</span>
+          </div>
+          <div class="hero-stat">
+            <strong data-count="5">5</strong>
+            <span>self-evolution levels</span>
+          </div>
+          <div class="hero-stat">
+            <strong data-count="8">8</strong>
+            <span>catalog sections</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="band" id="landscape" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">◇</span> Landscape</div>
+            <h2 class="section-title">What changes during self-evolution?</h2>
+            <p class="section-subtitle">
+              Five levels show how deeply a change reaches into the agent—from a current output to the criteria that
+              judge future updates.
+            </p>
+          </div>
+          <figure class="figure hero-figure reveal">
+            <img
+              src="assets/teaser_web.png"
+              width="1640"
+              height="950"
+              alt="Five levels of self-evolution, shown as divers descending from output-level to criterion-level changes"
+            >
+            <figcaption class="figure-caption">
+              <strong>Figure 1.</strong> Changes at L0 are limited to the current task, while those at L1, L2, L3, and
+              L4 can carry over to future tasks or updates. Reliable self-evolution requires evidence that remains
+              outside the relevant update boundary.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="overview" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">◎</span> Overview</div>
+            <h2 class="section-title">A structural map of reliable self-evolution</h2>
+            <p class="section-subtitle">
+              The survey asks two organizing questions: <strong>what changes</strong>, and
+              <strong>what evidence</strong> can support improvement?
+            </p>
+          </div>
+
+          <figure class="figure reveal">
+            <img
+              src="assets/organization.png"
+              width="2048"
+              height="929"
+              loading="lazy"
+              alt="Organization of the survey across framing, five self-evolution levels, reliability analysis, and outlook"
+            >
+            <figcaption class="figure-caption">
+              <strong>Figure 2.</strong> Part I frames self-evolution and RSI, Part II maps methods from L0 to L4 by
+              evolution depth, and Part III analyzes reliability and open problems.
+            </figcaption>
+          </figure>
+
+          <div class="intro-block reveal">
+            <h3>Classification by the deepest active evolution target</h3>
+            <div class="prose">
+              <p>
+                Each transition is classified by the <strong>deepest evolution target whose active semantic change
+                affects a decision-relevant output, update, or judgment</strong>—not by its algorithm name, training
+                stage, or runtime components.
+              </p>
+              <p>
+                L0 is task-local; L1–L4 require a retained change that affects later independent tasks or future
+                updates. The levels describe how far a change reaches, not how capable or reliable the system is.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-cards">
+            <article class="feature-card reveal">
+              <span class="feature-number">01</span>
+              <h4>Evolution target</h4>
+              <p>Classify the transition by the deepest object that actively changes.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">02</span>
+              <h4>Persistence boundary</h4>
+              <p>Separate task-local revision from retained changes that affect future tasks or updates.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">03</span>
+              <h4>RSI frontier</h4>
+              <p>Under the structural definition, recursive self-improvement begins at L3 and extends at L4.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">04</span>
+              <h4>Reliability evidence</h4>
+              <p>Keep evaluation and oversight independent of the update and matched to the claim’s scope.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="foundations" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">1</span> Foundations</div>
+            <h2 class="section-title">The self-evolution loop needs an external gate</h2>
+            <p class="section-subtitle">
+              Execution creates experience; an improver proposes change; an independent audit decides whether that
+              change may persist.
+            </p>
+          </div>
+
+          <div class="foundation-grid">
+            <figure class="figure reveal">
+              <img
+                src="assets/sec2_loop.png"
+                width="2048"
+                height="468"
+                loading="lazy"
+                alt="The self-evolution loop with task execution, change proposal, external audit, rollback, acceptance, and human escalation"
+              >
+              <figcaption class="figure-caption">
+                <strong>Figure 3.</strong> The evidence source and acceptance gate stay outside the update boundary, so
+                the loop cannot rewrite them.
+              </figcaption>
+            </figure>
+            <div class="principles">
+              <article class="principle reveal">
+                <h4><span class="principle-icon">01</span> Execute &amp; observe</h4>
+                <p>Run a task and collect outputs, trajectories, tool results, and experience.</p>
+              </article>
+              <article class="principle reveal">
+                <h4><span class="principle-icon">02</span> Propose &amp; select</h4>
+                <p>The improver proposes candidate changes and the criterion judges among them.</p>
+              </article>
+              <article class="principle reveal">
+                <h4><span class="principle-icon">03</span> Audit &amp; control</h4>
+                <p>External evidence supports accept, reject and roll back, or escalate to a human.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="taxonomy" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">2</span> Taxonomy</div>
+            <h2 class="section-title">Five nested levels of self-evolution</h2>
+            <p class="section-subtitle">
+              Deeper levels retain control over progressively more consequential parts of the update process.
+            </p>
+          </div>
+
+          <div class="taxonomy-rail reveal" aria-label="L0 to L4 taxonomy">
+            <article class="taxonomy-step l0">
+              <span class="level-code">L0</span>
+              <h3>Output-Level</h3>
+              <p>Current output or task-local trajectory · Self-confirmation</p>
+            </article>
+            <article class="taxonomy-step l1">
+              <span class="level-code">L1</span>
+              <h3>Model-Level</h3>
+              <p>Trainable model or policy state · Model collapse</p>
+            </article>
+            <article class="taxonomy-step l2">
+              <span class="level-code">L2</span>
+              <h3>Scaffold-Level</h3>
+              <p>Prompts, skills, memory, workflows, and harness · Scaffold overfitting</p>
+            </article>
+            <article class="taxonomy-step l3">
+              <span class="level-code">L3</span>
+              <h3>Improver-Level</h3>
+              <p>Procedure governing future updates · Metric capture</p>
+            </article>
+            <article class="taxonomy-step l4">
+              <span class="level-code">L4</span>
+              <h3>Criterion-Level</h3>
+              <p>Evaluation protocols, rewards, constraints, or values · Criterion drift</p>
+            </article>
+          </div>
+          <p class="boundary-note reveal">
+            <strong>Retention boundary:</strong> L0 ends with the current task.
+            <strong>RSI frontier:</strong> L3 begins self-modification of the improvement mechanism.
+          </p>
+        </div>
+      </section>
+
+      <section class="level-section level-0 band" id="levels" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">L0</span> Output-Level Self-Evolution</div>
+            <h2 class="section-title">Revise the current output; keep the agent fixed</h2>
+            <p class="section-subtitle">
+              Deepest active target: <strong>current output or task-local trajectory</strong>. Characteristic failure:
+              <strong>self-confirmation</strong>.
+            </p>
+            <span class="level-total"><strong>42</strong> cataloged works</span>
+          </div>
+          <div class="level-layout">
+            <figure class="figure reveal">
+              <img
+                src="assets/sec3_output.png"
+                width="2048"
+                height="1020"
+                loading="lazy"
+                alt="Task-local workflow of output-level self-evolution through reflection, exploration, and checking"
+              >
+              <figcaption class="figure-caption">
+                <strong>Figure 4.</strong> Reflection, exploration, and verification revise the current output while
+                the underlying agent setup stays fixed, so independent tasks start fresh.
+              </figcaption>
+            </figure>
+            <div class="method-grid">
+              <article class="method-card reveal">
+                <h4>Task-Local Boundary &amp; Persistence <span class="count-chip">1</span></h4>
+                <p>Changes remain inside the current task and do not persist into later independent tasks.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Iterative Revision <span class="count-chip">11</span></h4>
+                <p>Self-feedback, repair, role feedback, and tool results revise a draft in place.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Search, Verification &amp; Acceptance <span class="count-chip">28</span></h4>
+                <p>Sample paths, compare candidates, verify with sources or tests, then accept or reject.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Reliability &amp; Persistence Limit <span class="count-chip">2</span></h4>
+                <p>Self-repair can fail when the same system both generates and confirms its answer.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-section level-1">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">L1</span> Model-Level Self-Evolution</div>
+            <h2 class="section-title">Retain changes in the trainable model or policy</h2>
+            <p class="section-subtitle">
+              Deepest active target: <strong>trainable model or policy state</strong>. Characteristic failure:
+              <strong>model collapse</strong>.
+            </p>
+            <span class="level-total"><strong>137</strong> cataloged works</span>
+          </div>
+          <div class="level-layout reverse">
+            <figure class="figure reveal">
+              <img
+                src="assets/sec4_model.png"
+                width="2048"
+                height="548"
+                loading="lazy"
+                alt="Single-model self-training, competitive self-play, and cooperative co-evolution"
+              >
+              <figcaption class="figure-caption">
+                <strong>Figure 5.</strong> The three training relations, read left to right as the party emitting the
+                training signal moves further from the trainee and the signal becomes harder to fabricate.
+              </figcaption>
+            </figure>
+            <div class="method-grid">
+              <article class="method-card reveal">
+                <h4>Single-Model Self-Training <span class="count-chip">51</span></h4>
+                <p>Select existing outputs or manufacture synthetic supervision for retained policy updates.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Competitive Self-Play <span class="count-chip">41</span></h4>
+                <p>Competing copies or specialized proposer–solver loops create adversarial learning signals.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Cooperative Co-Evolution <span class="count-chip">34</span></h4>
+                <p>Teachers, critics, co-trainees, or populations improve together and share signal.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Fixed-Scaffold Reliability Limit <span class="count-chip">11</span></h4>
+                <p>Guard against model collapse, forgetting, tail narrowing, and weak generalization.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-section level-2 band">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">L2</span> Scaffold-Level Self-Evolution</div>
+            <h2 class="section-title">Evolve the structures that surround the model</h2>
+            <p class="section-subtitle">
+              Deepest active target: <strong>the scaffold</strong>. Characteristic failure:
+              <strong>scaffold overfitting</strong>.
+            </p>
+            <span class="level-total"><strong>257</strong> cataloged works</span>
+          </div>
+          <div class="level-layout">
+            <figure class="figure reveal">
+              <img
+                src="assets/sec5_scaffold.png"
+                width="2048"
+                height="1168"
+                loading="lazy"
+                alt="The widening scope of scaffold-level self-evolution from prompts to runtime harnesses"
+              >
+              <figcaption class="figure-caption">
+                <strong>Figure 6.</strong> The scaffold widens from a prompt or code artifact to the runtime harness
+                that encloses them all, while the improver and criterion stay fixed.
+              </figcaption>
+            </figure>
+            <div class="method-grid">
+              <article class="method-card reveal">
+                <h4>Definition &amp; Boundary <span class="count-chip">4</span></h4>
+                <p>Separate retained scaffold changes from model updates and improver-level change.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Prompts &amp; Programs <span class="count-chip">17</span></h4>
+                <p>Rewrite language control surfaces or executable artifacts.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Architecture &amp; Workflows <span class="count-chip">77</span></h4>
+                <p>Search structures, roles, communication, routing, and multi-agent workflows.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Skills &amp; Experience <span class="count-chip">106</span></h4>
+                <p>Form, verify, curate, share, and deploy reusable skills.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Memory &amp; Retrieval <span class="count-chip">31</span></h4>
+                <p>Evolve write, recall, structure, provenance, and deletion policies.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Runtime Harness &amp; Reliability <span class="count-chip">22</span></h4>
+                <p>Retain editable loops while diagnosing drift and preserving rollback.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-section level-3">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">L3</span> Improver-Level Self-Evolution</div>
+            <h2 class="section-title">Change how future updates are proposed and managed</h2>
+            <p class="section-subtitle">
+              Deepest active target: <strong>the improver</strong>. Characteristic failure:
+              <strong>metric capture</strong>.
+            </p>
+            <span class="level-total"><strong>21</strong> cataloged works</span>
+          </div>
+          <div class="level-layout reverse">
+            <figure class="figure reveal">
+              <img
+                src="assets/sec6_improver.png"
+                width="2048"
+                height="896"
+                loading="lazy"
+                alt="An improver modifying its own improvement mechanism"
+              >
+              <figcaption class="figure-caption">
+                <strong>Figure 7.</strong> A candidate successor to the current improver is externally audited and, if
+                promoted, governs later proposal, selection, commit, and rollback under a fixed criterion.
+              </figcaption>
+            </figure>
+            <div class="method-grid">
+              <article class="method-card reveal">
+                <h4>Self-Referential Agents <span class="count-chip">10</span></h4>
+                <p>Agents rewrite or replace the mechanism that performs their future improvement.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Learning Better Improvement Strategies <span class="count-chip">7</span></h4>
+                <p>Use experience to discover stronger update, optimization, or training strategies.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Fixed-Criterion Reliability Limit <span class="count-chip">4</span></h4>
+                <p>Improvement can become metric capture when the updater exploits a fixed criterion.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-section level-4 band">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">L4</span> Criterion-Level Self-Evolution</div>
+            <h2 class="section-title">Evolve how present and future updates are judged</h2>
+            <p class="section-subtitle">
+              Deepest active target: <strong>the criterion</strong>. Characteristic failure:
+              <strong>criterion drift</strong>.
+            </p>
+            <span class="level-total"><strong>30</strong> cataloged works</span>
+          </div>
+          <div class="level-layout">
+            <div class="criterion-map reveal" role="img" aria-label="Criterion-level evolution changes evaluators, tasks, objectives, and constraints">
+              <div class="criterion-orbit" aria-hidden="true"></div>
+              <div class="criterion-center">
+                <div><strong>L4</strong><span>Criterion-Level</span></div>
+              </div>
+              <div class="criterion-node one">Evaluation protocols &amp; rubrics</div>
+              <div class="criterion-node two">Tasks, environments &amp; objectives</div>
+              <div class="criterion-node three">Rewards, constraints &amp; values</div>
+            </div>
+            <div class="method-grid">
+              <article class="method-card reveal">
+                <h4>Evolving Evaluation Mechanisms <span class="count-chip">11</span></h4>
+                <p>Develop rubrics, evaluators, meta-judges, and co-evolving graders.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Evolving Tasks &amp; Objectives <span class="count-chip">19</span></h4>
+                <p>Change the tasks, environments, objectives, or feedback used to judge improvement.</p>
+              </article>
+              <article class="method-card reveal">
+                <h4>Reliability boundary</h4>
+                <p>Use protected outcomes, cross-criterion comparison, external authorization, and constraints.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reliability" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">3</span> Cross-Level Reliability</div>
+            <h2 class="section-title">Match every evolution target with an external audit</h2>
+            <p class="section-subtitle">
+              The rise of the ladder is <strong>self-evolution depth</strong>, not capability or reliability.
+            </p>
+          </div>
+          <figure class="figure reveal">
+            <img
+              src="assets/sec8_ladder.png"
+              width="2048"
+              height="1092"
+              loading="lazy"
+              alt="Reliability ladder pairing each self-evolution level with an external audit and control"
+            >
+            <figcaption class="figure-caption">
+              <strong>Figure 8.</strong> Each step is a deeper evolution target, and each card pairs it with the
+              external audit and control that a claim at that depth requires.
+            </figcaption>
+          </figure>
+          <div class="reliability-callout">
+            <article class="audit-card reveal">
+              <span class="audit-index">01 / EVIDENCE</span>
+              <h3>External audit across levels</h3>
+              <p>Use evidence outside the relevant update boundary and matched to the improvement claim.</p>
+            </article>
+            <article class="audit-card reveal">
+              <span class="audit-index">02 / HORIZON</span>
+              <h3>Level-specific failure modes</h3>
+              <p>Extend evaluation from a current output to transfer, retention, descendants, and protected outcomes.</p>
+            </article>
+            <article class="audit-card reveal">
+              <span class="audit-index">03 / INDEPENDENCE</span>
+              <h3>Preserve audit independence</h3>
+              <p>Protect evidence sources, acceptance gates, lineage, rollback, and human escalation from compromise.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="applications" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">4</span> Applications &amp; Outlook</div>
+            <h2 class="section-title">From updates to staged deployment</h2>
+            <p class="section-subtitle">
+              Wider deployment requires staged evaluation against a declared external target.
+            </p>
+          </div>
+          <figure class="figure reveal">
+            <img
+              src="assets/sec9_applications.png"
+              width="2048"
+              height="1024"
+              loading="lazy"
+              alt="Applications of self-evolving agents across engineering, persistent digital agents, scientific discovery, and high-stakes systems"
+            >
+            <figcaption class="figure-caption">
+              <strong>Figure 9.</strong> Across executable engineering, persistent digital agents, scientific discovery,
+              and embodied or high-stakes systems, evidence ranges from executable checks to expert review and
+              backtests.
+            </figcaption>
+          </figure>
+          <div class="application-grid">
+            <article class="application-card reveal">
+              <span class="app-icon">EE</span>
+              <h3>Executable Engineering &amp; AI Development</h3>
+              <p>Build, test, and optimize software, algorithms, infrastructure, and data workflows.</p>
+            </article>
+            <article class="application-card reveal">
+              <span class="app-icon">PA</span>
+              <h3>Persistent Digital Agents</h3>
+              <p>Adapt across sessions in live environments while reusing workflows and learning from failures.</p>
+            </article>
+            <article class="application-card reveal">
+              <span class="app-icon">SD</span>
+              <h3>Scientific Discovery</h3>
+              <p>Accelerate analysis, computing, experimentation, and research with verifiable outputs.</p>
+            </article>
+            <article class="application-card reveal">
+              <span class="app-icon">HS</span>
+              <h3>Embodied &amp; High-Stakes Systems</h3>
+              <p>Adapt in robotics, healthcare, finance, education, power, and law with consequential outcomes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="papers" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">5</span> Reading List</div>
+            <h2 class="section-title">Browse 549 manuscript-used works</h2>
+            <p class="section-subtitle">
+              Every paper appears once in its primary section and follows the canonical L0–L4 catalog.
+            </p>
+          </div>
+          <div class="catalog-summary">
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#surveys-and-positioning"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>24</strong>
+              <span>Surveys &amp; Positioning</span>
+              <small>Field positioning and adjacent literature ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#l0-output-level-self-evolution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>42</strong>
+              <span>L0 · Output-Level</span>
+              <small>Task-local revision and verification ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#l1-model-level-self-evolution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>137</strong>
+              <span>L1 · Model-Level</span>
+              <small>Self-training, self-play, and co-evolution ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#l2-scaffold-level-self-evolution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>257</strong>
+              <span>L2 · Scaffold-Level</span>
+              <small>Programs, workflows, skills, memory, harness ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#l3-improver-level-self-evolution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>21</strong>
+              <span>L3 · Improver-Level</span>
+              <small>Self-reference and learned improvement ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#l4-criterion-level-self-evolution"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>30</strong>
+              <span>L4 · Criterion-Level</span>
+              <small>Evaluation mechanisms, tasks, and objectives ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#cross-level-reliability-evidence-acceptance-and-control"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>8</strong>
+              <span>Cross-Level Reliability</span>
+              <small>Evidence, acceptance, control, independence ↗</small>
+            </a>
+            <a
+              class="catalog-card reveal"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#open-problems-and-outlook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>30</strong>
+              <span>Open Problems &amp; Outlook</span>
+              <small>Evolution, evaluation, applications, governance ↗</small>
+            </a>
+          </div>
+          <div class="catalog-action reveal">
+            <a
+              class="button primary"
+              href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents#paper-catalog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open the complete paper catalog
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5"></path>
+              </svg>
+            </a>
+            <p>The repository README remains the single source of truth for paper records and official links.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="about" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">”</span> About</div>
+            <h2 class="section-title">Cite, contribute, and keep the catalog reliable</h2>
+            <p class="section-subtitle">
+              Contributions should first be cited by the survey, then placed once in their primary taxonomy section.
+            </p>
+          </div>
+          <div class="about-grid">
+            <article class="about-card reveal">
+              <h3>Contributing</h3>
+              <p>
+                Correct a manuscript-used record, or add the paper to the manuscript before proposing it here. Use a
+                canonical paper URL and include code or project links only when they are official.
+              </p>
+              <p>
+                Original text and images in the repository are licensed under MIT. Linked papers, repositories,
+                project pages, names, and third-party metadata retain their respective terms.
+              </p>
+              <ul class="contact-list" aria-label="Contact email addresses">
+                <li>
+                  <a href="mailto:wkqscut@gmail.com">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 5h16v14H4zM4 7l8 6 8-6"></path>
+                    </svg>
+                    wkqscut@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:wenjinhou@zju.edu.cn">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 5h16v14H4zM4 7l8 6 8-6"></path>
+                    </svg>
+                    wenjinhou@zju.edu.cn
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:yanyuchen@zju.edu.cn">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 5h16v14H4zM4 7l8 6 8-6"></path>
+                    </svg>
+                    yanyuchen@zju.edu.cn
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:hehefan@zju.edu.cn">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 5h16v14H4zM4 7l8 6 8-6"></path>
+                    </svg>
+                    hehefan@zju.edu.cn
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <aside class="citation-box reveal">
+              <span class="citation-label">Citation status</span>
+              <h3>Manuscript metadata coming soon</h3>
+              <p>
+                The repository currently contains a placeholder paper URL and does not publish a verified author list
+                or BibTeX record. This site intentionally does not invent citation metadata.
+              </p>
+              <code class="citation-code"><span class="accent">Title:</span> Diving into Reliable Self-Evolving Agents: A Survey
+<span class="accent">Status:</span> Paper link and BibTeX pending
+<span class="accent">Companion:</span> github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents</code>
+              <div class="citation-actions">
+                <a
+                  class="button"
+                  href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents/blob/main/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contribution guide
+                </a>
+                <button class="button" type="button" id="copy-repo">Copy repository URL</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-mark" aria-hidden="true">🧬</div>
+        <p><strong>Awesome Reliable Self-Evolving Agents</strong></p>
+        <p>A static companion website for the survey and its curated reading list.</p>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents">GitHub</a>
+          <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents/blob/main/LICENSE">MIT License</a>
+          <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents/issues">Issues</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+(() => {
+  "use strict";
+
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function setMenu(open) {
+    if (!navToggle || !navLinks) return;
+    navLinks.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open && window.innerWidth <= 900);
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+  }
+
+  navToggle?.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+  navLinks?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMenu(false);
+  }, { passive: true });
+
+  const revealItems = document.querySelectorAll(".reveal");
+  revealItems.forEach((item) => item.classList.add("in"));
+
+  const navAnchors = [...document.querySelectorAll(".nav-links a[href^='#']")];
+  const trackedSections = [...document.querySelectorAll("[data-nav-section][id]")];
+
+  function updateActiveNavigation() {
+    const marker = window.scrollY + Math.min(window.innerHeight * 0.42, 330);
+    let activeId = "";
+    trackedSections.forEach((section) => {
+      if (section.offsetTop <= marker) activeId = section.id;
+    });
+    navAnchors.forEach((anchor) => {
+      const active = anchor.getAttribute("href") === `#${activeId}`;
+      anchor.classList.toggle("active", active);
+      active ? anchor.setAttribute("aria-current", "location") : anchor.removeAttribute("aria-current");
+    });
+  }
+
+  let scrollFrame = 0;
+  window.addEventListener("scroll", () => {
+    if (scrollFrame) return;
+    scrollFrame = window.requestAnimationFrame(() => {
+      updateActiveNavigation();
+      scrollFrame = 0;
+    });
+  }, { passive: true });
+  updateActiveNavigation();
+
+  document.querySelectorAll("[data-count]").forEach((element) => {
+    const target = Number(element.dataset.count);
+    if (!Number.isFinite(target) || reduceMotion) {
+      element.textContent = Number.isFinite(target) ? target.toLocaleString() : element.textContent;
+      return;
+    }
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - start) / 900, 1);
+      element.textContent = Math.round(target * (1 - (1 - progress) ** 3)).toLocaleString();
+      if (progress < 1) window.requestAnimationFrame(tick);
+    };
+    window.requestAnimationFrame(tick);
+  });
+
+  const copyButton = document.getElementById("copy-repo");
+  const repositoryUrl = "https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents";
+
+  function fallbackCopy(text) {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    const copied = document.execCommand("copy");
+    area.remove();
+    return copied;
+  }
+
+  function showCopyStatus(success) {
+    if (!copyButton) return;
+    copyButton.textContent = success ? "Copied ✓" : "Copy failed";
+    window.setTimeout(() => {
+      copyButton.textContent = "Copy repository URL";
+    }, 1800);
+  }
+
+  copyButton?.addEventListener("click", async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(repositoryUrl);
+        showCopyStatus(true);
+      } else {
+        showCopyStatus(fallbackCopy(repositoryUrl));
+      }
+    } catch {
+      showCopyStatus(false);
+    }
+  });
+
+  function initCursorParticles() {
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!finePointer || reduceMotion) return;
+
+    const canvas = document.querySelector(".cursor-particles");
+    if (!(canvas instanceof HTMLCanvasElement)) return;
+
+    const context = canvas.getContext("2d");
+    if (!context) return;
+
+    const colors = [
+      [36, 150, 232],
+      [0, 97, 179],
+      [8, 164, 183],
+      [196, 91, 149],
+    ];
+    const particles = [];
+    const pointer = {
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+      lastX: window.innerWidth / 2,
+      lastY: window.innerHeight / 2,
+      active: false,
+      pressed: false,
+      target: null,
+    };
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let ratio = 1;
+    let frame = 0;
+    let previousTime = performance.now();
+    let idleFrames = 0;
+
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function getMagnetTarget(eventTarget) {
+      if (!(eventTarget instanceof Element)) return null;
+      return eventTarget.closest(
+        "a, button, .feature-card, .method-card, .catalog-card, .application-card, .taxonomy-step, .figure",
+      );
+    }
+
+    function getMagnetPoint() {
+      if (!(pointer.target instanceof Element) || !document.documentElement.contains(pointer.target)) {
+        pointer.target = null;
+        return null;
+      }
+
+      const rect = pointer.target.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return null;
+
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const distance = Math.hypot(pointer.x - centerX, pointer.y - centerY);
+      const radius = Math.min(150, Math.max(72, Math.max(rect.width, rect.height) * 0.75));
+      if (distance > radius) return null;
+
+      const strength = 1 - distance / radius;
+      return { x: centerX, y: centerY, strength };
+    }
+
+    function spawnParticle(x, y, speed, burst = false) {
+      const angle = Math.random() * Math.PI * 2;
+      const force = burst ? 1.6 + Math.random() * 3.8 : 0.25 + Math.random() * (1.1 + speed * 0.045);
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      particles.push({
+        x: x + (Math.random() - 0.5) * (burst ? 12 : 7),
+        y: y + (Math.random() - 0.5) * (burst ? 12 : 7),
+        vx: Math.cos(angle) * force - (pointer.x - pointer.lastX) * 0.025,
+        vy: Math.sin(angle) * force - (pointer.y - pointer.lastY) * 0.025,
+        radius: burst ? 1.4 + Math.random() * 2.8 : 1 + Math.random() * 2.2,
+        life: 1,
+        decay: burst ? 0.018 + Math.random() * 0.012 : 0.025 + Math.random() * 0.018,
+        color,
+        orbit: (Math.random() - 0.5) * 0.08,
+      });
+
+      if (particles.length > 150) particles.splice(0, particles.length - 150);
+    }
+
+    function emitTrail(speed) {
+      const count = Math.min(7, 2 + Math.floor(speed / 8));
+      for (let index = 0; index < count; index += 1) {
+        spawnParticle(pointer.x, pointer.y, speed);
+      }
+    }
+
+    function drawGlow(x, y, radius, color, alpha) {
+      const [red, green, blue] = color;
+      const gradient = context.createRadialGradient(x, y, 0, x, y, radius);
+      gradient.addColorStop(0, `rgba(${red}, ${green}, ${blue}, ${alpha})`);
+      gradient.addColorStop(0.35, `rgba(${red}, ${green}, ${blue}, ${alpha * 0.42})`);
+      gradient.addColorStop(1, `rgba(${red}, ${green}, ${blue}, 0)`);
+      context.fillStyle = gradient;
+      context.beginPath();
+      context.arc(x, y, radius, 0, Math.PI * 2);
+      context.fill();
+    }
+
+    function requestDraw() {
+      if (!frame) frame = window.requestAnimationFrame(draw);
+    }
+
+    function draw(now) {
+      frame = 0;
+      const delta = Math.min((now - previousTime) / 16.67, 2);
+      previousTime = now;
+      context.clearRect(0, 0, width, height);
+
+      const magnet = getMagnetPoint();
+      const attractX = magnet ? pointer.x + (magnet.x - pointer.x) * magnet.strength * 0.45 : pointer.x;
+      const attractY = magnet ? pointer.y + (magnet.y - pointer.y) * magnet.strength * 0.45 : pointer.y;
+
+      context.save();
+      context.globalCompositeOperation = "lighter";
+
+      for (let index = particles.length - 1; index >= 0; index -= 1) {
+        const particle = particles[index];
+        const dx = attractX - particle.x;
+        const dy = attractY - particle.y;
+        const distance = Math.max(Math.hypot(dx, dy), 12);
+        const attraction = (magnet ? 0.17 + magnet.strength * 0.2 : 0.11) / distance;
+
+        particle.vx += dx * attraction * delta;
+        particle.vy += dy * attraction * delta;
+
+        const orbitForce = magnet ? particle.orbit * (0.6 + magnet.strength) : particle.orbit * 0.35;
+        particle.vx += -dy * orbitForce / distance;
+        particle.vy += dx * orbitForce / distance;
+        particle.vx *= Math.pow(0.91, delta);
+        particle.vy *= Math.pow(0.91, delta);
+        particle.x += particle.vx * delta;
+        particle.y += particle.vy * delta;
+        particle.life -= particle.decay * delta;
+
+        if (particle.life <= 0) {
+          particles.splice(index, 1);
+          continue;
+        }
+
+        const alpha = particle.life * 0.82;
+        drawGlow(particle.x, particle.y, particle.radius * 4.8, particle.color, alpha * 0.45);
+        context.fillStyle = `rgba(${particle.color.join(", ")}, ${alpha})`;
+        context.beginPath();
+        context.arc(particle.x, particle.y, Math.max(0.5, particle.radius * particle.life), 0, Math.PI * 2);
+        context.fill();
+      }
+
+      if (pointer.active) {
+        const coreColor = magnet ? colors[1] : colors[0];
+        const coreRadius = pointer.pressed ? 25 : magnet ? 22 : 16;
+        drawGlow(attractX, attractY, coreRadius, coreColor, magnet ? 0.52 : 0.34);
+        context.fillStyle = "rgba(255, 255, 255, 0.92)";
+        context.beginPath();
+        context.arc(attractX, attractY, pointer.pressed ? 2.8 : 2, 0, Math.PI * 2);
+        context.fill();
+      }
+
+      context.restore();
+
+      if (pointer.active || particles.length) {
+        idleFrames = 0;
+        requestDraw();
+      } else if (idleFrames < 2) {
+        idleFrames += 1;
+        requestDraw();
+      }
+    }
+
+    resizeCanvas();
+
+    window.addEventListener("resize", () => {
+      resizeCanvas();
+      requestDraw();
+    }, { passive: true });
+
+    document.addEventListener("pointermove", (event) => {
+      const speed = Math.hypot(event.clientX - pointer.x, event.clientY - pointer.y);
+      pointer.lastX = pointer.x;
+      pointer.lastY = pointer.y;
+      pointer.x = event.clientX;
+      pointer.y = event.clientY;
+      pointer.active = true;
+      pointer.target = getMagnetTarget(event.target);
+      canvas.classList.add("visible");
+      emitTrail(speed);
+      requestDraw();
+    }, { passive: true });
+
+    document.addEventListener("pointerover", (event) => {
+      pointer.target = getMagnetTarget(event.target);
+      requestDraw();
+    }, { passive: true });
+
+    document.addEventListener("pointerdown", () => {
+      pointer.pressed = true;
+      for (let index = 0; index < 18; index += 1) {
+        spawnParticle(pointer.x, pointer.y, 12, true);
+      }
+      requestDraw();
+    }, { passive: true });
+
+    document.addEventListener("pointerup", () => {
+      pointer.pressed = false;
+      requestDraw();
+    }, { passive: true });
+
+    document.documentElement.addEventListener("mouseleave", () => {
+      pointer.active = false;
+      pointer.target = null;
+      canvas.classList.remove("visible");
+      requestDraw();
+    });
+
+    document.documentElement.addEventListener("mouseenter", () => {
+      pointer.active = true;
+      canvas.classList.add("visible");
+      requestDraw();
+    });
+  }
+
+  initCursorParticles();
+})();
+    </script>
+  </body>
+</html>

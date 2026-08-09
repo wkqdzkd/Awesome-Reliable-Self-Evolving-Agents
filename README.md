@@ -29,9 +29,9 @@
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/teaser_rounded.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/teaser_rounded.png">
-  <img src="assets/teaser_rounded.png" width="90%" alt="Five levels of self-evolution, drawn as divers descending from the surface to the sea floor">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/teaser_web.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/teaser_web.png">
+  <img src="assets/teaser_web.png" width="90%" alt="Five levels of self-evolution, drawn as divers descending from the surface to the sea floor">
 </picture>
 </div>
 
