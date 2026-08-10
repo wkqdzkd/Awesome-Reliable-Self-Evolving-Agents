@@ -8,8 +8,11 @@
 
 <p align="center">
   <a href="#paper-catalog"><img alt="Papers" src="https://img.shields.io/badge/papers-549-6C5CE7?style=flat-square"></a>
+  <!--
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
   <a href="https://huggingface.co/papers/"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-Paper-FFD21E?style=flat-square&logo=huggingface&logoColor=black"></a>
+  -->
+  <a href="https://openreview.net/attachment?id=CGO1hDTHNe&amp;name=pdf"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-Paper-8C1B13?style=flat-square&amp;logo=openreview&amp;logoColor=white"></a>
   <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/"><img alt="Website" src="https://img.shields.io/badge/Website-GitHub%20Pages-0E9B9B?style=flat-square&logo=githubpages&logoColor=white"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=social"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square"></a>
