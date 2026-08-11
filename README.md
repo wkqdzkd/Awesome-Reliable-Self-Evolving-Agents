@@ -19,6 +19,7 @@
 </p>
 
 <p align="center">
+  <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/">🚀 Project</a> &nbsp;•&nbsp;
   <a href="#why-this-list-is-different">🧭 Taxonomy</a> &nbsp;•&nbsp;
   <a href="#contents">🗂️ Browse</a> &nbsp;•&nbsp;
   <a href="CONTRIBUTING.md">🤝 Contribute</a>
