@@ -12,7 +12,8 @@
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
   <a href="https://huggingface.co/papers/"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-Paper-FFD21E?style=flat-square&logo=huggingface&logoColor=black"></a>
   -->
-  <a href="https://openreview.net/attachment?id=CGO1hDTHNe&amp;name=pdf"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-Paper-8C1B13?style=flat-square&amp;logo=openreview&amp;logoColor=white"></a>
+  <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/Diving_into_Reliable_Self-Evolving_Agents_A_Survey.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/Paper-PDF-D14836?style=flat-square&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
+  <a href="https://openreview.net/forum?id=CGO1hDTHNe"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-Paper-8C1B13?style=flat-square&amp;logo=openreview&amp;logoColor=white"></a>
   <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/"><img alt="Website" src="https://img.shields.io/badge/Website-GitHub%20Pages-0E9B9B?style=flat-square&logo=githubpages&logoColor=white"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=social"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square"></a>
@@ -38,6 +39,27 @@
   <img src="assets/teaser_web.png" width="90%" alt="Five levels of self-evolution, drawn as divers descending from the surface to the sea floor">
 </picture>
 </div>
+
+---
+
+<div id="citation"></div>
+
+## 📌 Citation
+
+If this survey is useful to your work, please cite it:
+
+```bibtex
+@article{wang2026diving,
+  title   = {Diving into Reliable Self-Evolving Agents: A Survey},
+  author  = {Kaiqi Wang and Wenjin Hou and Yuchen Yan and
+             Hongrui Jia and Zhisheng Zhong and Botao Ren and
+             Yifei Chen and Songyang Zhang and Yongliang Shen and
+             Jun Xiao and Yi Yang and Yueting Zhuang and Hehe Fan},
+  journal = {OpenReview.net},
+  year    = {2026},
+  url     = {https://openreview.net/forum?id=CGO1hDTHNe}
+}
+```
 
 ---
 

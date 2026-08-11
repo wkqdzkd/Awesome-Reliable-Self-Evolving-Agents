@@ -6,10 +6,10 @@
     <meta name="theme-color" content="#f6f8fc">
     <meta
       name="description"
-      content="A curated collection of 549 works on reliable self-evolving agents, organized by what changes and what evidence supports improvement."
+      content="Survey of reliable self-evolving agents: a five-level taxonomy of self-evolution depth (L0–L4) with a reliability ladder pairing each evolution target with evidence and controls outside the update boundary."
     >
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Awesome Reliable Self-Evolving Agents">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Diving into Reliable Self-Evolving Agents: A Survey">
     <meta
       property="og:description"
       content="The L0–L4 landscape of reliable AI self-improvement, from task-local outputs to evolving criteria."
@@ -24,8 +24,40 @@
       name="twitter:image"
       content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/assets/teaser_web.png"
     >
-    <title>Awesome Reliable Self-Evolving Agents</title>
+    <title>Diving into Reliable Self-Evolving Agents: A Survey</title>
     <link rel="canonical" href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/">
+
+    <!-- Google Scholar (Highwire Press) bibliographic metadata -->
+    <meta name="citation_title" content="Diving into Reliable Self-Evolving Agents: A Survey">
+    <meta name="citation_author" content="Wang, Kaiqi">
+    <meta name="citation_author" content="Hou, Wenjin">
+    <meta name="citation_author" content="Yan, Yuchen">
+    <meta name="citation_author" content="Jia, Hongrui">
+    <meta name="citation_author" content="Zhong, Zhisheng">
+    <meta name="citation_author" content="Ren, Botao">
+    <meta name="citation_author" content="Chen, Yifei">
+    <meta name="citation_author" content="Zhang, Songyang">
+    <meta name="citation_author" content="Shen, Yongliang">
+    <meta name="citation_author" content="Xiao, Jun">
+    <meta name="citation_author" content="Yang, Yi">
+    <meta name="citation_author" content="Zhuang, Yueting">
+    <meta name="citation_author" content="Fan, Hehe">
+    <meta name="citation_publication_date" content="2026/08/10">
+    <meta name="citation_online_date" content="2026/08/10">
+    <meta name="citation_technical_report_institution" content="Tencent Hunyuan">
+    <meta name="citation_language" content="en">
+    <meta
+      name="citation_keywords"
+      content="self-evolving agents; recursive self-improvement; reliability; self-evolution depth; external audit; reliability ladder"
+    >
+    <meta
+      name="citation_abstract_html_url"
+      content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/"
+    >
+    <meta
+      name="citation_pdf_url"
+      content="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/Diving_into_Reliable_Self-Evolving_Agents_A_Survey.pdf"
+    >
     <script>document.documentElement.classList.add("js");</script>
     <!-- <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -937,6 +969,46 @@ section {
   color: var(--ink);
 }
 
+.abstract-card {
+  margin-inline: auto;
+  padding: clamp(22px, 3.4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.abstract-card p {
+  margin: 0 0 16px;
+  color: var(--ink-2);
+  font-size: 16.5px;
+  line-height: 1.78;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.abstract-card p:last-child {
+  margin-bottom: 0;
+}
+
+.abstract-card strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.abstract-keywords {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.abstract-keywords b {
+  color: var(--brand);
+  font-weight: 700;
+}
+
 .figure {
   position: relative;
   overflow: hidden;
@@ -1844,6 +1916,26 @@ section {
   color: #c8d2ff;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.bibtex-head {
+  margin: 18px 0 10px;
+}
+
+.bibtex-head .bibtex-title {
+  color: #9fb0ff;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bibtex-block {
+  margin: 0;
+  overflow-x: auto;
+  font-size: 10.5px;
+  line-height: 1.75;
+  white-space: pre;
 }
 
 .citation-actions {
@@ -2903,6 +2995,7 @@ html.js .reveal.in {
         </button>
 
         <div class="nav-links" id="nav-links">
+          <a href="#abstract">Abstract</a>
           <a href="#landscape">Landscape</a>
           <a href="#overview">Overview</a>
           <a href="#foundations">Foundations</a>
@@ -3132,16 +3225,29 @@ html.js .reveal.in {
           -->
           <a
             class="button"
-            href="https://openreview.net/attachment?id=CGO1hDTHNe&amp;name=pdf"
+            href="Diving_into_Reliable_Self-Evolving_Agents_A_Survey.pdf"
+            aria-label="Open the paper PDF in a new tab"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open the paper in a new tab"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M6 2h9l5 5v15H6z"></path>
               <path d="M14 2v6h6M9 13h6M9 17h6"></path>
             </svg>
-            Paper
+            Paper (PDF)
+          </a>
+          <a
+            class="button"
+            href="https://openreview.net/forum?id=CGO1hDTHNe"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the OpenReview page in a new tab"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 14 21 3M15 3h6v6"></path>
+              <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+            </svg>
+            OpenReview
           </a>
           <a
             class="button primary"
@@ -3212,6 +3318,41 @@ html.js .reveal.in {
     </header>
 
     <main id="main-content">
+      <section id="abstract" data-nav-section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="section-kicker"><span class="badge">§</span> Abstract</div>
+            <h2 class="section-title">Diving into Reliable Self-Evolving Agents: A Survey</h2>
+          </div>
+          <div class="abstract-card reveal">
+            <p>
+              <strong>Self-evolving agents</strong> use information produced during their own execution to revise
+              current outputs or modify retained agent components that shape later behavior and future updating. As
+              these systems gain broader and more persistent self-modification capabilities, <strong>reliability</strong>
+              becomes a central concern. Two questions guide this survey: what changes during self-evolution, and what
+              evidence can support claims of improvement. The literature is organized by
+              <strong>self-evolution depth</strong>, defined by the deepest evolution target whose change takes
+              effect—from the current output to retained components that shape future behavior, updates, or judgments.
+              Accordingly, we classify self-evolution into five levels: <strong>Output-Level</strong> Self-Evolution
+              (L0), <strong>Model-Level</strong> Self-Evolution (L1), <strong>Scaffold-Level</strong> Self-Evolution
+              (L2), <strong>Improver-Level</strong> Self-Evolution (L3), and <strong>Criterion-Level</strong>
+              Self-Evolution (L4). For each level, we survey representative systems and compare their evolution
+              mechanisms, changed objects, persistence conditions, and reliability challenges. We then provide a
+              cross-level synthesis of these concerns and develop a reliability ladder that pairs each evolution target
+              with evidence and controls outside the corresponding update boundary. Reliable self-evolution thus depends
+              not on self-evolution depth alone, but on whether evaluation and oversight remain independent of the
+              update and cover the relevant tasks, conditions, and constraints. Finally, we discuss key challenges and
+              future research directions. We aim for this survey to serve both as a structured reference for existing
+              work and as guidance for developing the next generation of capable and reliable self-evolving agents.
+            </p>
+            <p class="abstract-keywords">
+              <b>Keywords</b> self-evolving agents; recursive self-improvement; reliability; self-evolution depth;
+              external audit; reliability ladder
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="band" id="landscape" data-nav-section>
         <div class="wrap">
           <div class="section-head reveal">
@@ -3877,14 +4018,26 @@ html.js .reveal.in {
 
             <aside class="citation-box reveal">
               <span class="citation-label">Citation status</span>
-              <h3>Paper available on OpenReview</h3>
+              <h3>Paper available as PDF</h3>
               <p>
-                The manuscript is available on OpenReview. A verified BibTeX record will be added when available.
+                If this survey is useful to your work, please cite it using the BibTeX entry below.
               </p>
-              <code class="citation-code"><span class="accent">Title:</span> Diving into Reliable Self-Evolving Agents: A Survey
-<span class="accent">Paper:</span> <a href="https://openreview.net/attachment?id=CGO1hDTHNe&amp;name=pdf" target="_blank" rel="noopener noreferrer">https://openreview.net/attachment?id=CGO1hDTHNe&amp;name=pdf</a>
-<span class="accent">Git:</span> <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents" target="_blank" rel="noopener noreferrer">https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents</a></code>
+              <div class="bibtex-head">
+                <span class="bibtex-title">BibTeX</span>
+              </div>
+              <pre class="citation-code bibtex-block" id="bibtex-source">@article{<span class="accent">wang2026diving</span>,
+  <span class="accent">title</span>   = {Diving into Reliable Self-Evolving Agents: A Survey},
+  <span class="accent">author</span>  = {Kaiqi Wang and Wenjin Hou and Yuchen Yan and
+             Hongrui Jia and Zhisheng Zhong and Botao Ren and
+             Yifei Chen and Songyang Zhang and Yongliang Shen and
+             Jun Xiao and Yi Yang and Yueting Zhuang and Hehe Fan},
+  <span class="accent">journal</span> = {OpenReview.net},
+  <span class="accent">year</span>    = {2026},
+  <span class="accent">url</span>     = {https://openreview.net/forum?id=CGO1hDTHNe}
+}</pre>
               <div class="citation-actions">
+                <button class="button" type="button" id="copy-bibtex">Copy BibTeX</button>
+                <button class="button" type="button" id="copy-repo">Copy Repo URL</button>
                 <a
                   class="button"
                   href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents/blob/main/CONTRIBUTING.md"
@@ -3893,7 +4046,6 @@ html.js .reveal.in {
                 >
                   Contribution guide
                 </a>
-                <button class="button" type="button" id="copy-repo">Copy repository URL</button>
               </div>
             </aside>
           </div>
@@ -4310,7 +4462,6 @@ html.js .reveal.in {
     window.requestAnimationFrame(tick);
   });
 
-  const copyButton = document.getElementById("copy-repo");
   const repositoryUrl = "https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents";
 
   function fallbackCopy(text) {
@@ -4326,26 +4477,36 @@ html.js .reveal.in {
     return copied;
   }
 
-  function showCopyStatus(success) {
-    if (!copyButton) return;
-    copyButton.textContent = success ? "Copied ✓" : "Copy failed";
-    window.setTimeout(() => {
-      copyButton.textContent = "Copy repository URL";
-    }, 1800);
+  function bindCopyButton(buttonId, defaultLabel, resolveText) {
+    const button = document.getElementById(buttonId);
+    if (!button) return;
+
+    button.addEventListener("click", async () => {
+      const text = resolveText();
+      let copied = false;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          copied = true;
+        } else {
+          copied = fallbackCopy(text);
+        }
+      } catch {
+        copied = false;
+      }
+      button.textContent = copied ? "Copied ✓" : "Copy failed";
+      window.setTimeout(() => {
+        button.textContent = defaultLabel;
+      }, 1800);
+    });
   }
 
-  copyButton?.addEventListener("click", async () => {
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(repositoryUrl);
-        showCopyStatus(true);
-      } else {
-        showCopyStatus(fallbackCopy(repositoryUrl));
-      }
-    } catch {
-      showCopyStatus(false);
-    }
-  });
+  bindCopyButton("copy-repo", "Copy repository URL", () => repositoryUrl);
+  bindCopyButton(
+    "copy-bibtex",
+    "Copy BibTeX",
+    () => document.getElementById("bibtex-source")?.textContent.trim() ?? ""
+  );
 
   function initCursorParticles() {
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
