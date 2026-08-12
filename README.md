@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<h1>🧬 Awesome Reliable Self-Evolving Agents</h1>
+<h1><img src="assets/logo/logo-mark.png" width="32" height="32" align="absmiddle" alt="Tencent Hunyuan logo">&ensp;Awesome Reliable Self-Evolving Agents</h1>
 
 <strong>A curated collection of research on <em>self-evolving agents</em>, advancing reliable AI self-improvement.</strong><br>
 
@@ -14,7 +14,9 @@
   -->
   <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/Diving_into_Reliable_Self-Evolving_Agents_A_Survey.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/Paper-PDF-D14836?style=flat-square&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
   <a href="https://openreview.net/forum?id=CGO1hDTHNe"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-Paper-8C1B13?style=flat-square&amp;logo=openreview&amp;logoColor=white"></a>
-  <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/"><img alt="Website" src="https://img.shields.io/badge/Website-GitHub%20Pages-0E9B9B?style=flat-square&logo=githubpages&logoColor=white"></a>
+  <a href="https://x.com/TencentHunyuan/status/2087444616832594022?s=20"><img alt="X (Twitter)" src="https://img.shields.io/badge/Tweet-black?logo=x&amp;logoColor=white"></a>
+  <a href="http://xhslink.cn/o/atfKcaQL3C"><img alt="小红书" src="https://img.shields.io/badge/%E5%B0%8F%E7%BA%A2%E4%B9%A6-ff2442?logo=xiaohongshu&amp;logoColor=white"></a>
+  <a href="https://wkqdzkd.github.io/Awesome-Reliable-Self-Evolving-Agents/"><img alt="Website" src="https://img.shields.io/badge/Website-5B6BC0?style=flat-square&amp;logo=safari&amp;logoColor=white"></a>
   <a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents?style=social"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-2E8B57?style=flat-square"></a>
 </p>
