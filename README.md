@@ -757,6 +757,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2025`** Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly? [[paper](https://arxiv.org/abs/2511.13646)] [[code](https://github.com/OpenAutoCoder/live-swe-agent)] [[project](https://live-swe-agent.github.io)]
 - **`NAACL 2025`** Self-Developing: Can Large Language Models Invent Algorithms to Improve Themselves?: Algorithm Discovery for Recursive Self-Improvement through Reinforcement Learning. [[paper](https://arxiv.org/abs/2410.15639)]
 - **`arXiv 2003`** Gödel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements. [[paper](https://arxiv.org/abs/cs/0309048)]
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril): Open-source agentic software factory with an amazing UI that handles parallel Git worktrees for you, complete with programmatic verifications and fast review loops
 
 <div id="L3.learned_improvement"></div>
 
