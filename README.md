@@ -713,6 +713,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`arXiv 2026`** Self-Harness: Harnesses That Improve Themselves. [[paper](https://arxiv.org/abs/2606.09498)]
 - **`arXiv 2026`** SemaClaw: a step towards general-purpose personal AI agents through harness engineering. [[paper](https://arxiv.org/abs/2604.11548)]
 - **`arXiv 2026`** The last harness you'll ever build. [[paper](https://arxiv.org/abs/2604.21003)]
+- **`arXiv 2026`** AutoRef: Harness Optimization for Agentic Multi-Reference Image Generation. [[paper](https://arxiv.org/abs/2609.35530)]
 
 <div id="L2.reliability"></div>
 
