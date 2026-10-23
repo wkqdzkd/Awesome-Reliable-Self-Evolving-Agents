@@ -667,6 +667,7 @@ L0–L4 taxonomy and all 549 manuscript-used papers are presented below.
 - **`ACL 2026`** APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI. [[paper](https://arxiv.org/abs/2604.14362)]
 - **`arXiv 2026`** AutoAgent: AutoAgent: Evolving Cognition and Elastic Memory Orchestration for Adaptive Agents. [[paper](https://arxiv.org/abs/2603.09716)]
 - **`MICCAI 2026`** Evo-RAD: Evo-RAD: Navigating Rare Retinal Disease Diagnosis via Self-Evolving Agentic Retrieval. [[paper](https://arxiv.org/abs/2606.22955)] [[code](https://github.com/SDH-Lab/Evo-RAD)]
+- **`arXiv 2026`** Write Once, Query Many: Evolving Compact Reusable Memory for Long Videos. [[paper](https://arxiv.org/abs/2610.24537)]
 - **`arXiv 2026`** Faulty Memories: Useful Memories Become Faulty When Continuously Updated by LLMs. [[paper](https://arxiv.org/abs/2605.12978)]
 - **`arXiv 2026`** H-Mem: H-MEM: A Novel Memory Mechanism for Evolving and Retrieving Agent Memory via a Hybrid Structure. [[paper](https://arxiv.org/abs/2605.15701)]
 - **`arXiv 2026`** Live-Evo: Online Evolution of Agentic Memory from Continuous Feedback. [[paper](https://arxiv.org/abs/2602.02369)] [[project](https://ag2ai.github.io/live-evo-page)]
